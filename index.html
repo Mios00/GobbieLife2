@@ -548,6 +548,15 @@
         <div style="border:1px solid #2a2438;border-radius:6px;background:linear-gradient(180deg,#0c0a12,#080710);overflow:hidden">
           <div style="padding:9px 16px;border-bottom:1px solid #191524;display:flex;align-items:center;justify-content:space-between"><span style="font-size:10px;letter-spacing:.18em;color:#b49ad2">⚑ THE WANDER</span><sc-if value="{{ advActive }}" hint-placeholder-val="{{ false }}"><span style="font-size:9px;letter-spacing:.1em;color:#6a5c8e">GONE · ~{{ advEta }}s</span></sc-if></div>
           <div style="padding:12px 16px;display:flex;flex-direction:column;gap:9px">
+            <sc-if value="{{ hasWanderEvent }}" hint-placeholder-val="{{ false }}">
+              <div style="border:1px solid #3a2f52;border-radius:5px;background:linear-gradient(180deg,#120d1c,#0b0812);padding:12px 13px;animation:rise .35s ease">
+                <div style="font-size:9.5px;letter-spacing:.16em;color:#b49ad2;margin-bottom:7px">⚑ ON THE ROAD · {{ ev.title }}</div>
+                <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:#c3bad6">{{ ev.body }}</p>
+                <div style="display:flex;flex-direction:column;gap:6px">
+                  <sc-for list="{{ ev.choices }}" as="c" hint-placeholder-count="2"><button onClick="{{ c.onClick }}" style="font-size:11px;letter-spacing:.04em;color:#cfc6e0;background:#100d1a;border:1px solid #473d5e;border-radius:4px;padding:9px 11px;cursor:pointer;width:100%;text-align:left" style-hover="border-color:#6a5c8e;color:#e8e2f4"><span style="display:block">{{ c.label }}</span><sc-if value="{{ c.hasTag }}" hint-placeholder-val="{{ false }}"><span style="display:block;font-size:9px;letter-spacing:.1em;color:#8175a0;margin-top:3px">{{ c.tag }}</span></sc-if></button></sc-for>
+                </div>
+              </div>
+            </sc-if>
             <sc-if value="{{ advGame }}" hint-placeholder-val="{{ false }}">
               <sc-if value="{{ advGameSpeed }}" hint-placeholder-val="{{ false }}">
                 <div style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:.1em;color:#b49ad2"><span>{{ advGameN }} SO FAR</span><span>{{ advGameLeft }}s LEFT</span></div>
@@ -2708,7 +2717,7 @@ class Component extends DCLogic {
       showGame, gEraI, gEraII, gEraIII,
       showNav: navList.length > 0, navTabs, navBarStyle,
       tBuild, tJobs, tSurface, tWorks, tWorksMach, tIIJobs, tOutposts, tLog,
-      hasEvent: !!s.activeEvent, ev,
+      hasEvent: !!s.activeEvent && !s.activeEvent.wander, hasWanderEvent: !!(s.activeEvent && s.activeEvent.wander), ev,
       accent, topBarStyle: 'position:sticky;top:0;z-index:30;background:rgba(0,0,0,.94);backdrop-filter:blur(8px);border-bottom:1px solid ' + (s.era === 1 ? '#1a1a1c' : s.era === 2 ? '#2a1a10' : '#26240f') + ';padding:10px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap',
       toneLabel: t === 'grim' ? 'GRIMDARK' : t === 'silly' ? 'GOBLIN SILLY' : 'BALANCED',
       stage: s.era === 1 ? ('STAGE ' + s.stage) : s.stage, stageName: this.stageName(s.stage, s.tone),
