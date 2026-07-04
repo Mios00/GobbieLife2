@@ -2701,7 +2701,7 @@ class Component extends DCLogic {
       unrestColor: unrest > s.garrisons * this.GARR_SUPPRESS || unrest > 4 ? '#c8553a' : unrest > 0 ? '#d3a04e' : '#9ec4a2',
       gritColor: s.grit < 30 ? '#c8553a' : s.grit < 55 ? '#d3a04e' : '#9ec4a2',
       runts: s.runts, diggers: s.diggers, foragers: s.foragers,
-      fungNet: (net >= 0 ? '+' : '') + (Math.round(net * 10) / 10), fungNetColor: net >= 0 ? '#5a7a5e' : '#c8553a',
+      fungNet: (netII >= 0 ? '+' : '') + (Math.round(netII * 10) / 10), fungNetColor: netII >= 0 ? '#5a7a5e' : '#c8553a',
       starving: s.starving, goblin: s.starving ? '(\u00b0\ufe4f\u00b0)' : '(._.)',
       goblinFace: s.starving ? '(\u00b0\ufe4f\u00b0)' : (s.grit < 30 ? '(-_-)' : '(._.)'),
       goblinOuterStyle: 'display:inline-block;' + (s.starving ? 'animation:goblinShake .5s ease-in-out infinite' : 'animation:goblinBob ' + (s.grit < 30 ? '6s' : '3.6s') + ' ease-in-out infinite'),
