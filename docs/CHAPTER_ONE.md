@@ -11,7 +11,7 @@
 >
 > From the Codex of the Before, first volume
 
-### CHAPTER ONE — THE SHAPE IT CHOSE
+### CHAPTER ONE: THE SHAPE IT CHOSE
 
 The warmth was dying, and the mud knew it.
 
