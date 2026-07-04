@@ -593,6 +593,10 @@
             <sc-if value="{{ advResting }}" hint-placeholder-val="{{ false }}">
               <p style="margin:0;font-size:11px;line-height:1.55;color:#6a6478;font-style:italic">{{ pname }} rests by the fire, boots steaming, and will not speak of it yet.</p>
             </sc-if>
+            <sc-if value="{{ advDormant }}" hint-placeholder-val="{{ false }}">
+              <p style="margin:0;font-size:11px;line-height:1.55;color:#6a6478;font-style:italic">{{ advDormantMsg }}</p>
+              <div style="font-size:9px;letter-spacing:.14em;color:#4e485e">⚑ {{ advTally }}</div>
+            </sc-if>
           </div>
         </div>
         </sc-if>
@@ -2599,6 +2603,18 @@ class Component extends DCLogic {
 
     // NEXT strip · raid & threat warnings · ending epigraphs
     const showGamePre = s.phase === 'play' && !s.transition && !s.transition3 && !s.ended;
+    // The Wander panel persists once the first road opens (stage 1.2) and stays for the
+    // rest of the run — showing a quiet "resting" state between/after journeys instead of
+    // vanishing when the next quest is gated to a later stage or all roads are walked.
+    const advUnlocked = showGamePre && (this.STAGE_ORD[s.stage] || 0) >= (this.STAGE_ORD['1.2'] || 2);
+    const advTotal = this.ADVENTURES.length;
+    const advDormant = advUnlocked && !s.adv && !this.advAvailable(s);
+    const advAllDone = !this.advCurrent(s);
+    const _silW = t === 'silly', _pn = s.pname || this.nameFor(t);
+    const advDormantMsg = advAllDone
+      ? (_silW ? _pn + ' has done EVERY wander there was. The whole map. Boots officially retired.' : _pn + ' has walked every road the world laid down. There are no more to walk.')
+      : (_silW ? 'No new road yet — ' + _pn + ' does stretches by the fire, waiting for the world to catch up.' : 'No road calls yet. ' + _pn + ' waits by the fire for the world to turn, and the next journey to open.');
+    const advTally = Math.min(s.advStep || 0, advTotal) + ' OF ' + advTotal + ' ROADS WALKED';
     const nextGoals = showGamePre ? this.nextGoals(s).map((x, i) => ({ k: i, label: x.label, pctW: x.pct + '%', hasEta: !!x.eta, eta: x.eta || '' })) : [];
     const raidSoon = showGamePre && s.era === 2 && s.stage === '2.3' && !s.activeEvent && s.nextRaid <= 30;
     const threatSoon = showGamePre && s.era === 3 && s.territories >= 2 && !s.activeEvent && s.nextThreat <= 30;
@@ -2678,7 +2694,8 @@ class Component extends DCLogic {
       showHollowMotes: gEraIII && s.stage === '3.3',
       panoSmog,
       hasNext: nextGoals.length > 0, nextGoals,
-      showAdv: showGamePre && (!!s.adv || !!this.advAvailable(s)),
+      showAdv: advUnlocked,
+      advDormant, advDormantMsg, advTally,
       advActive: !!s.adv,
       advAvail: !s.adv && (s.advCd || 0) <= 0 && !!this.advAvailable(s),
       advResting: !s.adv && (s.advCd || 0) > 0 && !!this.advAvailable(s),
