@@ -2781,7 +2781,7 @@ class Component extends DCLogic {
       showStandings,
       notoriety: s.notoriety || 0, relBars, anyHostile, standingsSub: anyHostile ? 'a hostile power will bring war' : 'the powers watch, for now',
       kilnCostScrap: Math.ceil(s.kilnCostScrap), kilnCostWood: Math.ceil(s.kilnCostWood), forgeCostIron: Math.ceil(s.forgeCostIron), forgeCostScrap: Math.ceil(s.forgeCostScrap), bathCost: Math.ceil(s.bathCost), bathCostWood: Math.ceil(s.bathCostWood), meadCostScrap: Math.ceil(s.meadCostScrap), meadCostIron: Math.ceil(s.meadCostIron), meadCostWood: Math.ceil(s.meadCostWood), towerCostIron: Math.ceil(s.towerCostIron), towerCostScrap: Math.ceil(s.towerCostScrap), colosseumAdam: s.colosseumAdam, colosseumIron: s.colosseumIron, colosseumScrap: s.colosseumScrap, colosseumWood: s.colosseumWood,
-      showDefense: gEraII && s.stage === '2.3', defenseVal, showSoldiers: gEraII && s.stage === '2.3',
+      showDefense: gEraII && (s.stage === '2.2' || s.stage === '2.3'), defenseVal, showSoldiers: gEraII && s.stage === '2.3',
       showPano: panoOn, panoScale: _pcur.scale, panoDesc: (_pcur.desc && _pcur.desc[t]) || (_pcur.desc && _pcur.desc.mid) || '', panoSouls: this.fmtSouls(this.soulsFor(s)), panoEra: _pcur.era, panoFpPct: _pcur.fp, panoCol: _pcur.col, panoTierLabel: (panoActive + 1) + ' / 7',
       panoS0: panoMk(0), panoS1: panoMk(1), panoS2: panoMk(2), panoS3: panoMk(3), panoS4: panoMk(4), panoS5: panoMk(5), panoS6: panoMk(6),
       nextBpName: nextBp ? bpNames[nextBp[0]] : '', hasNextBp: !!nextBp, allBpFound: !nextBp, discPctToNext,
