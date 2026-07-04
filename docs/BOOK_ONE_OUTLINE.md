@@ -1,145 +1,152 @@
 # THE MUD THAT WANTED
-## Book One of The Root-Tender's Saga — full chapter outline
+## Book One of The Root-Tender's Saga — full chapter outline (revised structure)
 
-*38 chapters in three parts, ~95,000 words at target. Each entry gives the scene, the turn (what changes), and — where relevant — what it plants for later books. The three long fuses (the Knocking, the Green Dreams, the Root Gallery) are tracked explicitly: they must recur on a rhythm, never explained, always advanced.*
+*Book One now covers Era I entire (the warren, the pack, the breach) AND the first age of the surface (Era II stage 2.1, the Smog-Pit), ending at the first kiln-fire and the naming of the town. 38 chapters in four parts, ~110,000 words at target. Book Two opens at Smoghaven (2.2) and runs through the Herald Horn. Book Three is Era III and the Root.*
 
 **A note on the narration (binding style guide for all prose).**
 The saga is written in **third person limited**, one point-of-view head per scene, in a register close to Sanderson's Mistborn books: clear, concrete, scene-driven, momentum over ornament, wonder earned through specificity rather than rhetoric. The deep's strangeness follows rules, and the rules are shown working before they matter.
 
 - **No em dashes. Ever.** Use periods, commas, or restructure the sentence. Short sentences are welcome.
-- **Epigraphs carry the chronicle.** Each chapter opens with a short fragment from a codex whose author is unnamed until Book Three (the planted secret survives: the codex is Fenwick's, and the "F." reveal moves from the epilogue prose to the final epigraph of Book One). All commentary, hindsight, and foreshadowing that the old chronicler-voice used to do in-line now lives ONLY in epigraphs.
-- **Pre-verbal chapters** (1 through 9) stay in close third on the creature: simple sensory interiority that grows in vocabulary as the mind grows. Never narrate concepts the POV hasn't earned except through the epigraph.
-- **Dialogue does the character work** from chapter 10 onward. Distinct speech patterns: Moro (few words, always literal), Brakka (slow, kind, asks questions), Snit (fast, deflecting, funny), Vess (says less than she knows, never lies), the Oracle (riddles only, never explains).
-- Any quoted riddles/lines in this outline that contain em dashes are working shorthand; rewrite them to the style rules at drafting time.
+- **Epigraphs carry the chronicle.** Each chapter opens with a short fragment from a codex whose author is unnamed until Book Three (the codex is Fenwick's; the "F." reveal is the final epigraph of Book One). All hindsight and foreshadowing lives ONLY in epigraphs.
+- **Pre-verbal chapters** (1 through 4) stay in close third on the creature: simple sensory interiority that grows in vocabulary as the mind grows. Never narrate concepts the POV hasn't earned except through the epigraph.
+- **Dialogue does the character work** from chapter 6 onward. Distinct speech patterns: Moro (few words, always literal), Brakka (slow, kind, asks questions), Snit (fast, deflecting, funny), Vess (says less than she knows, never lies), the Oracle (riddles only, never explains).
+- Any quoted lines in this outline are working shorthand; rewrite to the style rules at drafting time.
+
+**Timeline compression.** The old draft spent nine chapters on the mud alone. The revised book spends three. The story starts in the mud's final hour before the goblin forms, treats deep time in epigraph and implication, and gets Ketch a body by the end of chapter one, a tool by chapter two, and company by chapter five. Era I's plateaus (pack, warrens, hoard) are Parts Two and Three. The breach lands mid-book at chapter 24, not at the end, and Part Four gives the surface a full act: ruin-scavenging, blightwood, the first strays born under the sun, Uzgar Red-Maw's toll, and the first kiln.
 
 ---
 
 ## PART ONE — THE ACHE
-*(The Lone Scrapper · chapters 1–9 · alone in the dark)*
+*(The Lone Scrapper · chapters 1–5 · one creature, one seam of warmth)*
 
-**1. The Ache.**
-Scene: black water, dead roots, a slick of mud that shudders and — against all mercy — begins to feel. Pain first. Then the difference between *me* and *not-me*, discovered when part of it sloughs away and does not hurt. Turn: it moves *toward* something for the first time (warmth) instead of merely existing. Plants: the *counting* is present from literally the first page — a faint, spaced concussion in the water, felt not heard, which the creature assumes is the world's pulse. It is almost right.
+**1. The Shape It Chose.**
+Scene: the mud in its final hour as mud. It has already lived its slow ages (epigraph carries that weight in six lines); the chapter opens with the ache burning, the water still, and the old two-clause law already in it: hold on, and when the warmth will not come to you, go. Tonight the going is different. The warmth-seam is failing, cooling by degrees, and the mud must cross a gap of open rock no slick of mud can cross. So it stops being a slick of mud. The forming is the scene: pressure and will, threads of dead root drawn in for a frame, the first limb extruded and lost and extruded again, fingers because grasping rewards fingers, ears because the dark rewards listening, small because the gaps reward small. It crosses the gap on new hands and knees, collapses against the warm rock, and feels its own heart start, syncopated against the counting that has been coming up through the stone all its life. Three beats, a rest, three beats. Turn: there is a goblin at the bottom of the world. Plants: the counting on page one; the body as a ledger of choices; the dark flecks in the mud that would not take a scratch, now buried in the marrow of it.
 
 **2. Wet and Dry, Up and Down.**
-Scene: the invention of geography. The creature maps its pool, its shelf of stone, the great fallen columns (we know them for roots; it doesn't). First tool: a splinter of slate used to scrape sweet rot from a crevice. Turn: it *keeps* the splinter. Property is born, and with it, tomorrow. Plants: the slate splinter — it will carry a smear of mud in its seam through the whole saga.
+Scene: first days in a body. Geography invented: the shelf, the pool, the fallen columns (we know them for roots; it doesn't). First tool: a splinter of slate used to scrape sweet rot from a crevice. It keeps the splinter. Property is born, and with it tomorrow. Turn: eyes open fully to fungus-light and it sees its silhouette in still water. Recognition, and the first loneliness. Plants: the slate splinter, which will carry a smear of mud in its seam through the whole saga; the fungus glowing along lines that all run down.
 
-**3. The Sweet Vein.**
-Scene: some mud tastes of purpose — faintly organized, as if the ground had once been asked to do something and was still trying. The creature follows the taste along a seam, digging with its splinter, and eats better than it has ever eaten. Turn: first deliberate *plan* (follow the seam tomorrow). First failure: the seam ends at a wall. Plants: the seam runs east. Behind the east wall, very faint, the counting is louder.
+**3. The Thing That Is Not Rain.**
+Scene: the knocking, properly. Patient, spaced, deliberate, from behind the east face. Three, rest, three. The creature answers by accident, dropping its slate, and the rhythm changes, incorporating the accident. Terror, retreat, three measured days away. Then it goes back. Turn: the first choice against fear. Plants: FUSE ONE laid openly. Rule for the book: the Knocking never harms, never explains, and always, a wall away, leads to reward. Or bait.
 
-**4. The Thing That Is Not Rain.**
-Scene: the knocking, properly. Patient, spaced, deliberate — three, rest, three. The creature answers by accident (dropping its slate), and the rhythm *changes*, incorporating the accident. Terror; retreat; three days (its first measured time) spent not going near the east face. Then it goes back. Turn: the creature makes the first *choice against fear* of its species. Plants: FUSE ONE laid openly. Rule for the whole book: the Knocking never harms, never explains, and always — a wall away — leads to reward. Or bait.
+**4. The Dream of Green.**
+Scene: first true sleep, first dream. Pillared halls of a colour it has no referent for, veined with light, and a sound like slow enormous breathing. It wakes weeping mud, homesick for a place that does not exist. Same night, following the dream's ache east, it finds worked stone under old rubble: a lintel, a threshold, a shut way. Not goblin-made. Nothing is, yet. It sleeps against the sealed door for the company of the counting. Turn: interiority and history arrive in the same chapter; there is an inside to the creature and a Before to the world. Plants: FUSE TWO (the green; its rhythm matches the counting, never stated); the lintel barred from this side, load-bearing in Book Three.
 
-**5. The Dream of Green.**
-Scene: first sleep deep enough to dream. Pillared halls of a colour it has no referent for, veined with light, and a sound like slow enormous breathing. It wakes weeping mud, homesick for a place that does not exist. Turn: interiority arrives — the creature now has an *inside*, and the inside can ache for something the outside never gave it. Plants: FUSE TWO. The breathing in the dream and the counting in the water share a rhythm. This is never stated; a careful reader may clock it around chapter 20.
-
-**6. The Body It Chose.**
-Scene: over an unmeasured season, form. Fingers because grasping rewarded fingers; big ears because the dark rewards listening; small because the seams reward small. The chronicler is explicit that the shape was not given but *earned* — a body as a ledger of choices. Turn: standing (badly) on two legs, it catches its silhouette in still water and recognizes itself. Recognition = the first loneliness. Plants: goblins look like this *because of what the deep asked of them*. In Book Three, the Root-Priest has the same silhouette, unchanged for three thousand years.
-
-**7. Hunger's Arithmetic.**
-Scene: the pale fungus discovered — the first renewable food. It glows faintly along lines; the lines converge downward, toward a depth where the creature's tunnels always, somehow, curl aside. It doesn't test this. It eats. First hoard: fungus stacked on the stone shelf, counted by laying a pebble against each cap. Turn: numbers exist now. So does worry (the pile can be *smaller than yesterday*). Plants: FUSE THREE's fringe — the curling-aside of deep tunnels, established as background physics the way you establish a wardrobe in a spare room.
-
-**8. The Wall That Was a Door Once.**
-Scene: following the sweet vein's memory, the creature clears rubble at the east face and finds worked stone — a lintel, a threshold, a shut way. Not goblin-made (nothing is, yet). It cannot open it and cannot leave it alone; it sleeps against it for the company of the counting. Turn: the first *artifact* — proof of Before, though it has no concept of history to hang it on. Plants: this lintel is warren-side, matching the Book Three revelation that the door under the world was barred *from below*.
-
-**9. The Name.**
-Scene: a cave-flood nearly kills it — swept from its shelf, hoard scattered, slate almost lost. In the aftermath, rebuilding, it experiences the thought *that almost was the end of — * and has no word for the last part of the sentence. It invents one. Scratches it on the slate in marks it makes up: the first written word of a civilisation, and it is a name. **Ketch.** Turn: Part One ends with selfhood formalized. The chronicler: "It had been a thing that wanted. Now it was a *someone* — which is a thing that wants and knows it, and can therefore be brave, and lonely, and owed."
+**5. The Name.**
+Scene: a cave-flood nearly ends the story. Swept from the shelf, hoard scattered, slate almost lost, and in the black churn the creature experiences the thought *that almost was the end of* and has no word for the last part of the sentence. It survives, rebuilds, and invents one. Scratches it on the slate in marks it makes up: the first written word of a civilisation, and it is a name. **Ketch.** Turn: selfhood formalized; Part One ends. Plants: the marks themselves, ancestor of every goblin glyph including the one cut into the Mechanica's foundation three books from now.
 
 ---
 
 ## PART TWO — THE STRAY
-*(The Runt Pack · chapters 10–22 · the invention of us)*
+*(The Runt Pack · chapters 6–15 · the invention of us)*
 
-**10. The Shape That Followed.**
-Scene: Ketch realizes it is being watched — and has been, for days. A smaller shape, starved, wrong-limbed, mimicking Ketch's scraping at a distance like a prayer. Ketch's first impulse is the hoard-impulse: drive it off. It sets out a fungus cap at the midpoint instead, and pretends not to look. Turn: the first gift. The stray eats, and follows closer. Plants: the stray — **Moro** — never speaks well, ever, but sees true; Moro will be the one who finds the Root Gallery.
+**6. The Shape That Followed.**
+Scene: Ketch is being watched, and has been for days. A smaller shape, starved, wrong-limbed, mimicking Ketch's scraping at a distance like a prayer. The hoard-instinct says drive it off. Ketch sets a fungus cap at the midpoint instead and pretends not to look. Turn: the first gift. Plants: the stray is **Moro**, who never speaks well and sees true, and who will find the Root Gallery.
 
-**11. The First Meal.**
-Scene: five now — strays accreting the way life does around warmth. The first *shared* meal, fungus split with a fairness nobody taught them, and the chronicler pauses the plot for a full page on why this scene, not the breach, is the hinge of goblin history. First argument (over sleeping spots). First rule. First breaking of the rule. First forgiveness — harder to invent than fire. Turn: the pack exists. Characters individuate: **Moro** (sees true), **Brakka** (big, gentle, afraid of the water), **Snit** (quick, light-fingered, lies to be liked), **Auntie Vess** (arrived old; nobody asks from where; touches walls like reading).
+**7. The First Meal.**
+Scene: five now, strays accreting the way life does around warmth. The first shared meal, split with a fairness nobody taught them. First argument. First rule. First breaking of the rule. First forgiveness, harder to invent than fire. Turn: the pack exists. Cast individuates in dialogue: **Moro** (literal, few words), **Brakka** (big, gentle, afraid of the water), **Snit** (quick, deflecting, lies to be liked), **Auntie Vess** (arrived old from nowhere anyone can name; touches walls like reading). Plants: Vess's nowhere was downward. Not confirmed until Book Three.
 
-**12. The Digging Song.**
-Scene: work in rhythm goes better — discovered accidentally when Brakka hums fear away in a tight seam and everyone's pace locks to it. First song: no words, just the pattern *three, rest, three.* Nobody, including the composer, notices where the rhythm came from. Turn: culture is born plagiarizing the Knocking. Plants: every warren-song in all three books carries this meter. The Chorus's hymn in Books Two and Three is this meter *inverted* — rest, three, rest. Music as the saga's fingerprint system.
+**8. The Digging Song.**
+Scene: work in rhythm goes better, discovered when Brakka hums his fear away in a tight seam and everyone's pace locks to it. First song: no words, just three, rest, three. Nobody notices where the rhythm came from. Turn: culture is born plagiarizing the Knocking. Plants: every goblin song carries this meter; the Chorus's hymn in later books is the meter inverted.
 
-**13. What the Water Keeps.**
-Scene: Brakka's terror of the flooded gallery below forces the pack to route around it — until Snit, showing off, swims it and returns with a graven shard: a fragment of relief-carving, hands (too many fingers) tending something vast and vegetal. First treasure. First lie, too — Snit claims there's nothing else down there. There is; Snit was too frightened to look at it twice. Turn: the pack now owns one piece of history it cannot read. Plants: the drowned gallery's carvings are the same iconography Fenwick assembles in Book Two — the primer's rhyme, *sun, tree, root, tender* — met here as pure image.
+**9. What the Water Keeps.**
+Scene: Snit, showing off, swims the flooded gallery Brakka fears and returns with a graven shard: relief-carving, hands with too many fingers tending something vast and vegetal. First treasure, first history. First lie too: Snit claims there was nothing else down there. There was; Snit couldn't look at it twice. Turn: the pack owns one piece of the Before it cannot read. Plants: the carving's iconography (sun, tree, root, tender) is what Fenwick's codex assembles in Book Two.
 
-**14. The First Grave.**
-Scene: a cave-in. The pack digs with hands, song abandoned, and pulls out the young stray **Pip** too late. Ketch holds the small cold hand and discovers grief — "the tax on the word *mine*," says the chronicler, "assessed without warning, at a rate of everything." The pack invents burial by instinct: down, not up. Into the mother-mud, which takes back its own. Turn: death enters the ledger; work slows for the first time for something that isn't hunger. Plants: burial *downward* as doctrine — by Book Three, "going down" is what goblins call both dying and coming home, and the ending trades on the doubled meaning.
+**10. The First Grave.**
+Scene: a cave-in takes the young stray **Pip**. The pack digs with bare hands, song abandoned, too late. Ketch holds the small cold hand and learns grief. Burial invented by instinct: down, not up, into the mother-mud, which takes back its own. Turn: death enters the ledger. Plants: burial downward as doctrine; by Book Three, "going down" means both dying and coming home, and the ending trades on the doubled meaning.
 
-**15. Jobs.**
-Scene: the warren almost starves because everyone dug and nobody foraged (the fungus doesn't wait). Council on the mud floor — seven goblins, solemn as a synod, deciding *who does what tomorrow.* This one digs. That one forages. Auntie Vess keeps the count. Turn: the economy is born, and the book treats it with full mythic weight: the chronicler names the moment "the second great invention, after forgiveness." Plants: the balance rule ("that none may starve") becomes the warren's first law and the Charge's first poetry.
+**11. Jobs.**
+Scene: the warren nearly starves because everyone dug and nobody foraged. Council on the mud floor: this one digs, that one forages, Vess keeps the count. Turn: the economy is born and the book treats it with full weight, the second great invention after forgiveness. Plants: the balance law, "that none may starve."
 
-**16. Snit's Wall.**
-Scene: Snit, caught skimming the hoard, flees ashamed toward the east face — and comes back changed, babbling: the Knocking *spoke* to Snit. Not in words. In offers. Snit, of all of them, understood it: *it wanted to trade.* Left overnight at the wall: one pebble. Found at dawn: one perfect nugget of sweet mud, and the pebble gone. Turn: the Knocking escalates from mystery to *counterparty*. The pack now half-worships, half-audits the east wall. Plants: the thing below trades fair. Every offering is answered at honest value. In Book Three this is the tell — the Hollow *lies*; the counting never has. Two different things are down there, and only one of them knocks.
+**12. Snit's Wall.**
+Scene: Snit, caught skimming the hoard, flees ashamed toward the east face and comes back changed. The Knocking made Snit an offer, not in words. One pebble left overnight at the wall. One perfect nugget of sweet mud found at dawn, pebble gone. Turn: the Knocking becomes a counterparty. Plants: it trades fair, always. In Book Three this is the tell: the Hollow lies, the counting never has. Two things are down there. Only one of them knocks.
 
-**17. Auntie Vess Reads the Walls.**
-Scene: Vess's habit of touching stone finally explained — she feels old tool-marks, and can tell goblin-scrape from Before-work from something older than both, "smoothed, not cut. Like the stone agreed to be shaped." She maps the warren by memory of texture: their home is not a cave. It is a *cellar*. Something's cellar. Turn: cosmology arrives — there is an upstairs. Plants: first articulation of the surface as a real place, setting Part Three's ambition; also Vess's craft becomes the Codex's authentication method in Book Two.
+**13. The Oracle Is Born Wrong-Eyed.**
+Scene: the warren's first birth. A runt with one eye dark, one pale as fungus-light, who does not cry. Vess, midwifing, goes very still: "One eye for the counting. One for the green." Nobody knows she said anything strange. Turn: the trilogy's chorus enters as an infant; time is generational now. Plants: her riddles will alternate counting-truths and green-truths; her last riddle in Book Three is spoken with both eyes open.
 
-**18. The Blind Season.**
-Scene: mid-book quiet chapter — a fungus blight, rationing, tempers, and the pack's first winter of the soul. Brakka sits with the water. Snit doesn't lie for a whole season (harder for Snit than hunger). Ketch learns the leader's loneliness: eating last, deciding whether to open the sealed lintel to look for food beyond it, choosing not to — not from fear, the chronicler notes, but because Ketch will not owe the Knocking a door. Turn: authority tempered. Plants: "will not owe" — Ketch's signature flaw/virtue, restated at the Root Gallery (ch. 21), the Horn (Book Two), and inverted at the ending of Book Three, where paying the oldest debt is the victory.
+**14. Moro Finds the Gallery.**
+Scene: Moro, gone two days down a crack, comes back silent and leads Ketch down by the hand. The deepest gallery, and the root: wide as a feasting-hall, dead as stone, running down past all sounding, with a groove worn around it, smooth as an old tool-handle. Small hands, thousands of years, tending. Moro puts a hand in the groove and begins, quietly, to walk it, as if remembering with the body. Vess pulls Moro away harder than needed. Turn: FUSE THREE fully lit. Evidence of predecessors, and of a job. Plants: everything. The groove's height matches goblin reach exactly.
 
-**19. The Oracle Is Born Wrong-Eyed.**
-Scene: a birth in the warren (the first) — a runt with one eye dark, one pale as fungus-light, who does not cry. Vess, midwifing, goes very still and says the old thing she's never explained: *"One eye for the counting, one for the green."* The pack doesn't know she said anything strange. The reader does. Turn: the trilogy's chorus enters as an infant; time is now generational. Plants: the Oracle's two eyes literalize the two fuses. Her riddles, starting ch. 26, alternate: counting-riddles (true about the deep) and green-riddles (true about the lost world). No one sorts them for three books. The final chapter of Book Three is her only riddle spoken with both eyes open.
-
-**20. Moro Finds the Gallery.**
-Scene: Moro, chasing a dropped pebble down a crack, is gone two days. Comes back silent — leads Ketch down by the hand. The deepest gallery: and there it is. The root. Wide as a feasting-hall, dead as stone, running down past all sounding — with a groove worn around its circumference, smooth as an old tool-handle. Small hands, thousands of years, tending. Turn: FUSE THREE fully lit. The pack stands before evidence of *predecessors* — and of a job. Plants: everything. The groove's height matches goblin reach exactly. Moro, who sees true, puts a hand in the groove and starts, very quietly, to walk it — as if remembering with the body. Vess pulls Moro away harder than needed.
-
-**21. The Sealing.**
-Scene: council over the root. Vess wants it tended (she doesn't say *tended*; she says "visited"). Snit wants it traded to the Knocking. Brakka wants it left alone. Ketch orders the gallery sealed — and the book is scrupulously honest about why: not fear, but the pull of a duty older than hunger, and Ketch is not ready to owe anyone anything. The warren has just learned *mine*. It is not ready for *ours*. Turn: the saga's original sin, committed with open eyes and good intentions. Vess is the last one out. She leaves her hand on the stone a long time. Plants: the seal is the door Ketch must reopen as an old ruler in Book Three; the chronicler marks it: "Every empire that was ever built is a wall raised around an unpaid debt."
-
-**22. The Counting Changes.**
-Scene: part-capper. The night the gallery is sealed, the Knocking — for the first time since chapter 4 — alters its rhythm. Three, rest, three becomes three, rest, *two.* Only the infant Oracle, awake in the dark, hears it. She is too young to tell anyone. The chronicler tells *us*, and declines to explain. Turn: dread installed under the floorboards of the whole trilogy. Plants: the missing knock. Book Three reveals the count was always a tally *of the tenders themselves* — the deep kept a place for each. Sealing the gallery struck the pack off its own ledger by one: Vess, who knew what she was, and now cannot go down.
+**15. The Sealing.**
+Scene: council over the root. Vess wants it visited. Snit wants it traded to the Knocking. Brakka wants it left alone. Ketch orders the gallery sealed, and the book is honest about why: not fear, but the pull of a duty older than hunger, and Ketch will not owe anyone anything. The warren has just learned *mine*. It is not ready for *ours*. That night the Knocking changes for the only time in the book: three, rest, three becomes three, rest, two. Only the infant Oracle hears. Turn: the saga's original sin, and Part Two ends with one knock missing. Plants: the count was always a tally of the tenders themselves. Sealing the gallery struck one goblin off the ledger: Vess, who knew what she was, and now cannot go down.
 
 ---
 
 ## PART THREE — THE HOARD AND THE ROOF
-*(The Mud Warrens · chapters 23–38 · a thousand loads of mud)*
+*(The Mud Warrens · chapters 16–24 · a thousand loads of mud)*
 
-**23. Dozens.**
-Scene: time-lapse chapter, seasons compressed saga-style. Strays keep coming — word travels in the dark in ways nobody examines. The warren at forty souls: districts, storage pits, the first woven-root baskets, the mud-count kept by Vess's pebble-ledger. Turn: society outgrows acquaintance — Ketch no longer knows every name, and feels the change like a draft. Plants: the anonymous warren-born, first generation to inherit rather than invent; their casualness about the old wonders (the lintel, the songs) is Book Two's population problem in miniature.
+**16. Dozens.**
+Scene: time-lapse, seasons compressed. Strays keep arriving; word travels in the dark in ways nobody examines. Forty souls: districts, storage pits, woven-root baskets, Vess's pebble-ledger. Turn: society outgrows acquaintance. Ketch no longer knows every name and feels it like a draft. Plants: the warren-born, first generation to inherit rather than invent.
 
-**24. The Mud Standard.**
-Scene: the chronicler's great economic digression, played absolutely straight: why mud. Wealth, mortar, memory, medium — the substance of the mother-dark itself, stacked and counted and sung over; a wedding portion paid in it, a wrong righted with it, Pip's grave topped with the sweetest vein of it. Turn: mud becomes *meaning*. By chapter's end the reader believes in a mud-hoard the way other books make you believe in dragon-gold. Plants: "the wealth of the world is the world" — the exact logic by which, in Book Three, the hoard can be *given back*.
+**17. The Mud Standard.**
+Scene: why mud is wealth, dramatized not lectured: a wedding portion paid in it, a wrong righted with it, Pip's grave topped with the sweetest vein of it. Turn: mud becomes meaning. Plants: "the wealth of the world is the world," the exact logic by which the hoard can one day be given back.
 
-**25. The Elder's Ear.**
-Scene: Auntie Vess, now truly old, spends her days with her ear pressed to the floor. The young think it's dotage. Moro sits with her. She teaches Moro — not in words; in listening. One night she grips Moro's wrist: the counting is *slower* than it was in her mother's time. Moro: "You never said you had a mother." Vess: "No. I never did." Turn: Vess's history cracks open one inch. Plants: Vess came *from below* — the last stray of the old tenders, arrived "from nowhere" in ch. 11 because nowhere was downward. Never confirmed in Book One. Confirmed by the Root-Priest, who asks after her by name three thousand pages later.
+**18. The Elder's Ear.**
+Scene: Vess, old now, ear to the floor for days. The young call it dotage. Moro sits with her and learns to listen. One night she grips Moro's wrist: the counting is slower than it was in her mother's time. Moro: "You never said you had a mother." Vess: "No. I never did." Turn: her history cracks open an inch. Plants: the counting is slowing across generations. The deep is running down, or waiting harder.
 
-**26. The First Riddle.**
-Scene: the wrong-eyed runt, now walking and talking (rarely, and only sideways), stops the whole warren mid-shift with her first riddle, delivered to Ketch at the top of the great stair: *"You were not the first to be lonely down here. You are only the first to be loud about it."* Turn: the Oracle assumes office; the warren, needing a category for her, invents reverence. Plants: riddle one is a counting-riddle (pale eye shut). Tally them, reader.
+**19. The First Riddle.**
+Scene: the wrong-eyed runt, walking and talking now, rarely and sideways, stops the warren mid-shift with her first riddle, to Ketch at the top of the great stair: "You were not the first to be lonely down here. You are only the first to be loud about it." Turn: the Oracle assumes office; the warren invents reverence to have somewhere to put her. Plants: riddle one is a counting-riddle, pale eye shut. Tally them.
 
-**27. Deep Tunnels Curl Aside.**
-Scene: engineering chapter. The warren needs depth for storage; every deep dig curls aside as if the earth politely declines. The diggers develop superstitions; Ketch develops a jaw-ache of suppressed knowing. A test bore aimed *directly* at the sealed gallery's level bends around it in a smooth arc no goblin dug. Turn: the world has opinions. The warren stops digging down. Starts, for the first time, talking about *up*. Plants: the earth protects the root — or contains it. The same arc, hugely magnified, is why the Dark Beyond's portals in Book Three open where they open: along lines where the god's body has thinned.
+**20. Deep Tunnels Curl Aside.**
+Scene: the warren needs depth for storage, and every deep dig curls aside as if the earth politely declines. A test bore aimed at the sealed gallery's level bends around it in a smooth arc no goblin dug. Turn: the world has opinions. The warren stops digging down and starts, for the first time, talking about up. Plants: the earth protects the root, or contains it. The same arcs, magnified, decide where the portals open in Book Three.
 
-**28. The Surface Heresies.**
-Scene: what is up there? First folklore war. Three camps: Up-Is-Death (traditionalists, Brakka presiding gently), Up-Is-Where-The-Dead-Go (the mystics — burial is down, so the dead must be sent *away* from us, so away must be up: impeccable wrong logic), Up-Is-More (the young, Snit's protégés, hungry). Vess says nothing, which everyone notices. Turn: ambition finds its direction. Ketch, silent through all of it, is watched by the Oracle: her dark eye open, her pale eye closed, or — no one can ever remember afterward — the reverse. Plants: "the Hollow wearing a sky-mask" enters the folklore here, a throwaway line of Up-Is-Death doctrine that Book Three makes retroactively load-bearing.
+**21. What Vess Left.**
+Scene: Auntie Vess dies mid-task, ear to the floor, one hand flat on the stone as if knocking back, very softly. Her effects: a pebble-ledger nobody can fully read, and, sewn inside her sleeping-roll, a hand-sized square of woven root-fiber. Green. The only green thing in the warren. No plant below ground makes it. Turn: FUSE TWO physically manifests, ownable, inherited. Ketch keeps it folded against the slate. Plants: the weave-pattern matches the groove-rhythm of the Root Gallery. It is a tender's badge of office. The Root-Priest wears its twin, unfaded, three thousand pages from now.
 
-**29. A Thousand Loads.**
-Scene: the elders' council sets the great number: a thousand loads of mud to brace the great shaft, and they can breach the roof of the world. The warren takes the number into itself like scripture — tally-walls, load-songs, children's games scored in loads. Turn: the book's endgame clock starts ticking, visibly, in every chapter. Plants: the Charge's phrasing — "Hoard a thousand loads of mud, then breach the roof of the world" — is graffiti'd on the tally-wall by an unknown hand: the first goblin poetry.
+**22. A Thousand Loads.**
+Scene: at Vess's downward burial the Oracle speaks over the grave, pale eye open: "She goes home the short way. You will all take the long way round, over the roof and through the fire and back down the inside of the world. Except the ones who don't." The elders, shaken, set the great number that same season: a thousand loads of mud to brace the great shaft, and they can breach the roof of the world. Tally-walls, load-songs, children's games scored in loads. Turn: the endgame clock of Part Three starts ticking in every scene. Plants: her riddle is the route-map of the whole trilogy, and "except the ones who don't" keeps the other fates alive as weather.
 
-**30. Snit's Ledger.**
-Scene: Snit, of all goblins, has become the keeper of the Knocking-trade — pebbles, shards, once (disastrously) a fungus cap left at the east wall; each answered overnight at fair value, in sweet mud, in slate, once in a bead of metal nobody can scratch. Snit keeps a secret ledger of the exchanges and has noticed what no one else has: the trades are *teaching* them. Each answer-gift is slightly beyond what the warren knows how to make. Turn: the Knocking is revealed as a patient tutor — or a farmer improving stock. Snit, who lies to be liked, tells no one, and for once it isn't a lie, it's a mercy. Plants: the unscratchable bead is adamantium. First contact with the god-killing metal is a *gift from below* — Book Two's forge-horror is the warren smelting on its own what the deep once handed them one bead at a time, wrapped in caution.
+**23. The Knocking Stops.**
+Scene: the shaft climbs; heat fades; damp fades; the dark thins into pallor. Deep-seam veterans refuse the high scaffolds; the warren-born climb like it's festival. The day the final ring is braced, the counting, continuous since page one, stops. The silence is a physical catastrophe: sleepers wake, Brakka weeps without knowing why, Snit leaves double payment at the east wall and it is not taken. Turn: the deep withdraws its custom, and the warren, to its own shame, is relieved. Plants: it did not stop. It cannot be heard from this high through this much braced and mortared distance. The warren has insulated itself from its own foundations. The Oracle begins going down to listen the way Vess did.
 
-**31. The Flood Year.**
-Scene: the drowned gallery rises — the worst flood in warren memory, Brakka's terror made cosmology. Brakka, who cannot swim and cannot stop being large, holds a collapsing dike with his back through a whole night's counting (the chronicler counts it: three, rest, three, four hundred times) while the warren evacuates the low seams. Dawn: the water stops one finger-width below the tally-wall. Turn: Brakka becomes the warren's first legend — and refuses the honor, which cements it. Plants: "the water knows its mark" enters the songbook; in Book Three the Mechanica's engineers use the flood-mark to date the warren, and get a number that frightens them.
+**24. The Breach.**
+Scene: eve-of-breach assembly, Ketch's first true speech, short. Then the Oracle at Ketch's elbow, both eyes open for one sentence only: "When the door under the world was shut, little digger, it was shut from below. Before you open the sky, ask which side of a door you bar." Ketch almost orders a halt, and the moment is honestly weighed: the hoard spent, the songs sung, forty faces upturned. No leader alive turns that tide. The climb. The crust. A fist of mud-caked knuckles punching through ash into freezing, alien light. The single tired sun. Distance itself, seen for the first time. The bones of the Before to every horizon. Snit laughs. Brakka faints. Moro looks back down the shaft. Turn: the world doubles in size at the exact middle of the book. Plants: in Ketch's other hand, unnoticed, out of pure habit, a smear of warren-mud pressed into the seam of the palm, and against the slate, Vess's square of green.
 
-**32. What Vess Left.**
-Scene: Auntie Vess dies as she lived — mid-task, ear to the floor, one hand flat on the stone as if knocking back, very softly. The warren's grief is enormous and strange: she was old when the pack was five; she is *fixed*, and her absence unfixes things. Her effects: a pebble-ledger no one can fully read, and — sewn inside her sleeping-roll — a hand-sized square of woven root-fiber, green. The only green thing in the warren. No plant below ground makes it. Turn: FUSE TWO physically manifests: the dream-colour, ownable, inherited. Ketch keeps it folded against the slate. Plants: the weave-pattern matches the groove-rhythm of the Root Gallery (Moro sees it; says nothing; walks it into memory). It is a tender's badge of office. In Book Three, the Root-Priest wears its twin, unfaded.
+---
 
-**33. Her Third Riddle.**
-Scene: at Vess's downward burial, the Oracle — pale eye open — speaks over the grave: *"She goes home the short way. You will all take the long way round, over the roof and through the fire and back down the inside of the world — except the ones who don't."* The warren takes it for comfort. It is a route-map of the entire trilogy. Turn: the reader is told the whole plot and cannot use the knowledge; the finest kind of dread. Plants: "except the ones who don't" — the fates not taken; also the first hint the Oracle sees *branches*, not one future, which keeps the saga's other endings alive as real weather rather than decoration.
+## PART FOUR — THE SMOG-PIT
+*(Era II, stage 2.1 · chapters 25–38 · the surface: ruin as far as the eye can see. Pick it clean.)*
 
-**34. The Great Shaft.**
-Scene: the ascent begins — the engineering epic of the book's climb. Bracing rings of mud-brick, scaffolds of blightroot timber salvaged from the flood, load-songs echoing up a shaft that swallows torchlight. Heat fades. Damp fades. The dark thins into something worse than dark: *pallor.* Veterans of the deep seams refuse the high scaffolds; the young warren-born, who dream less green, climb like it's a festival. Turn: altitude becomes generational sorting. Plants: the shaft is dug precisely up the line of the old lintel-door's ghost — Vess's texture-map, inherited by Moro, chose the route. They are climbing an old road without knowing it. The door was always a stair.
+**25. The First Night Under Stars.**
+Scene: the pack camps in the lee of a dead manufactory. First fire under open sky. First cold that comes from above. Star-count in the old meter without anyone noticing: three, rest, three. Half the pack wants to go back down; the vote that follows is the surface's first political act, and it is won not by courage but by Snit pointing out there is more *stuff* up here than the warren could count in a lifetime. Turn: they stay. Plants: the manufactory's mark, a two-sun sigil, stamped on every beam. Fenwick's codex opens with this sigil in Book Two.
 
-**35. The Knocking Stops.**
-Scene: the day the final shaft-ring is braced, the counting — continuous since page one, the pulse under every scene, the meter inside every song — stops. The silence is a physical catastrophe: goblins stumble mid-verse; sleepers wake; Brakka weeps without knowing why. Snit leaves double payment at the east wall. It is not taken. Turn: the deep has withdrawn its custom. The warren, to its own shame, is *relieved* — and sings louder to fill the quiet. Plants: it did not stop. It cannot be heard from this high, through this much braced and mortared distance — the warren has insulated itself from its own foundations. The Oracle, alone at the sealed gallery door far below, can still hear it. She begins going down to listen the way Vess did. Book Three finds her still doing it.
+**26. Pick It Clean.**
+Scene: the invention of scavenging as craft. What scrap is: the good iron bones under the rust, the pins and plates and cable the Before left in their millions. First sled. First salvage-yard. First fight over a find, settled by the balance law, extended now beyond food. Turn: the surface economy is born. Plants: buried in the third load, a bead of dark metal that will not take a scratch. Snit pockets it and says nothing. It is the twin of the one the Knocking once traded them, and the marrow-flecks in Ketch. Adamantium enters the book as litter.
 
-**36. Which Side of a Door.**
-Scene: eve of the breach. Torch-lit assembly at the shaft's foot; Ketch's first true speech (short; the chronicler gives it whole). Then, in the crowd's roar, the Oracle at Ketch's elbow with the book's thesis riddle, both eyes open for one sentence only: *"When the door under the world was shut, little digger, it was shut from below. Ask yourself, before you open the sky: which side of a door do you bar?"* Turn: Ketch almost — almost — orders a halt. The moment is honestly weighed: the hoard spent, the songs sung, forty faces upturned. No leader alive turns that tide. Ketch climbs. Plants: the answer to her riddle (*the side the danger is on*) is the Book Three revelation in miniature: they barred the underside; the danger was never below the door — the danger IS the absence the door lies across, and they are about to build a world on top of it.
+**27. The Angry Trees.**
+Scene: blightwood. Stands of black trees that grew after the Sundering and grew wrong: dense, oily, and they groan when cut, a sound too near a voice. Brakka, axe in hand, asks the question nobody answers: "What did they grow out of?" Turn: fuel exists, and it costs something to take. Plants: blightwood grew from the god's shed matter; the groan is the book keeping its accounts honest. Ash from this wood is the alchemy of Book Two.
 
-**37. The Breach.**
-Scene: the climb, the crust, the fist of mud-caked knuckles punching through ash into freezing, alien light. Full sensory catastrophe: the single tired sun, distance itself (no goblin has ever seen farther than torchlight), the horizon-to-horizon bones of the Before. The pack surfaces one by one into awe and terror. Snit laughs. Brakka faints. Moro looks *back down* the shaft. Turn: the world doubles in size and the book ends its physical journey. Plants: in Ketch's other hand, unnoticed, carried out of pure habit: a smear of warren-mud pressed into the seam of the palm — and against the slate, Vess's square of green. The chronicler closes in on the palm for the book's final image before the epilogue: "The whole of what followed — the horn and the hegemony, the engine and the ending — was already there, folded in the seam of one small hand. It usually is."
+**28. The Stray Under the Sun.**
+Scene: the first surface-stray arrives, a goblin who has never touched the mother-dark, born wild in the wastes. Through her eyes the pack sees itself as others will: mud-caked, deep-voiced, singing in a meter she doesn't know. She stays. Others follow. Turn: population becomes plot; the warren-born are outnumbered within three chapters and the songs speed up. Plants: the generational sorting that dominates Book Two's Smoghaven. Her name is **Reeka**, and her grandchildren will run the forges.
 
-**38. Epilogue — The First Night Under Stars.**
-Scene: the pack camps in the lee of a dead manufactory. First fire under open sky. First star-count (they use the old meter without noticing: three, rest, three). The Oracle, small at the fire's edge, pale eye reflecting starlight, speaks the book's last line to no one in particular: *"Now the world will learn we are here. Next it will decide what we are for. Try to answer before it does, little diggers. The last ones who let the world decide are the reason the sky has room for so many stars."* Turn: Book One closes; every fuse lit, no fuse spent. Plants: Book Two's opening image (the same fire, one year later, ringed by a shanty-town) is staged here — and the chronicler signs off with the first hint of their identity: "I was not yet born when they made that fire. I have spent my whole life warming my hands at it. — F."
+**29. The Smog-Pit Takes Its Name.**
+Scene: the camp digs in around the old manufactory pit, part shelter, part hoard-vault. Cookfires plus blightwood plus a windless bowl of land equals the first smog, a brown lid that stings and stays. The strays name the place with wasteland bluntness, and it sticks, and it is almost an insult and entirely theirs. Turn: the settlement has a name, which means it has a future. Plants: the pit is the manufactory's old delving, and it goes deeper than anyone has bothered to check.
+
+**30. The Oracle Comes Up Last.**
+Scene: the Oracle ascends the shaft only after the town is named. She stands in daylight for the first time in her life, pale eye watering, dark eye shut, and delivers the surface's first riddle: "Down there the dark kept count of you. Up here you must learn to count yourselves. It is harder. The dark never lied about the number." Turn: the warren below becomes the old country; the book's center of gravity moves permanently upstairs. Plants: counting yourselves is a Book Two theme (ledgers, censuses, notoriety), and the line about lying is the Hollow's indictment three books early.
+
+**31. What the Ruins Teach.**
+Scene: deep salvage inside the manufactory. Intact machinery in lines, purpose unknowable. A wall of pressed-metal writing nobody can read, except that Moro traces one repeated glyph-cluster and walks its shape without knowing why: the same rhythm as the groove on the root. Turn: the Before was not a different world. It was this one, and it knew about the deep. Plants: manufactories were built over root-lines deliberately. The Before was drawing something up. Fenwick's codex spends Book Two proving what this chapter makes the reader feel.
+
+**32. The Toll.**
+Scene: **Uzgar Red-Maw** arrives with the ash-waste's oldest institution: extortion. Warlord of the wastes, goblin like them and nothing like them, ash-born, splendid, and reasonable in the way a landslide is reasonable. His riders ring the Smog-Pit and he names his price for the town's continued existence, payable in scrap and food. Turn: the surface has owners, and the pack meets its first mirror: goblins whom the world made hard instead of deep. Plants: Uzgar's four-step arc (toll, escalation, coming himself, and an end no reader expects) threads through Books One and Two.
+
+**33. Pay or Bleed.**
+Scene: the council splits three ways, the book's first true political argument in dialogue: Snit for paying (buy time, hide the good scrap), Brakka for the wall (hold anyway), Reeka for the wastes' third way (make the toll expensive to collect). Ketch pays, and hates it, and learns the leader's arithmetic: pride is a resource like any other, and this season the town is short. Turn: the toll is paid; the resentment is banked. Plants: "will not owe" wounded in Ketch for the first time since the sealing; the debt to Uzgar becomes the engine of the Part Four climax.
+
+**34. The Stakes.**
+Scene: the town answers the toll the goblin way: not revenge, work. The first wall rises, wooden stakes in a ring, laughable and beloved. The first watch is set. Brakka stands the first night of it, and the chapter stays with him, slow and kind, the town's fear and his own old water-fear both held off by the same act of standing still. Turn: defence exists. The town has an inside and an outside now, same as the mud once did. Plants: the wall's nine lives (stakes to rampart to stone to the Iron Horizon) begin here; Brakka's *hold anyway* becomes the watch's creed.
+
+**35. The Cold Fire.**
+Scene: the problem of the surface winter: blightwood burns dirty and fast, food runs thin, and the smog-lid makes the town sick. In the manufactory's bones, Reeka and Moro find the answer the Before left behind: a kiln, a true kiln, built to cook wood down slow into something better. They do not know the word for what comes out. They know it burns hot, clean, and long. Ash. Turn: the refining chain's first link, found not invented. Plants: everything the Before built up here was for burning downward. The kiln is step one of a recipe, and the recipe's last step is the god-killing metal.
+
+**36. The First Kiln-Fire.**
+Scene: rebuilding the kiln, the town's first great communal work since the shaft. It fails twice. The third firing takes through a whole night's counting (the old meter, hummed by forty voices around a brick oven under a brown sky), and at dawn the kiln coughs and settles into a deep, even burn that will not go out for three years. Turn: the town has industry. The Smog-Pit earns its smog honestly now. Plants: the kiln's draw runs down the manufactory's old flues, into the pit's uncheck-ed depths. Smoke goes down before it goes up. Something below is being warmed for the first time in an age.
+
+**37. Uzgar's Second Visit.**
+Scene: the Red-Maw returns off-season, alone but for two riders, which is worse than an army. He has smelled the smoke and done the arithmetic: a town with fire is a town worth more, or a town about to be dangerous. The parley between him and Ketch, brazier between them, is the book's climax in dialogue: two goblins, one born of mud, one born of ash, arguing what their people are for. Uzgar raises the toll. Ketch, with the kiln at his back and the wall at his sides and the arithmetic finally favorable, refuses. Turn: the first refusal. Uzgar smiles, which is the worst thing he does in the whole book, and rides off leaving the threat unspent. Plants: Book Two's opening movement (the escalation) is loaded and cocked.
+
+**38. Epilogue: The Ledger and the Light.**
+Scene: quiet close. Winter's first snow greys the smog. Ketch walks the wall at dusk: the kiln glowing, the tally-wall relocated stone by stone from the warren below, Vess's green square and the old slate wrapped together in oilcloth at his belt. Down the shaft, far past hearing, the Oracle sits at the sealed gallery door, listening to what nobody else remembers is there. And in the salvage-yard, by lamplight, a young warren-born scribe the book has shown only twice, sorting shards with too many fingers carved on them, begins, in the first written marks descended from a name on a slate, a private list of everything the Before left behind. Turn: Book One closes; every fuse lit, none spent. Final epigraph, and the book's last line, signed for the first time: "It was never a list. It was a letter to whoever would need it. I was eleven years old, and I am writing it still. F."
 
 ---
 
@@ -147,18 +154,28 @@ Scene: the pack camps in the lee of a dead manufactory. First fire under open sk
 
 | Fuse | Laid | Advanced | Book One state at close |
 |---|---|---|---|
-| **The Knocking / the Counting** | ch. 1, 4 | 16, 22, 25, 30, 35 | Stopped (audibly); actually insulated away. Rhythm altered once (22) — the missing knock unexplained. |
-| **The Green Dreams** | ch. 5 | 19, 32, 33 | Physical token in Ketch's keeping (Vess's weave); source unexplained; Oracle's pale eye linked. |
-| **The Root Gallery** | ch. 7 (fringe), 20 | 21, 27, 32 | Sealed by Ketch's own order; Moro carries the groove-rhythm in body-memory; Oracle descends to listen. |
+| **The Knocking / the Counting** | ch. 1, 3 | 12, 15, 18, 23, 30 | Inaudible from the surface (insulated, not stopped). Rhythm altered once (15): the missing knock, unexplained. Oracle still descends to listen. |
+| **The Green Dreams** | ch. 4 | 13, 21, 22 | Vess's green weave in Ketch's keeping; source unexplained; Oracle's pale eye linked. |
+| **The Root Gallery** | ch. 9 (image), 14 | 15, 20, 31 | Sealed by Ketch's order; Moro carries the groove-rhythm in body-memory and found its twin in the manufactory glyphs; the kiln's flues now warm the deep. |
+| **Adamantium** | ch. 26 (bead) | 35 (the recipe's shape) | In Snit's pocket and Ketch's marrow; unnamed, unscratched, waiting for Book Two's forge. |
+| **Uzgar Red-Maw** | ch. 32 | 33, 37 | Toll paid once, refused once. The smile. Escalation loaded for Book Two. |
 
 ## Character ledger at close of Book One
 
-- **Ketch** — founder, namer, sealer of the gallery. Flaw/virtue fused: *will not owe.* Carries slate, mud-seam, green weave. Book Two cost: everything he will not owe accrues interest.
-- **Moro** — sees true, speaks little. Body-memory of the tending. Book Two: quartermaster of Smoghaven; Book Three: first to walk the groove again.
-- **Brakka** — legend against his will. Fear of water transmuted into the warren's patron-virtue: *hold anyway.* Dies (Book Two, the first raid) holding a gate; his song outlives the wall it saved.
-- **Snit** — reformed liar, keeper of the secret ledger, first goblin to suspect they were being *taught*. Book Two: becomes the Tallyman's opposite number and near-friend. The ledger resurfaces in Fenwick's codex.
-- **Auntie Vess** — the last old tender, unrevealed. Her weave, her pebble-ledger, her name in the Root-Priest's first question.
-- **The Oracle** — wrong-eyed chorus. Riddle-tally at book's close: three counting, two green, one both-eyed. She does not age normally. No one has yet noticed.
-- **The chronicler ("F.")** — voice of the saga; identity planted, unpaid.
+- **Ketch**: founder, namer, sealer of the gallery, payer and refuser of the toll. Flaw and virtue fused: will not owe. Carries slate, mud-seam, green weave. Book Two collects the interest.
+- **Moro**: sees true, speaks little. Body-memory of the tending; matched the groove to the manufactory glyphs. Book Two: quartermaster of Smoghaven.
+- **Brakka**: the watch's creed made flesh. Hold anyway. Dies in Book Two's first raid holding a gate; his song outlives the wall it saved.
+- **Snit**: reformed liar, keeper of two secrets (the ledger of trades, the bead). First goblin to suspect they were being taught. Book Two: the Tallyman's opposite number.
+- **Auntie Vess** (d., ch. 21): the last old tender, unrevealed. Her weave, her ledger, her name in the Root-Priest's first question.
+- **Reeka**: first surface-stray, wasteland-practical, co-finder of the kiln. Book Two: forge-mistress; her line runs the fires of Smoghaven.
+- **Uzgar Red-Maw**: warlord of the ash-wastes, the mirror. Arc spans Books One and Two.
+- **The Oracle**: wrong-eyed chorus. Riddle-tally at close: two counting, one green, one both-eyed. She does not age normally. No one has noticed yet.
+- **Fenwick ("F.")**: glimpsed twice, revealed in the last line as the codex-keeper. Eleven years old at book's end. The epigraphs are his, written across a lifetime.
 
-*Next desk-work: Book Two outline (the four faction-arcs need beat-grids before drafting), and Chapter One prose — see `CHAPTER_ONE.md`.*
+## Revised trilogy map
+
+- **Book One — The Mud That Wanted**: Era I entire + Era II stage 2.1. Mud to town. Ends at the first kiln-fire and the refusal of the toll.
+- **Book Two — The Horn of Smoghaven**: Era II stages 2.2 and 2.3. Town to power. The forge, the factions, the raids, the Chorus surfacing, Uzgar's arc paid off, and the Herald Horn's note as the final page.
+- **Book Three — The Root Rekindled**: Era III entire. Power to parable. Dominion, Coalition, the Dark Beyond, the Mechanica abandoned, the mud given back.
+
+*Next desk-work: Chapter One prose to the revised structure (see `CHAPTER_ONE.md`), then Book Two's faction beat-grids.*

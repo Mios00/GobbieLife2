@@ -2,6 +2,8 @@
 
 *A trilogy of the world after the Sundering — being the tale of the mud that learned to want, the horn that woke the thrones, and the door that was never a door.*
 
+> **Revision note (structure v2).** The book boundaries have shifted since this treatment was written; `BOOK_ONE_OUTLINE.md` is authoritative. Book One now covers Era I entire **plus Era II stage 2.1** (the breach lands mid-book; the book ends at the first kiln-fire and the refusal of Uzgar's toll). Book Two covers stages 2.2–2.3, opening at Smoghaven and closing on the Herald Horn's note. Book Three is unchanged (Era III and the Root). Prose style is also superseded: third person limited, Mistborn register, codex epigraphs, no em dashes — see the style guide in the outline.
+
 ---
 
 > *Before the ash there were two suns, and beneath the two suns an empire, and beneath the empire — holding it up the way roots hold a mountain — a god shaped like a tree.*
