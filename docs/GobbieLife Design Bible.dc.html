@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#000;}
+  body{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace}
+  ::selection{background:#26352a;color:#e2ebe3}
+  a{color:inherit}
+  @keyframes blink{0%,48%{opacity:1}49%,100%{opacity:0}}
+  @keyframes belt{to{background-position:-34px 0}}
+  @keyframes flick{0%,100%{opacity:.9}43%{opacity:.55}61%{opacity:1}}
+  @keyframes warn{0%,100%{opacity:1}50%{opacity:.2}}
+  @keyframes breathe{0%,100%{opacity:.55}50%{opacity:1}}
+  @keyframes drift{to{transform:translateY(-3px)}}
+  ::-webkit-scrollbar{width:11px;height:11px}
+  ::-webkit-scrollbar-track{background:#000}
+  ::-webkit-scrollbar-thumb{background:#1d1d20;border:3px solid #000;border-radius:0}
+  ::-webkit-scrollbar-thumb:hover{background:#2c2c30}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#000;color:#9b988f;font-size:15px;line-height:1.45;padding-bottom:120px">
+
+  <!-- ============ STICKY TONE BAR ============ -->
+  <div style="position:sticky;top:0;z-index:50;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);border-bottom:1px solid #1a1a1c;padding:10px 22px;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:9px;flex:1;min-width:200px">
+      <span style="color:#86b394">(._.)</span>
+      <span style="color:#5e5d57;font-size:12px;letter-spacing:.04em">gobbielife://design-bible</span>
+      <span style="color:#33332f;font-size:12px">·</span>
+      <span style="color:#46453f;font-size:12px">v0.1</span>
+      <span style="width:8px;height:15px;background:#86b394;display:inline-block;animation:blink 1.1s step-end infinite"></span>
+    </div>
+    <div style="display:flex;align-items:center;gap:13px">
+      <span style="font-size:11px;letter-spacing:.16em;color:#7a5b4e">GRIMDARK</span>
+      <input type="range" min="0" max="100" value="{{ tone }}" onInput="{{ onTone }}" style="width:200px;accent-color:#86b394;cursor:pointer;background:transparent">
+      <span style="font-size:11px;letter-spacing:.16em;color:#6f8a72">SILLY</span>
+      <span style="min-width:118px;text-align:right;font-size:11px;font-weight:700;letter-spacing:.14em;color:#cfcabd">{{ toneLabel }}</span>
+    </div>
+  </div>
+
+  <div style="max-width:1140px;margin:0 auto;padding:0 26px">
+
+    <!-- ============ MASTHEAD ============ -->
+    <header style="padding:78px 0 30px;border-bottom:1px solid #1a1a1c">
+      <div style="font-size:11px;letter-spacing:.34em;color:#5b5a54;margin-bottom:30px">AN IDLE ASCII SAGA &nbsp;·&nbsp; LIVING DESIGN BIBLE</div>
+      <div style="display:flex;align-items:flex-end;gap:30px;flex-wrap:wrap">
+        <h1 style="margin:0;font-size:clamp(48px,8vw,104px);font-weight:800;letter-spacing:-.035em;color:#ece9df;line-height:.92">GobbieLife</h1>
+        <div style="font-size:clamp(28px,5vw,52px);color:#3f3e39;padding-bottom:6px;letter-spacing:-.04em">(._.)<span style="color:#86b394;animation:breathe 2.4s ease-in-out infinite">_</span></div>
+      </div>
+      <p style="max-width:760px;margin:30px 0 0;font-size:18px;line-height:1.62;color:#b6b3a9">You are mud that learned to want. From one blind digger scraping the dark, to the tyrant of a wounded high-fantasy world — <span style="color:#86b394">one click at a time.</span></p>
+      <div style="display:flex;gap:46px;flex-wrap:wrap;margin-top:38px">
+        <div><div style="font-size:10px;letter-spacing:.2em;color:#56554f;margin-bottom:7px">GENRE</div><div style="color:#cdcabf;font-size:13px;line-height:1.6">Incremental · idle · narrative</div></div>
+        <div><div style="font-size:10px;letter-spacing:.2em;color:#56554f;margin-bottom:7px">IN THE LINEAGE OF</div><div style="color:#cdcabf;font-size:13px;line-height:1.6">Candy Box · A Dark Room · Paperclips</div></div>
+        <div><div style="font-size:10px;letter-spacing:.2em;color:#56554f;margin-bottom:7px">THE ARC</div><div style="color:#cdcabf;font-size:13px;line-height:1.6">3 eras · 9 stages · 5 endings · 7 settlement tiers</div></div>
+        <div><div style="font-size:10px;letter-spacing:.2em;color:#56554f;margin-bottom:7px">THE PROMISE</div><div style="color:#cdcabf;font-size:13px;line-height:1.6">The UI itself evolves as you do</div></div>
+      </div>
+      <nav style="display:flex;gap:8px;flex-wrap:wrap;margin-top:40px">
+        <a href="#stick" style="text-decoration:none;font-size:12px;color:#8b887f;border:1px solid #232325;padding:7px 13px;border-radius:3px;background:#0a0a0b" style-hover="border-color:#3a4a3e;color:#cdcabf">01 / Why it sticks</a>
+        <a href="#world" style="text-decoration:none;font-size:12px;color:#8b887f;border:1px solid #232325;padding:7px 13px;border-radius:3px;background:#0a0a0b" style-hover="border-color:#3a4a3e;color:#cdcabf">02 / The world &amp; cast</a>
+        <a href="#engine" style="text-decoration:none;font-size:12px;color:#8b887f;border:1px solid #232325;padding:7px 13px;border-radius:3px;background:#0a0a0b" style-hover="border-color:#3a4a3e;color:#cdcabf">03 / Narrative engine</a>
+        <a href="#screens" style="text-decoration:none;font-size:12px;color:#8b887f;border:1px solid #232325;padding:7px 13px;border-radius:3px;background:#0a0a0b" style-hover="border-color:#3a4a3e;color:#cdcabf">04 / Live screens</a>
+        <a href="#eras" style="text-decoration:none;font-size:12px;color:#8b887f;border:1px solid #232325;padding:7px 13px;border-radius:3px;background:#0a0a0b" style-hover="border-color:#3a4a3e;color:#cdcabf">05 / The three eras</a>
+        <a href="#settle" style="text-decoration:none;font-size:12px;color:#9a6f54;border:1px solid #2a1f14;padding:7px 13px;border-radius:3px;background:#0a0604" style-hover="border-color:#5a3a1e;color:#e2935a">06 / Settlement growth</a>
+        <a href="#builds" style="text-decoration:none;font-size:12px;color:#9a8c4e;border:1px solid #26240f;padding:7px 13px;border-radius:3px;background:#0a0a06" style-hover="border-color:#5a5236;color:#e7c468">07 / Building catalog</a>
+        <a href="#pacing" style="text-decoration:none;font-size:12px;color:#8b887f;border:1px solid #232325;padding:7px 13px;border-radius:3px;background:#0a0a0b" style-hover="border-color:#3a4a3e;color:#cdcabf">08 / Pacing</a>
+        <a href="#paths" style="text-decoration:none;font-size:12px;color:#8b887f;border:1px solid #232325;padding:7px 13px;border-radius:3px;background:#0a0a0b" style-hover="border-color:#3a4a3e;color:#cdcabf">09 / The five fates</a>
+      </nav>
+    </header>
+
+    <!-- ============ 01 WHY IT STICKS ============ -->
+    <section id="stick" style="padding:64px 0;border-bottom:1px solid #1a1a1c;scroll-margin-top:64px">
+      <div style="font-size:11px;letter-spacing:.28em;color:#6f8a72;margin-bottom:14px">01 — THE STORYBOARD PROBLEM</div>
+      <h2 style="margin:0 0 18px;font-size:34px;font-weight:700;color:#ece9df;letter-spacing:-.02em;max-width:780px">Numbers going up is the bait. The hook is <span style="color:#86b394">revelation.</span></h2>
+      <p style="max-width:740px;margin:0 0 40px;color:#a8a59b;font-size:15.5px;line-height:1.7">Candy Box didn't retain players with candy. It retained them with the suspicion that the silly counter hid an enormous, strange game underneath. GobbieLife is built on five engineered cravings — each one a reason to come back tomorrow.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:#1a1a1c;border:1px solid #1a1a1c">
+        <div style="background:#0a0a0b;padding:26px 24px">
+          <div style="font-size:24px;color:#3c4a40;margin-bottom:14px">▚</div>
+          <div style="font-size:10px;letter-spacing:.2em;color:#6f8a72;margin-bottom:9px">PILLAR 01</div>
+          <h3 style="margin:0 0 9px;font-size:17px;color:#e2dfd5;font-weight:700">The UI is the progress bar</h3>
+          <p style="margin:0;font-size:13.5px;line-height:1.65;color:#928f86">The screen is empty black with one goblin. Every bottleneck you smash physically re-draws the interface — tabs fade in, daylight cracks the warren, pipes and dashboards bloom. You're not grinding a number; you're grinding toward a <span style="color:#bdb9ae">transformation you can see.</span></p>
+        </div>
+        <div style="background:#0a0a0b;padding:26px 24px">
+          <div style="font-size:24px;color:#3c4a40;margin-bottom:14px">↟</div>
+          <div style="font-size:10px;letter-spacing:.2em;color:#6f8a72;margin-bottom:9px">PILLAR 02</div>
+          <h3 style="margin:0 0 9px;font-size:17px;color:#e2dfd5;font-weight:700">The most pathetic underdog</h3>
+          <p style="margin:0;font-size:13.5px;line-height:1.65;color:#928f86">You begin as the single most worthless creature in fantasy — a blind lump of <span style="color:#bdb9ae">(._.)</span> in the mud. The power fantasy isn't a chosen hero; it's vermin clawing up to rewrite the map. Rags-to-empire at civilizational scale.</p>
+        </div>
+        <div style="background:#0a0a0b;padding:26px 24px">
+          <div style="font-size:24px;color:#3c4a40;margin-bottom:14px">◐</div>
+          <div style="font-size:10px;letter-spacing:.2em;color:#6f8a72;margin-bottom:9px">PILLAR 03</div>
+          <h3 style="margin:0 0 9px;font-size:17px;color:#e2dfd5;font-weight:700">Tone is self-expression</h3>
+          <p style="margin:0;font-size:13.5px;line-height:1.65;color:#928f86">At the outset the player sets the *voice* of their whole run — bleak and bloody, or gleeful and absurd — and it <span style="color:#bdb9ae">holds</span>, so the narrator never whiplashes mid-saga. Two players' chronicles read like different games: screenshot fuel and replay fuel. (The slider up top is a live preview of both extremes.)</p>
+        </div>
+        <div style="background:#0a0a0b;padding:26px 24px">
+          <div style="font-size:24px;color:#3c4a40;margin-bottom:14px">⌥</div>
+          <div style="font-size:10px;letter-spacing:.2em;color:#6f8a72;margin-bottom:9px">PILLAR 04</div>
+          <h3 style="margin:0 0 9px;font-size:17px;color:#e2dfd5;font-weight:700">A saga that's half-yours</h3>
+          <p style="margin:0;font-size:13.5px;line-height:1.65;color:#928f86">Authored tentpoles give the world weight and meaning. Procedural Whispers between them give every run a unique texture of names, deaths, and small absurd victories. The same spine, never the same flesh.</p>
+        </div>
+        <div style="background:#0a0a0b;padding:26px 24px">
+          <div style="font-size:24px;color:#3c4a40;margin-bottom:14px">⑂</div>
+          <div style="font-size:10px;letter-spacing:.2em;color:#6f8a72;margin-bottom:9px">PILLAR 05</div>
+          <h3 style="margin:0 0 9px;font-size:17px;color:#e2dfd5;font-weight:700">The ending is being written now</h3>
+          <p style="margin:0;font-size:13.5px;line-height:1.65;color:#928f86">Tiny choices in Era 1 quietly accrue Alignment. By the time the four endings reveal themselves, players realize the finale was seeded a hundred clicks ago — and immediately want to replay for the others.</p>
+        </div>
+        <div style="background:#0b0c0a;padding:26px 24px;display:flex;flex-direction:column;justify-content:center;border:1px solid #2a3a2e">
+          <div style="font-size:10px;letter-spacing:.2em;color:#86b394;margin-bottom:11px">THE CORE LOOP, IN ONE LINE</div>
+          <p style="margin:0;font-size:14px;line-height:1.7;color:#cdcabf">Click → resource → automate → <span style="color:#86b394">hit a wall</span> → a story beat re-draws the world → richer click → repeat, three times, bigger each era.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 THE WORLD ============ -->
+    <section id="world" style="padding:64px 0;border-bottom:1px solid #1a1a1c;scroll-margin-top:64px">
+      <div style="font-size:11px;letter-spacing:.28em;color:#6f8a72;margin-bottom:14px">02 — THE WORLD &amp; ITS DRAMAS</div>
+      <h2 style="margin:0 0 18px;font-size:34px;font-weight:700;color:#ece9df;letter-spacing:-.02em;max-width:820px">A wounded realm of high fantasy — seen from the gutter looking up.</h2>
+      <p style="max-width:760px;margin:0 0 44px;color:#a8a59b;font-size:15.5px;line-height:1.7">The grandeur is real: gilded elven spires, smoke-choked war-states of men, dwarven trade-holds older than kings. GobbieLife's twist is the <span style="color:#bdb9ae">vantage</span>. You are the thing they scrape off their boots — and you are coming up through the floor.</p>
+
+      <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:start">
+        <div>
+          <div style="border-left:2px solid #2a3a2e;padding:4px 0 4px 22px;margin-bottom:30px">
+            <h3 style="margin:0 0 10px;font-size:18px;color:#e2dfd5;font-weight:700">The Gut, beneath the Dead God-Tree</h3>
+            <p style="margin:0;font-size:14px;line-height:1.72;color:#9d9a90">Ages past, the high powers fought the <span style="color:#bdb9ae">Sundering Wars</span> and bled raw magic into the deep earth. It pooled in the lightless mud beneath the roots of a god-tree they had already killed. The mud quickened. It learned to hunger, then to dig, then to <span style="color:#bdb9ae">want.</span> That is you. You are not a chosen people. You are a side-effect — refuse that woke up. The whole world above agrees you are vermin. The whole game is proving them right, or proving them wrong.</p>
+          </div>
+          <div style="border-left:2px solid #2a2a2c;padding:4px 0 4px 22px;margin-bottom:30px">
+            <h3 style="margin:0 0 10px;font-size:18px;color:#e2dfd5;font-weight:700">The three powers above</h3>
+            <p style="margin:0;font-size:14px;line-height:1.72;color:#9d9a90"><span style="color:#cdbf9a">The Sunspire elves</span> — beautiful, decadent, certain of their superiority and quietly terrified of being replaced. <span style="color:#c98a6a">The Iron States of men</span> — fractious, industrial, already burning their own forests; your natural rivals and natural mirror. <span style="color:#9fb0c4">The Dwarrow trade-holds</span> — neutral, mercenary, will sell a blade to anyone with the coin. Your first door into the world economy runs through them.</p>
+          </div>
+          <div style="border-left:2px solid #2a2a2c;padding:4px 0 4px 22px">
+            <h3 style="margin:0 0 10px;font-size:18px;color:#e2dfd5;font-weight:700">The question the game asks</h3>
+            <p style="margin:0;font-size:14px;line-height:1.72;color:#9d9a90">When the discarded inherit power, what do they build with it? A boot? A wall? A market? A shield? The four endings are four answers — and the player spends the whole game, mostly without noticing, choosing one.</p>
+          </div>
+        </div>
+
+        <div style="background:#0a0a0b;border:1px solid #1d1d1f;border-radius:4px;padding:24px">
+          <div style="font-size:10px;letter-spacing:.2em;color:#6f8a72;margin-bottom:18px">RECURRING CAST · AUTHORED ANCHORS</div>
+          <div style="display:flex;flex-direction:column;gap:18px">
+            <div style="display:flex;gap:14px">
+              <div style="font-size:18px;color:#5a6b5e;min-width:42px;text-align:center">(˃ᯅ˂)</div>
+              <div><div style="color:#dcd8ce;font-size:14px;font-weight:600;margin-bottom:3px">Vesk the One-Eyed</div><div style="font-size:12.5px;line-height:1.6;color:#8d8a81">The first Runt to speak your name. Your lieutenant, conscience, or casualty — depending on the road you take.</div></div>
+            </div>
+            <div style="height:1px;background:#161618"></div>
+            <div style="display:flex;gap:14px">
+              <div style="font-size:18px;color:#6b665a;min-width:42px;text-align:center">≈?≈</div>
+              <div><div style="color:#dcd8ce;font-size:14px;font-weight:600;margin-bottom:3px">The Whisperer in the Mud</div><div style="font-size:12.5px;line-height:1.6;color:#8d8a81">The voice of the narration itself. The dead god-tree? Your own hunger? It never says. Its register bends with your Tone.</div></div>
+            </div>
+            <div style="height:1px;background:#161618"></div>
+            <div style="display:flex;gap:14px">
+              <div style="font-size:18px;color:#7a7060;min-width:42px;text-align:center">$_$</div>
+              <div><div style="color:#dcd8ce;font-size:14px;font-weight:600;margin-bottom:3px">The Tallyman</div><div style="font-size:12.5px;line-height:1.6;color:#8d8a81">A dwarven merchant with no loyalties and excellent prices. Your bridge from the warren to the world.</div></div>
+            </div>
+            <div style="height:1px;background:#161618"></div>
+            <div style="display:flex;gap:14px">
+              <div style="font-size:18px;color:#9a8a6a;min-width:42px;text-align:center">◇⩊◇</div>
+              <div><div style="color:#dcd8ce;font-size:14px;font-weight:600;margin-bottom:3px">Lady Aelith of the Sunspire</div><div style="font-size:12.5px;line-height:1.6;color:#8d8a81">The elven envoy sent to handle you. The face of everything you threaten — and a possible ally, if you take that road.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FACTIONS -->
+      <div style="margin-top:46px;font-size:11px;letter-spacing:.2em;color:#6f8a72;margin-bottom:16px">THE FIVE POWERS · WHO ELSE IS ON THE BOARD</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:#1a1a1c;border:1px solid #1a1a1c">
+        <div style="background:#0a0a0b;padding:20px 18px">
+          <div style="display:flex;gap:6px;margin-bottom:12px"><span style="width:14px;height:14px;background:#cdbf9a"></span><span style="width:14px;height:14px;background:#0a0a0b;border:1px solid #cdbf9a"></span></div>
+          <div style="color:#e4ddc9;font-size:14px;font-weight:700;margin-bottom:6px">The Sunspire Concord</div>
+          <div style="font-size:10px;letter-spacing:.14em;color:#8a7e54;margin-bottom:8px">ELVES · DECADENT · DIVIDED</div>
+          <p style="margin:0;font-size:12.5px;line-height:1.6;color:#928f86">Gilded, brilliant, and quietly terrified of being replaced. Split between Aelith's doves and Sylvareth's purifying hawks. Whichever wing you empower changes the whole world's posture toward you.</p>
+        </div>
+        <div style="background:#0a0a0b;padding:20px 18px">
+          <div style="display:flex;gap:6px;margin-bottom:12px"><span style="width:14px;height:14px;background:#c98a6a"></span><span style="width:14px;height:14px;background:#7a3416"></span></div>
+          <div style="color:#e8c4a0;font-size:14px;font-weight:700;margin-bottom:6px">The Iron States</div>
+          <div style="font-size:10px;letter-spacing:.14em;color:#9a6f54;margin-bottom:8px">MEN · INDUSTRIAL · FRACTIOUS</div>
+          <p style="margin:0;font-size:12.5px;line-height:1.6;color:#928f86">A dozen feuding war-states already burning their own forests for fuel. They don't fear you as vermin — they resent you as a competitor. Your truest mirror, and your fiercest rival for the same dirty future.</p>
+        </div>
+        <div style="background:#0a0a0b;padding:20px 18px">
+          <div style="display:flex;gap:6px;margin-bottom:12px"><span style="width:14px;height:14px;background:#9fb0c4"></span><span style="width:14px;height:14px;background:#3a4450"></span></div>
+          <div style="color:#cdd6e0;font-size:14px;font-weight:700;margin-bottom:6px">The Dwarrow Trade-Holds</div>
+          <div style="font-size:10px;letter-spacing:.14em;color:#6f7a8a;margin-bottom:8px">DWARVES · NEUTRAL · MERCANTILE</div>
+          <p style="margin:0;font-size:12.5px;line-height:1.6;color:#928f86">Older than kings, loyal to no one but the ledger. They'll arm anyone with coin — which makes them your first and most reliable door into the world economy. The Tallyman is their hand in your warren.</p>
+        </div>
+        <div style="background:#0a0a0b;padding:20px 18px">
+          <div style="display:flex;gap:6px;margin-bottom:12px"><span style="width:14px;height:14px;background:#8a9a7e"></span><span style="width:14px;height:14px;background:#2c3326"></span></div>
+          <div style="color:#cbd6bd;font-size:14px;font-weight:700;margin-bottom:6px">The Splinter Packs</div>
+          <div style="font-size:10px;letter-spacing:.14em;color:#7a8a6a;margin-bottom:8px">RIVAL GOBLINS · FERAL · MANY</div>
+          <p style="margin:0;font-size:12.5px;line-height:1.6;color:#928f86">Other warrens that woke from the same mud. Absorb them, raid them, or be betrayed by them. They are everything you might have stayed — and the cheapest, ugliest source of early growth.</p>
+        </div>
+        <div style="background:#08070a;padding:20px 18px;border:1px solid #2a2438">
+          <div style="display:flex;gap:6px;margin-bottom:12px"><span style="width:14px;height:14px;background:#8a7ea0"></span><span style="width:14px;height:14px;background:#1a1626"></span></div>
+          <div style="color:#cfc6e0;font-size:14px;font-weight:700;margin-bottom:6px">The Hollow</div>
+          <div style="font-size:10px;letter-spacing:.14em;color:#7a6f96;margin-bottom:8px">THE DARK BEYOND · STIRRING</div>
+          <p style="margin:0;font-size:12.5px;line-height:1.6;color:#9a93ad">Something older than the Sundering, pressing at the edge of every map. The reason the Savior path exists at all — and the locked door behind the fifth, hidden fate.</p>
+        </div>
+      </div>
+
+      <!-- WIDER CAST -->
+      <div style="margin-top:40px;font-size:11px;letter-spacing:.2em;color:#6f8a72;margin-bottom:16px">THE WIDER CAST · MORE AUTHORED ANCHORS</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:#1a1a1c;border:1px solid #1a1a1c">
+        <div style="background:#0a0a0b;padding:18px;display:flex;gap:13px"><div style="font-size:17px;color:#cdbf9a;min-width:44px;text-align:center">◇⩘◇</div><div><div style="color:#e4ddc9;font-size:13.5px;font-weight:700;margin-bottom:4px">Archon Sylvareth</div><div style="font-size:12px;line-height:1.55;color:#8d8a81">The Sunspire hawk. Wants goblins purged root and branch — and grows stronger every time you prove him right.</div></div></div>
+        <div style="background:#0a0a0b;padding:18px;display:flex;gap:13px"><div style="font-size:17px;color:#c98a6a;min-width:44px;text-align:center">[ŏ̬]</div><div><div style="color:#e8c4a0;font-size:13.5px;font-weight:700;margin-bottom:4px">Marshal Brand</div><div style="font-size:12px;line-height:1.55;color:#8d8a81">A human warlord who respects you as a competitor and never, ever as a creature. Trade or war — he meets you as an equal.</div></div></div>
+        <div style="background:#0a0a0b;padding:18px;display:flex;gap:13px"><div style="font-size:17px;color:#9fb0c4;min-width:44px;text-align:center">(▰▰)</div><div><div style="color:#cdd6e0;font-size:13.5px;font-weight:700;margin-bottom:4px">Guildmother Korrin</div><div style="font-size:12px;line-height:1.55;color:#8d8a81">Dwarrow matriarch who quietly prices your entire rise. The Tallyman answers to her. Stay useful and stay solvent.</div></div></div>
+        <div style="background:#0a0a0b;padding:18px;display:flex;gap:13px"><div style="font-size:17px;color:#8a9a7e;min-width:44px;text-align:center">(҂ʘ̧̬ʘ̧̬)</div><div><div style="color:#cbd6bd;font-size:13.5px;font-weight:700;margin-bottom:4px">Grosh the Gut-Mother</div><div style="font-size:12px;line-height:1.55;color:#8d8a81">Rival goblin queen of the largest Splinter Pack. Absorb her, war her, or fall to her — the first goblin who could end you.</div></div></div>
+        <div style="background:#0a0a0b;padding:18px;display:flex;gap:13px"><div style="font-size:17px;color:#86b394;min-width:44px;text-align:center">▤▤▤</div><div><div style="color:#cbd6bd;font-size:13.5px;font-weight:700;margin-bottom:4px">Mab the Chronicler</div><div style="font-size:12px;line-height:1.55;color:#8d8a81">The goblin who carves the Memory Stones. She <i>is</i> your Chronicle — and she remembers every choice you'd rather she forgot.</div></div></div>
+        <div style="background:#08070a;padding:18px;display:flex;gap:13px;border:1px solid #2a2438"><div style="font-size:17px;color:#8a7ea0;min-width:44px;text-align:center">≀⩌≀</div><div><div style="color:#cfc6e0;font-size:13.5px;font-weight:700;margin-bottom:4px">The Root-Priest</div><div style="font-size:12px;line-height:1.55;color:#9a93ad">A zealot who swears the dead god-tree still speaks. Dismissed as mad — until the hidden path proves every word of it true.</div></div></div>
+      </div>
+    </section>
+
+    <!-- ============ 03 NARRATIVE ENGINE ============ -->
+    <section id="engine" style="padding:64px 0;border-bottom:1px solid #1a1a1c;scroll-margin-top:64px">
+      <div style="font-size:11px;letter-spacing:.28em;color:#6f8a72;margin-bottom:14px">03 — THE HYBRID NARRATIVE ENGINE</div>
+      <h2 style="margin:0 0 18px;font-size:34px;font-weight:700;color:#ece9df;letter-spacing:-.02em;max-width:820px">Authored bones. Procedural flesh. A chronicle that's uniquely yours.</h2>
+      <p style="max-width:780px;margin:0 0 40px;color:#a8a59b;font-size:15.5px;line-height:1.7">Pure procedural text feels like noise; pure authored text can't react. GobbieLife runs <span style="color:#bdb9ae">three intensities at once</span> — ambient flavor, stakes-bearing events, and authored tentpoles — all gated by four state variables, so the saga always means something <span style="color:#bdb9ae">and</span> always surprises.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:#1a1a1c;border:1px solid #1a1a1c;margin-bottom:36px">
+        <div style="background:#0a0a0b;padding:22px 20px">
+          <div style="color:#86b394;font-size:13px;font-weight:700;letter-spacing:.04em;margin-bottom:8px">◆ SAGA BEATS</div>
+          <div style="font-size:10px;letter-spacing:.18em;color:#5e5d57;margin-bottom:11px">AUTHORED · ~3–4 PER ERA</div>
+          <p style="margin:0;font-size:13px;line-height:1.6;color:#928f86">Fixed tentpole moments that fire at stage thresholds. Hand-written, fully branched on Tone and Alignment. These are the spine — meaning, characters, consequence.</p>
+        </div>
+        <div style="background:#0a0a0b;padding:22px 20px">
+          <div style="color:#cdbf9a;font-size:13px;font-weight:700;letter-spacing:.04em;margin-bottom:8px">≈ WHISPERS</div>
+          <div style="font-size:10px;letter-spacing:.18em;color:#5e5d57;margin-bottom:11px">PROCEDURAL · CONSTANT DRIP</div>
+          <p style="margin:0;font-size:13px;line-height:1.6;color:#928f86">Micro-events assembled live from authored fragment blocks — <span style="color:#bdb9ae">[WHO] · [DID] · [WHAT] · [WHERE]</span> — filtered by Tone, Era and recent resources. Infinite texture, zero noise.</p>
+        </div>
+        <div style="background:#0a0a0b;padding:22px 20px">
+          <div style="color:#c98a6a;font-size:13px;font-weight:700;letter-spacing:.04em;margin-bottom:8px">▤ THE CHRONICLE</div>
+          <div style="font-size:10px;letter-spacing:.18em;color:#5e5d57;margin-bottom:11px">PERSISTENT · SHAREABLE</div>
+          <p style="margin:0;font-size:13px;line-height:1.6;color:#928f86">Every beat and notable Whisper is etched into a scrolling Memory-Stone log — the player's personal saga, exportable as a wall of text. The replay & share engine.</p>
+        </div>
+        <div style="background:#0a0a0b;padding:22px 20px">
+          <div style="color:#9fb0c4;font-size:13px;font-weight:700;letter-spacing:.04em;margin-bottom:8px">⊞ THE FOUR DIALS</div>
+          <div style="font-size:10px;letter-spacing:.18em;color:#5e5d57;margin-bottom:11px">STATE · GATES EVERYTHING</div>
+          <p style="margin:0;font-size:13px;line-height:1.6;color:#928f86"><b style="color:#bdb9ae">Tone</b> (grim↔silly, set at run start) · <b style="color:#bdb9ae">Alignment</b> (4-axis accrual, <span style="color:#8a7ea0">kept hidden — surfaced only as Oracle riddles</span>) · <b style="color:#bdb9ae">Era/Stage</b> · <b style="color:#bdb9ae">Grit</b> (morale). Every line of text queries these before it's chosen or assembled.</p>
+        </div>
+      </div>
+
+      <!-- WHISPER GENERATOR DEMO -->
+      <div style="background:#08080a;border:1px solid #232325;border-radius:5px;overflow:hidden">
+        <div style="display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid #1a1a1c;background:#0c0c0e">
+          <span style="width:9px;height:9px;border-radius:50%;background:#2a3a2e"></span>
+          <span style="font-size:11px;letter-spacing:.14em;color:#6f8a72">WHISPER ENGINE · LIVE DEMO</span>
+          <span style="margin-left:auto;font-size:11px;color:#5e5d57">obeys the tone slider ↑</span>
+        </div>
+        <div style="padding:28px 22px">
+          <div style="font-size:11px;letter-spacing:.16em;color:#56554f;margin-bottom:14px">ASSEMBLED FROM BLOCKS →</div>
+          <div style="display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px">
+            <span style="font-size:12.5px;color:#cdcabf;background:#11140f;border:1px solid #2a3a2e;border-radius:3px;padding:6px 11px">{{ whisper.who }}</span>
+            <span style="font-size:12.5px;color:#cdcabf;background:#14110f;border:1px solid #3a2f26;border-radius:3px;padding:6px 11px">{{ whisper.did }}</span>
+            <span style="font-size:12.5px;color:#cdcabf;background:#0f1214;border:1px solid #26323a;border-radius:3px;padding:6px 11px">{{ whisper.what }}</span>
+            <span style="font-size:12.5px;color:#cdcabf;background:#13110f;border:1px solid #3a3526;border-radius:3px;padding:6px 11px">{{ whisper.where }}</span>
+          </div>
+          <div style="font-size:18px;line-height:1.6;color:#dcd8ce;min-height:54px;border-left:2px solid #2a3a2e;padding:6px 0 6px 18px;margin-bottom:24px">≈ &nbsp;{{ whisper.text }}</div>
+          <button onClick="{{ rollWhisper }}" style="font-family:inherit;font-size:13px;letter-spacing:.06em;color:#bfe0c8;background:#11160f;border:1px solid #34492f;border-radius:3px;padding:11px 20px;cursor:pointer" style-hover="background:#16201400;border-color:#4a6440;background:#17211a">↻ &nbsp;ROLL A NEW WHISPER</button>
+        </div>
+      </div>
+
+      <!-- THE RECKONINGS -->
+      <div style="margin-top:46px;border-top:1px solid #1a1a1c;padding-top:38px">
+        <div style="font-size:11px;letter-spacing:.2em;color:#c87a6a;margin-bottom:14px">THE MIDDLE TIER · THE RECKONINGS</div>
+        <h3 style="margin:0 0 14px;font-size:24px;font-weight:700;color:#ece9df;letter-spacing:-.01em;max-width:820px">Between the flavor and the tentpoles: events with teeth.</h3>
+        <p style="max-width:820px;margin:0 0 30px;color:#a8a59b;font-size:14.5px;line-height:1.68">Whispers tell you the world is alive; Saga Beats are the chapters you remember. <span style="color:#bdb9ae">Reckonings</span> are the weather in between — disasters, windfalls, dilemmas and omens that draw from a stage-gated deck, carry real mechanical stakes, and are skinned by your Tone. They're what stop a long idle stretch from going quiet.</p>
+
+        <!-- three-intensity ladder -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-bottom:34px">
+          <div style="background:#0a0a0b;border:1px solid #1d1d1f;border-radius:4px;padding:16px 18px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><span style="color:#8a857a;font-size:13px;font-weight:700">≈ Whispers</span><span style="font-size:10px;letter-spacing:.1em;color:#56554f">CONSTANT</span></div>
+            <div style="height:4px;background:#161618;border-radius:2px;overflow:hidden;margin-bottom:9px"><div style="width:22%;height:100%;background:#5e5d57"></div></div>
+            <p style="margin:0;font-size:12px;line-height:1.55;color:#7e7b72">Ambient. No stakes. Pure texture and mood.</p>
+          </div>
+          <div style="background:#0d0807;border:1px solid #3a2218;border-radius:4px;padding:16px 18px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><span style="color:#d89a7a;font-size:13px;font-weight:700">◇ Reckonings</span><span style="font-size:10px;letter-spacing:.1em;color:#9a6f54">OCCASIONAL</span></div>
+            <div style="height:4px;background:#1a0f08;border-radius:2px;overflow:hidden;margin-bottom:9px"><div style="width:60%;height:100%;background:#c87a6a"></div></div>
+            <p style="margin:0;font-size:12px;line-height:1.55;color:#a8847a">Real stakes. Often a choice. Logged to the Chronicle.</p>
+          </div>
+          <div style="background:#0a0b0a;border:1px solid #2a3a2e;border-radius:4px;padding:16px 18px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><span style="color:#86b394;font-size:13px;font-weight:700">◆ Saga Beats</span><span style="font-size:10px;letter-spacing:.1em;color:#6f8a72">RARE · PIVOTAL</span></div>
+            <div style="height:4px;background:#11160f;border-radius:2px;overflow:hidden;margin-bottom:9px"><div style="width:100%;height:100%;background:#86b394"></div></div>
+            <p style="margin:0;font-size:12px;line-height:1.55;color:#7ea489">Authored tentpoles that redraw the world.</p>
+          </div>
+        </div>
+
+        <!-- four reckoning sub-types -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:#1a1a1c;border:1px solid #1a1a1c;margin-bottom:30px">
+          <div style="background:#0a0708;padding:20px 18px">
+            <div style="color:#c87a6a;font-size:13px;font-weight:700;margin-bottom:9px">▼ CALAMITIES</div>
+            <p style="margin:0;font-size:12.5px;line-height:1.6;color:#9a8580">Cave-ins and floods early; killing smog, tailings-bursts and ash-winters at the forge; great quakes, blood-plagues, starfalls and the Hollow tide at world-scale. The disasters escalate with the eras and punish overextension — the bigger you grow, the more surface they have to strike.</p>
+          </div>
+          <div style="background:#080a08;padding:20px 18px">
+            <div style="color:#86b394;font-size:13px;font-weight:700;margin-bottom:9px">▲ FORTUNES</div>
+            <p style="margin:0;font-size:12.5px;line-height:1.6;color:#869a86">A rich seam, a prodigy runt, a fungus bloom, a defector bearing a Blueprint, a windfall of Spoils. Rarer than calamities, and never quite free.</p>
+          </div>
+          <div style="background:#0b0a07;padding:20px 18px">
+            <div style="color:#cdbf9a;font-size:13px;font-weight:700;margin-bottom:9px">◆ DILEMMAS</div>
+            <p style="margin:0;font-size:12.5px;line-height:1.6;color:#9a9580">Choice events — a captured scout, a pack at the gates, a plague in the warren. Each option is a resource trade <span style="color:#bdb9ae">and</span> a silent nudge to your Alignment; some are outright <span style="color:#bdb9ae">gambles</span> (a good/bad branch on a coin-flip), and a whole strand — <span style="color:#bdb9ae">The Standings</span> — turns each choice into warmer or colder relations with the four powers. This is where the four (five) fates are quietly written.</p>
+          </div>
+          <div style="background:#08070a;padding:20px 18px">
+            <div style="color:#8a7ea0;font-size:13px;font-weight:700;margin-bottom:9px">◌ OMENS</div>
+            <p style="margin:0;font-size:12.5px;line-height:1.6;color:#9a93ad">Lore in the wild — a Sundering-war relic, the Root-Priest's vision, carvings that hint at the Hollow. Rare, optional, and the breadcrumbs to the hidden fate.</p>
+          </div>
+        </div>
+
+        <!-- stage-scaling matrix -->
+        <div style="background:#08080a;border:1px solid #232325;border-radius:5px;overflow:hidden;margin-bottom:18px">
+          <div style="padding:11px 18px;border-bottom:1px solid #1a1a1c;background:#0c0c0e;font-size:11px;letter-spacing:.14em;color:#c87a6a">ONE ARCHETYPE, THREE SCALES — THE CAVE-IN NEVER STOPS MATTERING</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
+            <div style="padding:18px;border-right:1px solid #161618">
+              <div style="font-size:10px;letter-spacing:.14em;color:#8a857a;margin-bottom:7px">ERA I — "A tunnel collapses."</div>
+              <p style="margin:0;font-size:12.5px;line-height:1.6;color:#928f86">Lose 2–4 Runts and a cache of Mud. <span style="color:#7e7b72">Grim:</span> they're buried screaming in the dark. <span style="color:#7e7b72">Silly:</span> they're fine — just mortified, and very muddy.</p>
+            </div>
+            <div style="padding:18px;border-right:1px solid #161618">
+              <div style="font-size:10px;letter-spacing:.14em;color:#b07a4e;margin-bottom:7px">ERA II — "A gantry buckles."</div>
+              <p style="margin:0;font-size:12.5px;line-height:1.6;color:#a07a5e">A Smelter goes offline, Scrap is lost, and Grit takes the hit as the town watches the smoke.</p>
+            </div>
+            <div style="padding:18px">
+              <div style="font-size:10px;letter-spacing:.14em;color:#a8954e;margin-bottom:7px">ERA III — "An outpost caves in."</div>
+              <p style="margin:0;font-size:12.5px;line-height:1.6;color:#a89a5e">You lose a supply node and a trade route — and foreign powers smell weakness on the wind.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- dilemma anatomy + deck rules -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px">
+          <div style="background:#0b0a07;border:1px solid #2a2418;border-radius:5px;padding:20px">
+            <div style="font-size:11px;letter-spacing:.14em;color:#cdbf9a;margin-bottom:12px">DILEMMA ANATOMY · "THE CAPTURED SCOUT"</div>
+            <p style="margin:0 0 13px;font-size:12.5px;line-height:1.6;color:#9a9580">A Sunspire scout is dragged before you, terrified. The warren waits. Every door costs something and leans your fate:</p>
+            <div style="display:flex;flex-direction:column;gap:8px;font-size:12px">
+              <div style="display:flex;gap:10px"><span style="color:#9fb0c4;min-width:62px">Ransom</span><span style="color:#928f86;flex:1">+ coin, a Diplomatic lean, and the Sunspire owes you a favor.</span></div>
+              <div style="display:flex;gap:10px"><span style="color:#c87a6a;min-width:62px">Eat him</span><span style="color:#928f86;flex:1">+ Grit, an Aggressive lean — Tone decides how gleeful.</span></div>
+              <div style="display:flex;gap:10px"><span style="color:#d2e0ec;min-width:62px">Free him</span><span style="color:#928f86;flex:1">a Heroic lean, and an ally who returns at the worst moment, for you.</span></div>
+              <div style="display:flex;gap:10px"><span style="color:#cdbf9a;min-width:62px">Send back</span><span style="color:#928f86;flex:1">blindfolded — an Isolationist lean; the world learns nothing of you.</span></div>
+            </div>
+          </div>
+          <div style="background:#0a0a0b;border:1px solid #1d1d1f;border-radius:5px;padding:20px">
+            <div style="font-size:11px;letter-spacing:.14em;color:#6f8a72;margin-bottom:12px">HOW THE DECK STAYS FAIR</div>
+            <div style="display:flex;flex-direction:column;gap:11px;font-size:12.5px;line-height:1.55;color:#928f86">
+              <div><span style="color:#bdb9ae">State-reactive weighting.</span> Low Grit pulls morale events; overexpansion pulls calamities; fresh tech pulls fortunes. The world responds to how you play — never pure RNG.</div>
+              <div><span style="color:#bdb9ae">Cooldowns &amp; draws.</span> Each archetype is a card pulled from a stage-gated deck and set aside until reshuffle, so you never eat two famines back to back.</div>
+              <div><span style="color:#bdb9ae">Doubles as the brake.</span> Because calamities scale with your footprint, reckless growth carries real risk — the events themselves enforce the deliberate pacing.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 LIVE SCREENS ============ -->
+    <section id="screens" style="padding:64px 0;border-bottom:1px solid #1a1a1c;scroll-margin-top:64px">
+      <div style="font-size:11px;letter-spacing:.28em;color:#6f8a72;margin-bottom:14px">04 — LIVE SCREENS · THE UI EVOLVES</div>
+      <h2 style="margin:0 0 18px;font-size:34px;font-weight:700;color:#ece9df;letter-spacing:-.02em;max-width:820px">Four moments from the arc. Watch the interface itself grow up.</h2>
+      <p style="max-width:760px;margin:0 0 40px;color:#a8a59b;font-size:15.5px;line-height:1.7">These are faked but clickable mock-screens. <span style="color:#86b394">Screen A is wired</span> — scrape real mud, and the tone slider rewrites what the dark says back to you.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:26px">
+
+        <!-- SCREEN A — 1.1 -->
+        <div data-screen-label="Stage 1.1 mock" style="border:1px solid #1f1f21;border-radius:5px;overflow:hidden;background:#000">
+          <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:#070708;border-bottom:1px solid #161618">
+            <span style="font-size:11px;color:#5a6b5e">●</span><span style="font-size:11px;letter-spacing:.1em;color:#6f6e68">STAGE 1.1 — THE LONE SCRAPPER</span><span style="margin-left:auto;width:6px;height:12px;background:#3c4a40;animation:blink 1.2s step-end infinite"></span>
+          </div>
+          <div style="padding:30px 22px;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(120% 80% at 50% 40%,#050605,#000)">
+            <div style="color:#2c2c2a;font-size:13px;letter-spacing:.5em;margin-bottom:18px">·&nbsp;&nbsp;·&nbsp;&nbsp;·&nbsp;&nbsp;·&nbsp;&nbsp;·</div>
+            <div style="font-size:40px;color:#cdcabf;letter-spacing:-.04em;margin-bottom:4px">(._.)</div>
+            <div style="color:#2c2c2a;font-size:13px;letter-spacing:.5em;margin-bottom:24px">·&nbsp;&nbsp;·&nbsp;&nbsp;·&nbsp;&nbsp;·&nbsp;&nbsp;·</div>
+            <p style="font-size:13.5px;line-height:1.6;color:#8f8c83;max-width:300px;min-height:66px;margin:0 0 22px">{{ scrapeFlavor }}</p>
+            <button onClick="{{ scrape }}" style="font-family:inherit;font-size:13px;letter-spacing:.08em;color:#cdcabf;background:#0c0d0c;border:1px solid #2c2c2e;border-radius:3px;padding:12px 22px;cursor:pointer" style-hover="border-color:#4a6440;color:#bfe0c8">[ &nbsp;SCRAPE MUD&nbsp; ]</button>
+            <div style="margin-top:22px;font-size:12px;letter-spacing:.14em;color:#56554f">MUD &nbsp;<span style="color:#cdcabf;font-weight:700">{{ mud }}</span></div>
+          </div>
+        </div>
+
+        <!-- SCREEN B — 1.3 -->
+        <div data-screen-label="Stage 1.3 mock" style="border:1px solid #1f1f21;border-radius:5px;overflow:hidden;background:#000">
+          <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:#070708;border-bottom:1px solid #161618">
+            <span style="font-size:11px;color:#5a6b5e">●</span><span style="font-size:11px;letter-spacing:.1em;color:#6f6e68">STAGE 1.3 — THE MUD WARRENS</span>
+          </div>
+          <div style="display:flex;gap:0;font-size:11px;border-bottom:1px solid #161618">
+            <div style="padding:9px 13px;color:#cdcabf;border-bottom:2px solid #86b394;letter-spacing:.08em">WARREN</div>
+            <div style="padding:9px 13px;color:#6f6e68;letter-spacing:.08em">DIGGERS</div>
+            <div style="padding:9px 13px;color:#6f6e68;letter-spacing:.08em">STORES</div>
+            <div style="padding:9px 13px;color:#6f6e68;margin-left:auto">⌁</div>
+          </div>
+          <div style="padding:22px;min-height:262px">
+            <div style="font-size:11px;letter-spacing:.14em;color:#56554f;margin-bottom:8px">MUD STORE &nbsp;<span style="color:#cdcabf">740</span> / 1000</div>
+            <div style="height:14px;background:#0d0d0e;border:1px solid #232325;border-radius:2px;overflow:hidden;margin-bottom:20px"><div style="width:74%;height:100%;background:repeating-linear-gradient(90deg,#3c4a40,#3c4a40 6px,#46564a 6px,#46564a 12px)"></div></div>
+            <div style="font-size:11px;letter-spacing:.14em;color:#56554f;margin-bottom:13px">JOB ASSIGNMENTS</div>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px">
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;color:#aeaba1"><span>Mud Diggers</span><span style="display:flex;align-items:center;gap:11px;color:#6f6e68">◄<span style="color:#cdcabf;min-width:14px;text-align:center">6</span>►</span></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;color:#aeaba1"><span>Fungus Foragers</span><span style="display:flex;align-items:center;gap:11px;color:#6f6e68">◄<span style="color:#cdcabf;min-width:14px;text-align:center">3</span>►</span></div>
+            </div>
+            <div style="font-size:11px;letter-spacing:.14em;color:#56554f;margin-bottom:9px">THE PACK</div>
+            <div style="font-size:18px;color:#7e7b72;letter-spacing:.08em;margin-bottom:22px">(._.)(o.o)(-.-)(._.)(˃ᯅ˂)(o.o)</div>
+            <button style="width:100%;font-family:inherit;font-size:12.5px;letter-spacing:.08em;color:#cdbf9a;background:#0e0d0a;border:1px solid #3a3526;border-radius:3px;padding:13px;cursor:pointer;animation:breathe 3s ease-in-out infinite" style-hover="border-color:#5a5236;color:#e0d4b0">▲ &nbsp;BREACH THE SURFACE &nbsp;— &nbsp;1,000 MUD</button>
+          </div>
+        </div>
+
+        <!-- SCREEN C — 2.2 -->
+        <div data-screen-label="Stage 2.2 mock" style="border:1px solid #2a1f18;border-radius:5px;overflow:hidden;background:#080503">
+          <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:#0c0704;border-bottom:1px solid #2a1a10">
+            <span style="font-size:11px;color:#c46a32">●</span><span style="font-size:11px;letter-spacing:.1em;color:#9a6f54">STAGE 2.2 — SMOGHAVEN</span>
+          </div>
+          <div style="padding:22px;min-height:262px;background:radial-gradient(120% 90% at 70% 20%,#140a05,#070403)">
+            <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:.12em;margin-bottom:16px"><span style="color:#9a6f54">GRIT</span><span style="color:#d3702f">▓▓▓▓▓▓▓░░░ 71%</span></div>
+            <div style="font-family:inherit;font-size:13px;line-height:1.5;color:#b07a4e;background:#0a0604;border:1px solid #2a1a10;border-radius:3px;padding:14px;margin-bottom:14px">
+              <div style="overflow:hidden;white-space:nowrap">SCRAP <span style="display:inline-block;width:54px;background:repeating-linear-gradient(90deg,#3a2616,#3a2616 8px,#5a3a1e 8px,#5a3a1e 16px);background-size:34px 100%;animation:belt .7s linear infinite;color:transparent">····</span>→<span style="color:#d3702f">[ SMELTER ]</span>→ <span style="color:#e2935a">IRON</span></div>
+              <div style="overflow:hidden;white-space:nowrap;margin-top:8px">ASH&nbsp;&nbsp; <span style="display:inline-block;width:54px;background:repeating-linear-gradient(90deg,#3a2616,#3a2616 8px,#5a3a1e 8px,#5a3a1e 16px);background-size:34px 100%;animation:belt 1s linear infinite;color:transparent">····</span>→<span style="color:#d3702f">[ FORGE&nbsp;&nbsp;]</span>→ <span style="color:#e2935a">PLATE</span></div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px">
+              <div style="background:#0a0604;border:1px solid #2a1a10;border-radius:3px;padding:10px"><div style="font-size:10px;letter-spacing:.14em;color:#9a6f54;margin-bottom:6px">SMELTER ×3</div><div style="height:6px;background:#1a0f08;border-radius:2px;overflow:hidden"><div style="width:88%;height:100%;background:#d3702f"></div></div></div>
+              <div style="background:#0a0604;border:1px solid #3a1a10;border-radius:3px;padding:10px"><div style="font-size:10px;letter-spacing:.14em;color:#9a6f54;margin-bottom:6px">FORGE ×1 <span style="color:#e0552a;animation:warn 1s step-end infinite">JAM</span></div><div style="height:6px;background:#1a0f08;border-radius:2px;overflow:hidden"><div style="width:34%;height:100%;background:#b3361f"></div></div></div>
+            </div>
+            <button style="width:100%;font-family:inherit;font-size:12.5px;letter-spacing:.08em;color:#e2935a;background:#140a05;border:1px solid #4a2a16;border-radius:3px;padding:12px;cursor:pointer" style-hover="border-color:#7a4424;color:#f0a868">⚒ &nbsp;DISPATCH HUNTING PARTY</button>
+          </div>
+        </div>
+
+        <!-- SCREEN D — 3.x -->
+        <div data-screen-label="Stage 3.x mock" style="border:1px solid #2a2410;border-radius:5px;overflow:hidden;background:#06060a">
+          <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:#0a0a06;border-bottom:1px solid #26240f">
+            <span style="font-size:11px;color:#d8a83a">●</span><span style="font-size:11px;letter-spacing:.1em;color:#9a8c4e">STAGE 3.2 — THE IRON HEGEMONY</span>
+          </div>
+          <div style="padding:18px;min-height:262px;background:#06060a">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+              <div style="border:1px solid #26240f;background:#0a0a06;padding:11px"><div style="font-size:9px;letter-spacing:.16em;color:#8a7e44;margin-bottom:7px">TERRITORIES</div><div style="font-size:24px;color:#e7c468;font-weight:700;line-height:1">14<span style="font-size:12px;color:#6a6232"> / 31</span></div></div>
+              <div style="border:1px solid #26240f;background:#0a0a06;padding:11px"><div style="font-size:9px;letter-spacing:.16em;color:#8a7e44;margin-bottom:7px">TRADE ROUTES</div><div style="font-size:24px;color:#e7c468;font-weight:700;line-height:1">9<span style="font-size:12px;color:#6a6232"> secured</span></div></div>
+            </div>
+            <div style="border:1px solid #26240f;background:#0a0a06;padding:11px;margin-bottom:12px">
+              <div style="font-size:9px;letter-spacing:.16em;color:#8a7e44;margin-bottom:9px">THE MAP</div>
+              <div style="font-size:13px;line-height:1.25;color:#5a5430;letter-spacing:.06em;font-family:inherit">
+                <div><span style="color:#b3361f">███</span>▓▓░░<span style="color:#e7c468">██</span>░░░║</div>
+                <div>░░<span style="color:#e7c468">████</span>▓░░░░░║</div>
+                <div>▓▓░░<span style="color:#b3361f">██</span>░<span style="color:#e7c468">███</span>░║</div>
+              </div>
+            </div>
+            <div style="border:1px solid #26240f;background:#0a0a06;padding:11px">
+              <div style="font-size:9px;letter-spacing:.16em;color:#8a7e44;margin-bottom:10px">ALIGNMENT LOCK-IN</div>
+              <div style="display:flex;flex-direction:column;gap:7px;font-size:11px">
+                <div style="display:flex;align-items:center;gap:9px"><span style="color:#c87a6a;min-width:74px">AGGRESSIVE</span><span style="flex:1;color:#b3361f">▓▓▓▓▓▓▓░░</span></div>
+                <div style="display:flex;align-items:center;gap:9px"><span style="color:#8a8470;min-width:74px">DIPLOMATIC</span><span style="flex:1;color:#5a5430">▓▓▓░░░░░░</span></div>
+                <div style="display:flex;align-items:center;gap:9px"><span style="color:#8a8470;min-width:74px">ISOLATION</span><span style="flex:1;color:#5a5430">▓▓░░░░░░░</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="margin:34px 0 0;font-size:12.5px;color:#5e5d57;letter-spacing:.04em">↳ Note the geometry shift: Era 1 is centered, sparse, monochrome ash. Era 2 cracks into rusty industrial routing. Era 3 hardens into a brutalist amber dashboard — a Bloomberg terminal for warlords.</p>
+    </section>
+
+    <!-- ============ 05 THE THREE ERAS ============ -->
+    <section id="eras" style="padding:64px 0;border-bottom:1px solid #1a1a1c;scroll-margin-top:64px">
+      <div style="font-size:11px;letter-spacing:.28em;color:#6f8a72;margin-bottom:14px">05 — THE THREE ERAS · ENRICHED ROADMAP</div>
+      <h2 style="margin:0 0 40px;font-size:34px;font-weight:700;color:#ece9df;letter-spacing:-.02em;max-width:820px">Your roadmap, with the design connective tissue filled in.</h2>
+
+      <!-- ERA 1 -->
+      <div style="display:grid;grid-template-columns:200px 1fr;gap:30px;margin-bottom:46px">
+        <div style="position:sticky;top:74px;align-self:start">
+          <div style="font-size:54px;color:#2c2c2a;font-weight:800;line-height:1">I</div>
+          <div style="font-size:16px;color:#cdcabf;font-weight:700;margin:6px 0 10px">The Feral Awakening</div>
+          <div style="font-size:12px;line-height:1.6;color:#7e7b72">Pure black. Dirty, minimal, confined. Biology-based upkeep.</div>
+          <div style="display:flex;gap:5px;margin-top:14px"><span style="width:18px;height:18px;background:#000;border:1px solid #2c2c2e"></span><span style="width:18px;height:18px;background:#cdcabf"></span><span style="width:18px;height:18px;background:#86b394"></span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1px;background:#1a1a1c;border:1px solid #1a1a1c">
+          <div style="background:#0a0a0b;padding:20px 22px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><h3 style="margin:0;font-size:15px;color:#e2dfd5;font-weight:700">1.1 · The Lone Scrapper</h3><span style="font-size:11px;color:#6f8a72;letter-spacing:.1em">100% MANUAL</span></div>
+            <p style="margin:0 0 9px;font-size:13px;line-height:1.6;color:#928f86">One goblin, total isolation, a single button. This is where the Tone baseline is taught — the very first line of narration sets the whole run's voice.</p>
+            <div style="font-size:12px;color:#6f8a72;line-height:1.6">+ DESIGN ADD: a 3-second cold-open where the screen is fully black and a single Whisper types itself out before the goblin even appears. No UI. Just the voice in the mud.</div>
+          </div>
+          <div style="background:#0a0a0b;padding:20px 22px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><h3 style="margin:0;font-size:15px;color:#e2dfd5;font-weight:700">1.2 · The Runt Pack</h3><span style="font-size:11px;color:#6f8a72;letter-spacing:.1em">UPKEEP LOOP</span></div>
+            <p style="margin:0 0 9px;font-size:13px;line-height:1.6;color:#928f86">First passive income: Runts dig Mud automatically but eat Fungus. You hand-forage Fungus to keep them alive — the core tension of the era.</p>
+            <div style="font-size:12px;color:#6f8a72;line-height:1.6">+ DESIGN ADD: a visible starvation state — Runts in the roster degrade <span style="color:#bdb9ae">(._.) → (-.-) → (x.x)</span> as Fungus runs low. Loss is shown, not just numbered.</div>
+          </div>
+          <div style="background:#0a0a0b;padding:20px 22px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><h3 style="margin:0;font-size:15px;color:#e2dfd5;font-weight:700">1.3 · The Mud Warrens</h3><span style="font-size:11px;color:#cdbf9a;letter-spacing:.1em">⌖ BOTTLENECK</span></div>
+            <p style="margin:0 0 9px;font-size:13px;line-height:1.6;color:#928f86">Nav tabs fade in; Job Assignments let you balance Diggers vs Foragers to fully automate upkeep. Storage caps at 1,000 Mud — forcing the one-time <span style="color:#cdbf9a">Breach the Surface</span> purchase.</p>
+            <div style="font-size:12px;color:#6f8a72;line-height:1.6">+ DESIGN ADD: Breaching is the first Saga Beat — a hand-written moment where the pack sees the sky for the first time. Tone decides whether it's wondrous or horrifying.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ERA 2 -->
+      <div style="display:grid;grid-template-columns:200px 1fr;gap:30px;margin-bottom:46px">
+        <div style="position:sticky;top:74px;align-self:start">
+          <div style="font-size:54px;color:#3a2414;font-weight:800;line-height:1">II</div>
+          <div style="font-size:16px;color:#e2935a;font-weight:700;margin:6px 0 10px">The Iron Hunger</div>
+          <div style="font-size:12px;line-height:1.6;color:#9a6f54">Smoke and fire. Rusty geometry, ASCII pipes and belts. Mechanical upkeep — Grit.</div>
+          <div style="display:flex;gap:5px;margin-top:14px"><span style="width:18px;height:18px;background:#140a05;border:1px solid #2a1a10"></span><span style="width:18px;height:18px;background:#d3702f"></span><span style="width:18px;height:18px;background:#e2935a"></span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1px;background:#2a1a10;border:1px solid #2a1a10">
+          <div style="background:#0a0604;padding:20px 22px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><h3 style="margin:0;font-size:15px;color:#e8c4a0;font-weight:700">2.1 · The Smog-Pit</h3><span style="font-size:11px;color:#b07a4e;letter-spacing:.1em">DISCOVERY</span></div>
+            <p style="margin:0 0 9px;font-size:13px;line-height:1.6;color:#a07a5e">Daylight cracks the UI open. Two raw jobs split the pack: <span style="color:#cabba0">Scavengers</span> pull Scrap (and drive Discovery), <span style="color:#b7c69a">Woodcutters</span> cut <span style="color:#b7c69a">Blightwood</span> — petrified deadwood. Discovery unlocks a chain of Blueprints; the first, the <span style="color:#c98a4a">Char-Kiln</span>, burns Blightwood into <span style="color:#a09a8e">Ash</span> (the universal fuel), at a small ongoing Grit cost (smoke). This is the only stage with a paid <span style="color:#e8c4a0">Lure a Runt</span> button.</p>
+            <div style="font-size:12px;color:#b07a4e;line-height:1.6">+ DESIGN ADD: Blueprints are physical finds with authored flavor — each Char-Kiln / Smelter / Forge / Mead Pit / Colosseum plan is a Saga Beat as Discovery climbs.</div>
+          </div>
+          <div style="background:#0a0604;padding:20px 22px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><h3 style="margin:0;font-size:15px;color:#e8c4a0;font-weight:700">2.2 · Smoghaven</h3><span style="font-size:11px;color:#b07a4e;letter-spacing:.1em">THE GRID</span></div>
+            <p style="margin:0 0 9px;font-size:13px;line-height:1.6;color:#a07a5e">Discovery <span style="color:#c8553a">crawls</span> now, and everything is built more slowly. Two mid-game unlocks matter most: the <span style="color:#d4cdb4">Embassy</span> reveals <span style="color:#c98a6a">The Standings</span> (your relations with the four powers) and slowly mends them; the <span style="color:#bcd89a">Hunting Lodge</span> gives comfort + <span style="color:#bcd89a">stage-scaled food</span> (+1 → +2 → +2.5 per lodge across 2.1→2.3 as the hunting-grounds widen) to stretch the fungus. The <span style="color:#f3d572">Colosseum</span> becomes discoverable here too (after the Embassy) as a huge prestige comfort sink. The <span style="color:#c6d6e6">Forge</span> gains a <span style="color:#e0a878">Bank/Relight</span> toggle — halt the Adamantium melt to hoard iron + ash. Every building's cost climbs steeply per copy — city re-planning and re-zoning — so growth is a series of hard choices, not a snowball.</p>
+            <div style="font-size:12px;color:#b07a4e;line-height:1.6">+ DESIGN ADD: starvation has a short grace buffer then accelerates; a pulsing warning warns before the first death.</div>
+          </div>
+          <div style="background:#0a0604;padding:20px 22px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><h3 style="margin:0;font-size:15px;color:#e8c4a0;font-weight:700">2.3 · The Ferrous Vault</h3><span style="font-size:11px;color:#e7c468;letter-spacing:.1em">⌖ BOTTLENECK</span></div>
+            <p style="margin:0 0 9px;font-size:13px;line-height:1.6;color:#a07a5e">You draw the eye of the kingdoms — random <span style="color:#e0b4a8">enemy raids</span> begin (out of a named faction), scaled by <span style="color:#e0b4a8">Notoriety</span>. Answer with Defence: the <span style="color:#e0b4a8">Warband</span> (+4 each) and two <span style="color:#c6d6e6">9-tier</span> structures rebuilt grander each tier — the <span style="color:#c6d6e6">Watchtower</span> (→ The Brass Spires, 8→240) and the <span style="color:#c6d6e6">Wall</span> (→ The Iron Horizon, 12→380); from Tier 5 both also cost <span style="color:#d2dce8">Adamantium</span>. A large gap between attack and defence <span style="color:#c8553a">multiplies</span> the loss, split between <span style="color:#d2dce8">Adamantium</span> and <span style="color:#c8553a">population</span> (weighted toward metal) — raids can kill goblins and sour the raiding faction's Standing. Or <span style="color:#e0b4a8">pay them off</span>: the tribute's value scales off your Adamantium hoard and is randomly split across whatever resources you hold (priced against Adamantium). Discovery finally yields <span style="color:#f3d572">The Herald Horn</span> (formerly the Iron-Clad Bastion, now <span style="color:#c8553a">4×</span> the cost) — sound it and the world learns the goblins have come; the <span style="color:#f3d572">note</span> you choose is the first explicit Alignment fork — <span style="color:#e7c468">The Grand Maze</span> (turn inward), <span style="color:#86b394">The Ashen Conclave</span> (a senate for all races), <span style="color:#b3361f">The Iron Legion</span> (subjugate the world), or <span style="color:#9fb0c4">The Sanctuary</span> (become the world's unseen guardian).</p>
+            <div style="font-size:12px;color:#b07a4e;line-height:1.6">+ DESIGN ADD: from 2.3 <span style="color:#5f93a8">The Hollow</span> begins to surface — rare mythic Whispers and discovery events (ancient tablets, a breathing door, a welcome-frieze), each shown in cold cyan in the Chronicle, hinting a greater story lost behind the mist of time.</div>
+            <div style="font-size:12px;color:#b07a4e;line-height:1.6">+ DESIGN ADD: the Adamantium hoard that makes you strong is exactly what makes raids bigger — defence must scale with wealth.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ERA 3 -->
+      <div style="display:grid;grid-template-columns:200px 1fr;gap:30px">
+        <div style="position:sticky;top:74px;align-self:start">
+          <div style="font-size:54px;color:#2a2410;font-weight:800;line-height:1">III</div>
+          <div style="font-size:16px;color:#e7c468;font-weight:700;margin:6px 0 10px">The World Blight</div>
+          <div style="font-size:12px;line-height:1.6;color:#9a8c4e">Brutalist dashboard. Heavy Unicode blocks █▓║. Macro-management and territorial control.</div>
+          <div style="display:flex;gap:5px;margin-top:14px"><span style="width:18px;height:18px;background:#06060a;border:1px solid #26240f"></span><span style="width:18px;height:18px;background:#e7c468"></span><span style="width:18px;height:18px;background:#b3361f"></span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1px;background:#26240f;border:1px solid #26240f">
+          <div style="background:#0a0a06;padding:20px 22px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><h3 style="margin:0;font-size:15px;color:#ecd89a;font-weight:700">3.1 · The Ashen Dominion</h3><span style="font-size:11px;color:#a8954e;letter-spacing:.1em">SUPPLY CHAINS</span></div>
+            <p style="margin:0 0 9px;font-size:13px;line-height:1.6;color:#a89a5e">No more single machines — <span style="color:#d2dce8">Adamantium</span> is now the empire's metal. You run external Outposts (Adamantium + Coin) and Trade Routes (Coin + Influence). Food is eaten <span style="color:#c8553a">super-linearly</span> by Outposts <em>and</em> by every land you hold; <span style="color:#ecd89a">Granaries</span> burn Coin → Food. <span style="color:#f3d572">Claiming land</span> costs escalate steeply, so expansion slows under its own weight. <span style="color:#c98a6a">Unrest</span> from ungoverned lands is suppressed by <span style="color:#ecd89a">Garrisons</span> (Adamantium) or the coin-fed <span style="color:#bcd89a">Pleasure-Garden</span> (bread &amp; games — also warms the Splinter Packs); left to fester, high Unrest can spark an <span style="color:#c8553a">Uprising</span> — a province revolts, and you crush it, buy it back, or let it secede. <span style="color:#c98a6a">The Standings</span> — a four-faction diplomacy engine (Sunspire, Iron States, Dwarrow Holds, Splinter Packs) — rise and fall with your Reckoning choices; let a faction turn <span style="color:#c8553a">hostile</span> and it marches on you. A Threat timer rolls faction Wars, Natural Disasters (scaling with outpost count), and the escalating <span style="color:#8a7ea0">Dark Beyond</span> (the Hollow, grander the nearer the end).</p>
+          </div>
+          <div style="background:#0a0a06;padding:20px 22px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><h3 style="margin:0;font-size:15px;color:#ecd89a;font-weight:700">3.2 · The Iron Hegemony</h3><span style="font-size:11px;color:#a8954e;letter-spacing:.1em">THE FRONT LINES</span></div>
+            <p style="margin:0 0 9px;font-size:13px;line-height:1.6;color:#a89a5e">The four powers stop watching and unite: a <span style="color:#e7c468">Coalition</span> meter climbs with every hostile throne and every land you hold, and at full it marches on you as one host. Four levers of the <span style="color:#e7c468">Congress of Powers</span> — Sway, Cow, Seal, Shield — hold it back and, quietly, this is where Alignment <span style="color:#e7c468">locks in</span> (Aggressive, Diplomatic, Isolationist, or Heroic). Keep it low and the meter <span style="color:#86b394">rewards</span> you: below 20% the world is <span style="color:#86b394">at ease</span> and trade flows — up to <span style="color:#86b394">+40% Coin &amp; Influence</span>, richest at 0% (each lever's cost also creeps up with territory through Era III, so it stays a live choice). Advance at 18 lands with your purpose certain. <span style="color:#6f8496">BUILT.</span></p>
+          </div>
+          <div style="background:#0a0a06;padding:20px 22px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><h3 style="margin:0;font-size:15px;color:#ecd89a;font-weight:700">3.3 · The Grand Mechanica</h3><span style="font-size:11px;color:#b3361f;letter-spacing:.1em">⌖ THE CLIMAX</span></div>
+            <p style="margin:0 0 9px;font-size:13px;line-height:1.6;color:#a89a5e">The final <span style="color:#e7c468">Megaproject</span> — its nature set by your locked Alignment — is a <span style="color:#e7c468">two-clock race</span>: pour Adamantium+Coin+Influence batches into the Mechanica bar while <span style="color:#5f93a8">The Dark Beyond</span> doom-clock climbs 0→100%. It no longer loops — at <span style="color:#5f93a8">every 20% it launches an escalating incursion</span>: resources → infrastructure → then it begins <span style="color:#c8553a">erasing land from the map</span> (60%: −4 tiles, 80%: −8) — and at <span style="color:#c8553a">100% the world is swallowed whole</span> (a thematic Dark-Beyond Game Over). Finish the Mechanica and speak the final word (or Heed the Root) before it crests. <span style="color:#6f8496">BUILT.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 SETTLEMENT GROWTH ============ -->
+    <section id="settle" style="padding:64px 0;border-bottom:1px solid #1a1a1c;scroll-margin-top:64px">
+      <div style="font-size:11px;letter-spacing:.28em;color:#c98a6a;margin-bottom:14px">06 — THE WEIGHT OF GROWTH</div>
+      <h2 style="margin:0 0 18px;font-size:34px;font-weight:700;color:#ece9df;letter-spacing:-.02em;max-width:860px">Three mud huts to a horizon of smokestacks — seven tiers, and you feel every single jump.</h2>
+      <p style="max-width:820px;margin:0 0 14px;color:#a8a59b;font-size:15.5px;line-height:1.7">The moment you breach the surface, the settlement becomes a living panorama pinned to the top of the screen, redrawing itself as you grow. The way to make expansion feel <span style="color:#bdb9ae">heavy</span> is to make each tier feel out of reach until it's earned: every step roughly triples the population and adds a new silhouette to the skyline. You don't read your progress as a number — you watch your town blot out more of the sky.</p>
+      <p style="max-width:820px;margin:0 0 38px;color:#6f6e68;font-size:12.5px;line-height:1.6">7 tiers across Eras II–III, shown by <span style="color:#c98a6a">size-class</span> (no proper names) + a <span style="color:#c98a6a">live souls count</span> that scales believably from a few dozen in the mud to <span style="color:#e7c468">tens of millions</span> at the world-capital. <span style="color:#c98a6a">Hit play to watch it grow — or scrub the slider tier by tier.</span> <span style="color:#6f8496">PORTED &amp; LIVE in the playable: a band pinned above the Era II/III viewport, tier auto-driven by stage + growth (no scrubber), population derived from pack size (Era II) and provinces + outposts (Era III).</span></p>
+
+      <div style="border:1px solid #2a1f14;border-radius:6px;overflow:hidden;background:#0a0604">
+        <div style="display:flex;align-items:center;gap:9px;padding:11px 16px;border-bottom:1px solid #2a1f14;background:#0c0704">
+          <span style="width:9px;height:9px;border-radius:50%;background:#c98a6a"></span>
+          <span style="font-size:11px;letter-spacing:.14em;color:#b07a4e">SETTLEMENT PANORAMA · LIVE</span>
+          <span style="margin-left:auto;font-size:11px;letter-spacing:.1em;color:#7a5b44">TIER {{ panoTierLabel }}</span>
+        </div>
+        <div style="position:relative;height:240px;overflow:hidden;background:radial-gradient(130% 80% at 50% 8%,#1a0d05,#070403)">
+          <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,10,5,0) 56%,rgba(46,24,10,0.55));pointer-events:none;animation:flick 5s ease-in-out infinite"></div>
+          <pre style="{{ panoS0 }}">              o   °
+     .-.     .-.        .-.
+    /   \   /   \      /   \
+  _[___]___[___]______[___]_
+  ::::::::::: mud ::::::::::: </pre>
+          <pre style="{{ panoS1 }}">        o    °     o
+   .-.  ‖   .-.   .-.    .-.
+  /   \ ‖  /   \ /   \  /   \
+ \[___]‖[___][___][___][__]/
+ \| stakes ring the dig-yards |/
+  '''''''''''''''''''''''''''''' </pre>
+          <pre style="{{ panoS2 }}">      °o   ‖‖   o°      o
+   .-. ‖‖  ‖‖  .-.  .-. ‖   .-.
+  /   \‖‖ [##] /   \/   \‖  /   \
+ [___][###][##][___][___][##][___]
+ [___][###][##][___][___][##][___]
+ \||||| market · forge-smoke |||||/
+  :::::::::::::::::::::::::::::::::: </pre>
+          <pre style="{{ panoS3 }}">    °o°  ‖‖‖   °o  ‖‖   o°  ‖‖‖
+   ‖‖‖  ‖███‖  ‖‖ ‖██‖  ‖‖  ‖███‖
+  [###]‖███‖[###]██[##][###]███‖[##]
+  [###][███][###][██][##][###][██][##]
+  [###][███][###][██][##][###][██][##]
+ ╫══[###][███] slag works [██][###]══╫
+ ╫════════ smelter quarter ═════════╫
+  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ </pre>
+          <pre style="{{ panoS4 }}">   ▟█▙  °‖‖° ▟█▙   ‖‖‖   ▟█▙  °‖‖°
+  ║███║ ‖███‖║███║ ‖██‖ ║███║ ‖███‖
+ ▟║███║[####]║███║[###]║███║[####]███▙
+ █║███║[####]║███║[###]║███║[####]███║
+ █[####][##][####][###][####][##][###]█
+ █╫═════════════════════════════════╫█
+ ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓████
+  ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ </pre>
+          <pre style="{{ panoS5 }}">   ▲   ‖‖‖  ▟█▙  ▲  ‖‖‖  ▟█▙   ▲  ‖‖
+  ║█║ ▟███▙║███║▟█▙║███║▟███▙ ║█║▟██▙
+ ▟███▙███║███║███║███║███║███║███║███▙
+ █████████████████████████████████████
+ █████████████████████████████████████
+ █▓█▓█▓█▓█▓█ black-smoke █▓█▓█▓█▓█▓█▓█
+ █████████████ city-state █████████████
+ ║██████████████████████████████████║
+  ▔▔▔▔▔▔▔▔▔▔ outer ring ▔▔▔▔▔▔▔▔▔▔▔▔ </pre>
+          <pre style="{{ panoS6 }}">        ▲              ▲         ▲
+    ▲  ███   ▲   ▲    ███  ▲    ███
+   ███ ███▟█▙███ ███ ▟█▙███ ███ ███
+  ▟███▙██████████████████████████████▙
+  ███████████████████████████████████
+  ███████████████████████████████████
+  ███████████████████████████████████
+  █▓██▓██▓██▓██▓██▓██▓██▓██▓██▓██▓██▓█
+ ║██████████████████████████████████████║
+  ▔▔▔▔▔▔▔▔ the whole horizon ▔▔▔▔▔▔▔▔ </pre>
+          <div style="position:absolute;left:0;right:0;bottom:0;height:22px;background:linear-gradient(0deg,#030201,#0a0604);border-top:1px solid #2a1a10"></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;padding:18px 20px;border-top:1px solid #2a1f14;background:#0c0704">
+          <div style="flex:1;min-width:200px">
+            <div style="font-size:19px;font-weight:700;color:{{ panoColName }};line-height:1.1">{{ panoName }}</div>
+            <div style="font-size:12px;color:#9a6f54;margin-top:4px;line-height:1.5">{{ panoDesc }}</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:10px;letter-spacing:.14em;color:#6a5230;margin-bottom:3px">{{ panoEra }}</div>
+            <div style="font-size:22px;font-weight:700;color:{{ panoColName }};line-height:1">{{ panoSouls }} <span style="font-size:11px;color:#7a5b44;font-weight:400">souls</span></div>
+          </div>
+        </div>
+        <div style="padding:0 20px 14px;background:#0c0704">
+          <div style="display:flex;justify-content:space-between;font-size:9px;letter-spacing:.14em;color:#6a5230;margin-bottom:5px"><span>FOOTPRINT OF THE TOWN</span><span>TIER {{ panoTierLabel }}</span></div>
+          <div style="height:7px;background:#1a0f08;border-radius:2px;overflow:hidden"><div style="width:{{ panoFpPct }}%;height:100%;background:{{ panoColName }};transition:width .6s ease"></div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid #2a1f14;background:#0a0604;flex-wrap:wrap">
+          <button onClick="{{ togglePano }}" style="font-family:inherit;font-size:12px;letter-spacing:.06em;color:#f0c89a;background:#140a05;border:1px solid #4a2a16;border-radius:3px;padding:9px 16px;cursor:pointer;min-width:152px" style-hover="border-color:#7a4424;color:#f0a868">{{ panoPlayLabel }}</button>
+          <button onClick="{{ panoPrev }}" style="font-family:inherit;font-size:13px;color:#b07a4e;background:#0c0704;border:1px solid #2a1a10;border-radius:3px;padding:8px 13px;cursor:pointer" style-hover="border-color:#5a3a1e;color:#e2935a">◄</button>
+          <input type="range" min="0" max="6" value="{{ panoTier }}" onInput="{{ panoScrub }}" style="flex:1;min-width:120px;accent-color:#d3702f;cursor:pointer">
+          <button onClick="{{ panoNext }}" style="font-family:inherit;font-size:13px;color:#b07a4e;background:#0c0704;border:1px solid #2a1a10;border-radius:3px;padding:8px 13px;cursor:pointer" style-hover="border-color:#5a3a1e;color:#e2935a">►</button>
+        </div>
+        <div style="display:flex;gap:6px;padding:0 20px 16px;background:#0a0604">
+          <sc-for list="{{ panoTicks }}" as="t" hint-placeholder-count="7"><button onClick="{{ t.onClick }}" style="{{ t.style }}">{{ t.n }}</button></sc-for>
+        </div>
+      </div>
+
+      <p style="margin:30px 0 0;font-size:12.5px;color:#5e5d57;letter-spacing:.04em;line-height:1.6">↳ In play, this banner is pinned to the top of the screen and morphs in real time as you cross each threshold — each transition arriving as an authored Saga Beat with a one-time camera pull-back, a Whisper from Mab the Chronicler naming the moment, and a fresh band of sky lost to smoke. Never a silent number tick.</p>
+    </section>
+
+    <!-- ============ 07 BUILDING CATALOG ============ -->
+    <section id="builds" style="padding:64px 0;border-bottom:1px solid #1a1a1c;scroll-margin-top:64px">
+      <div style="font-size:11px;letter-spacing:.28em;color:#9a8c4e;margin-bottom:14px">07 — THE BUILDING CATALOG</div>
+      <h2 style="margin:0 0 18px;font-size:34px;font-weight:700;color:#ece9df;letter-spacing:-.02em;max-width:840px">Dozens of structures across the ages — every one earned by progress, or by discovery.</h2>
+      <p style="max-width:820px;margin:0 0 22px;color:#a8a59b;font-size:15.5px;line-height:1.7">Two kinds of gate govern what you can build. <span style="color:#bdb9ae">PROGRESS</span> gates — eras, stages, resource thresholds — you grind toward. <span style="color:#bdb9ae">DISCOVERY</span> gates — Blueprints, events, secrets — you have to <i>find</i>. That second kind is why two runs never build the same town in the same order, and why a rich player can still be stuck. A representative slice:</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:34px;font-size:10px;letter-spacing:.08em">
+        <span style="color:#6f6e68;border:1px solid #2c2c2e;padding:3px 8px;border-radius:3px">PROGRESS</span>
+        <span style="color:#6f8a72;border:1px solid #2a3a2e;padding:3px 8px;border-radius:3px">RESOURCE</span>
+        <span style="color:#b08a4e;border:1px solid #3a3018;padding:3px 8px;border-radius:3px">DISCOVERY / BLUEPRINT</span>
+        <span style="color:#b07a4e;border:1px solid #3a2a18;padding:3px 8px;border-radius:3px">EVENT</span>
+        <span style="color:#c87a6a;border:1px solid #3a2218;padding:3px 8px;border-radius:3px">ALIGNMENT</span>
+        <span style="color:#cdbf9a;border:1px solid #3a3526;padding:3px 8px;border-radius:3px">BOTTLENECK</span>
+        <span style="color:#8a7ea0;border:1px solid #2a2438;padding:3px 8px;border-radius:3px">SECRET</span>
+        <span style="color:#b3361f;border:1px solid #3a1f18;padding:3px 8px;border-radius:3px">CLIMAX</span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1px;background:#1a1a1c;border:1px solid #1a1a1c">
+
+        <!-- ERA I -->
+        <div style="background:#0a0a0b;padding:22px 20px">
+          <div style="font-size:13px;font-weight:700;color:#cdcabf;letter-spacing:.04em;margin-bottom:4px">ERA I · THE WARREN</div>
+          <div style="font-size:10px;letter-spacing:.16em;color:#56554f;margin-bottom:16px">UNDERGROUND · ASH</div>
+          <div style="display:flex;flex-direction:column">
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #161618"><div style="font-size:13px;color:#8e8b82;min-width:38px;text-align:center">[##]</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#dcd8ce;font-weight:600">Mud Pit</span><span style="font-size:9px;letter-spacing:.08em;color:#6f6e68;border:1px solid #2c2c2e;padding:2px 6px;border-radius:3px">START</span></div><div style="font-size:12px;color:#928f86;line-height:1.5;margin-top:3px">your first and only income — a manual scrape node</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #161618"><div style="font-size:13px;color:#8e8b82;min-width:38px;text-align:center">[_]</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#dcd8ce;font-weight:600">Storage Box</span><span style="font-size:9px;letter-spacing:.08em;color:#6f8a72;border:1px solid #2a3a2e;padding:2px 6px;border-radius:3px">RESOURCE</span></div><div style="font-size:12px;color:#928f86;line-height:1.5;margin-top:3px">raises your Mud ceiling so you can stockpile</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #161618"><div style="font-size:13px;color:#8e8b82;min-width:38px;text-align:center">(,,)</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#dcd8ce;font-weight:600">Fungus Bed</span><span style="font-size:9px;letter-spacing:.08em;color:#6f6e68;border:1px solid #2c2c2e;padding:2px 6px;border-radius:3px">STAGE 1.2</span></div><div style="font-size:12px;color:#928f86;line-height:1.5;margin-top:3px">grows the Fungus that keeps the pack from starving</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #161618"><div style="font-size:13px;color:#8e8b82;min-width:38px;text-align:center">(o)</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#dcd8ce;font-weight:600">Runt Den</span><span style="font-size:9px;letter-spacing:.08em;color:#6f6e68;border:1px solid #2c2c2e;padding:2px 6px;border-radius:3px">STAGE 1.2</span></div><div style="font-size:12px;color:#928f86;line-height:1.5;margin-top:3px">houses Runts and sets your population cap</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #161618"><div style="font-size:13px;color:#8e8b82;min-width:38px;text-align:center">«»</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#dcd8ce;font-weight:600">Barter Nook</span><span style="font-size:9px;letter-spacing:.08em;color:#6f6e68;border:1px solid #2c2c2e;padding:2px 6px;border-radius:3px">STAGE 1.3</span></div><div style="font-size:12px;color:#928f86;line-height:1.5;margin-top:3px">unlocks Job Assignments — the first automation</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0"><div style="font-size:13px;color:#cdbf9a;min-width:38px;text-align:center">/|\</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#e0d4b0;font-weight:600">Surface Breach</span><span style="font-size:9px;letter-spacing:.08em;color:#cdbf9a;border:1px solid #3a3526;padding:2px 6px;border-radius:3px">BOTTLENECK</span></div><div style="font-size:12px;color:#928f86;line-height:1.5;margin-top:3px">the one-time dig that opens the world above</div></div></div>
+          </div>
+        </div>
+
+        <!-- ERA II -->
+        <div style="background:#0a0706;padding:22px 20px">
+          <div style="font-size:13px;font-weight:700;color:#e2935a;letter-spacing:.04em;margin-bottom:4px">ERA II · THE SURFACE</div>
+          <div style="font-size:10px;letter-spacing:.16em;color:#7a5b44;margin-bottom:16px">INDUSTRIAL · EMBER</div>
+          <div style="display:flex;flex-direction:column">
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1c130c"><div style="font-size:13px;color:#b07a4e;min-width:38px;text-align:center">[≣]</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#e8c4a0;font-weight:600">Smelter</span><span style="font-size:9px;letter-spacing:.08em;color:#b08a4e;border:1px solid #3a3018;padding:2px 6px;border-radius:3px">BLUEPRINT</span></div><div style="font-size:12px;color:#a07a5e;line-height:1.5;margin-top:3px">refines Scrap into Iron — the backbone resource</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1c130c"><div style="font-size:13px;color:#b07a4e;min-width:38px;text-align:center">[Ω]</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#e8c4a0;font-weight:600">Forge</span><span style="font-size:9px;letter-spacing:.08em;color:#b08a4e;border:1px solid #3a3018;padding:2px 6px;border-radius:3px">BLUEPRINT</span></div><div style="font-size:12px;color:#a07a5e;line-height:1.5;margin-top:3px">Iron + Ash into Adamantium; the jam-prone bottleneck — has a Bank/Relight toggle to halt the melt</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1c130c"><div style="font-size:13px;color:#b07a4e;min-width:38px;text-align:center">▙▟</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#e8c4a0;font-weight:600">Shanty Row</span><span style="font-size:9px;letter-spacing:.08em;color:#6f8a72;border:1px solid #2a3a2e;padding:2px 6px;border-radius:3px">RESOURCE</span></div><div style="font-size:12px;color:#a07a5e;line-height:1.5;margin-top:3px">housing — raises the surface population cap</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1c130c"><div style="font-size:13px;color:#b07a4e;min-width:38px;text-align:center">(══)</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#e8c4a0;font-weight:600">Mead Pit</span><span style="font-size:9px;letter-spacing:.08em;color:#b08a4e;border:1px solid #3a3018;padding:2px 6px;border-radius:3px">DISCOVERY</span></div><div style="font-size:12px;color:#a07a5e;line-height:1.5;margin-top:3px">restores Grit — your brake against overexpansion</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1c130c"><div style="font-size:13px;color:#b07a4e;min-width:38px;text-align:center">↟</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#e8c4a0;font-weight:600">Hunting Lodge</span><span style="font-size:9px;letter-spacing:.08em;color:#6f6e68;border:1px solid #2c2c2e;padding:2px 6px;border-radius:3px">STAGE 2.2</span></div><div style="font-size:12px;color:#a07a5e;line-height:1.5;margin-top:3px">advanced food to hold Grit at scale — stage-scaled +1/+2/+2.5 per lodge (2.1/2.2/2.3)</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1c130c"><div style="font-size:13px;color:#b07a4e;min-width:38px;text-align:center">⌖</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#e8c4a0;font-weight:600">Tinker's Shed</span><span style="font-size:9px;letter-spacing:.08em;color:#b08a4e;border:1px solid #3a3018;padding:2px 6px;border-radius:3px">DISCOVERY</span></div><div style="font-size:12px;color:#a07a5e;line-height:1.5;margin-top:3px">finds new Blueprints — the discovery engine itself</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1c130c"><div style="font-size:13px;color:#b07a4e;min-width:38px;text-align:center">■</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#e8c4a0;font-weight:600">Watchtower</span><span style="font-size:9px;letter-spacing:.08em;color:#b07a4e;border:1px solid #3a2a18;padding:2px 6px;border-radius:3px">9 TIERS</span></div><div style="font-size:12px;color:#a07a5e;line-height:1.5;margin-top:3px">a single watch upgraded Wooden Lookout → The Brass Spires (def 8→240) · Tier 5+ also costs Adamantium</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0"><div style="font-size:13px;color:#cdbf9a;min-width:38px;text-align:center">╫</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#f0c89a;font-weight:600">The Wall</span><span style="font-size:9px;letter-spacing:.08em;color:#cdbf9a;border:1px solid #3a3526;padding:2px 6px;border-radius:3px">9 TIERS</span></div><div style="font-size:12px;color:#a07a5e;line-height:1.5;margin-top:3px">rebuilt grander each tier: Wooden Stakes → Mud → Brick → Stone → Iron-Clad → … → The Iron Horizon (def 12→380) · Tier 5+ also costs Adamantium</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0"><div style="font-size:13px;color:#f3d572;min-width:38px;text-align:center">┴</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#f3d572;font-weight:600">The Herald Horn</span><span style="font-size:9px;letter-spacing:.08em;color:#b08a4e;border:1px solid #3a3018;padding:2px 6px;border-radius:3px">GREAT WORK</span></div><div style="font-size:12px;color:#a07a5e;line-height:1.5;margin-top:3px">the 2.3 ascension work (4× cost) — sound it to announce the goblins; its note seeds Alignment and opens Era III</div></div></div>
+          </div>
+        </div>
+
+        <!-- ERA III -->
+        <div style="background:#0a0a06;padding:22px 20px">
+          <div style="font-size:13px;font-weight:700;color:#e7c468;letter-spacing:.04em;margin-bottom:4px">ERA III · THE CITY-STATE</div>
+          <div style="font-size:10px;letter-spacing:.16em;color:#7a6e3a;margin-bottom:16px">GEOPOLITICAL · AMBER</div>
+          <div style="display:flex;flex-direction:column">
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1a1808"><div style="font-size:13px;color:#a8954e;min-width:38px;text-align:center">◈</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#ecd89a;font-weight:600">Outpost</span><span style="font-size:9px;letter-spacing:.08em;color:#6f6e68;border:1px solid #2c2c2e;padding:2px 6px;border-radius:3px">STAGE 3.1</span></div><div style="font-size:12px;color:#a89a5e;line-height:1.5;margin-top:3px">an external node — the start of supply chains</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1a1808"><div style="font-size:13px;color:#a8954e;min-width:38px;text-align:center">⌂</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#ecd89a;font-weight:600">Trade House</span><span style="font-size:9px;letter-spacing:.08em;color:#6f6e68;border:1px solid #2c2c2e;padding:2px 6px;border-radius:3px">STAGE 3.1</span></div><div style="font-size:12px;color:#a89a5e;line-height:1.5;margin-top:3px">secures global trade routes for coin</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1a1808"><div style="font-size:13px;color:#a8954e;min-width:38px;text-align:center">▣</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#ecd89a;font-weight:600">Treasury</span><span style="font-size:9px;letter-spacing:.08em;color:#6f8a72;border:1px solid #2a3a2e;padding:2px 6px;border-radius:3px">RESOURCE</span></div><div style="font-size:12px;color:#a89a5e;line-height:1.5;margin-top:3px">coin storage with slow interest</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1a1808"><div style="font-size:13px;color:#c87a6a;min-width:38px;text-align:center">█</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#ecd89a;font-weight:600">War Foundry</span><span style="font-size:9px;letter-spacing:.08em;color:#c87a6a;border:1px solid #3a2218;padding:2px 6px;border-radius:3px">ALIGNMENT</span></div><div style="font-size:12px;color:#a89a5e;line-height:1.5;margin-top:3px">mass war production — the Aggressive road</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1a1808"><div style="font-size:13px;color:#86b394;min-width:38px;text-align:center">◇</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#ecd89a;font-weight:600">Cultural Quarter</span><span style="font-size:9px;letter-spacing:.08em;color:#c87a6a;border:1px solid #3a2218;padding:2px 6px;border-radius:3px">ALIGNMENT</span></div><div style="font-size:12px;color:#a89a5e;line-height:1.5;margin-top:3px">polyglot growth — the Diplomatic road</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1a1808"><div style="font-size:13px;color:#cdbf9a;min-width:38px;text-align:center">║║</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#ecd89a;font-weight:600">The Gilded Gate</span><span style="font-size:9px;letter-spacing:.08em;color:#c87a6a;border:1px solid #3a2218;padding:2px 6px;border-radius:3px">ALIGNMENT</span></div><div style="font-size:12px;color:#a89a5e;line-height:1.5;margin-top:3px">seals the kingdom — the Isolationist road</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1a1808"><div style="font-size:13px;color:#9fb0c4;min-width:38px;text-align:center">↟█↟</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#ecd89a;font-weight:600">The Bulwark</span><span style="font-size:9px;letter-spacing:.08em;color:#c87a6a;border:1px solid #3a2218;padding:2px 6px;border-radius:3px">ALIGNMENT</span></div><div style="font-size:12px;color:#a89a5e;line-height:1.5;margin-top:3px">turns the war-engine outward — the Heroic road</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #1a1808"><div style="font-size:13px;color:#8a7ea0;min-width:38px;text-align:center">▒?▒</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#cfc6e0;font-weight:600">The Root-Shrine</span><span style="font-size:9px;letter-spacing:.08em;color:#8a7ea0;border:1px solid #2a2438;padding:2px 6px;border-radius:3px">SECRET</span></div><div style="font-size:12px;color:#9a93ad;line-height:1.5;margin-top:3px">▒▒▒▒▒ heed the Root-Priest ▒▒▒▒▒</div></div></div>
+            <div style="display:flex;gap:12px;padding:11px 0"><div style="font-size:13px;color:#b3361f;min-width:38px;text-align:center">▲</div><div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-size:13.5px;color:#f0e0a0;font-weight:600">The Megaproject</span><span style="font-size:9px;letter-spacing:.08em;color:#b3361f;border:1px solid #3a1f18;padding:2px 6px;border-radius:3px">CLIMAX</span></div><div style="font-size:12px;color:#a89a5e;line-height:1.5;margin-top:3px">the final, run-ending build — shaped by your fate</div></div></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 08 PACING ============ -->
+    <section id="pacing" style="padding:64px 0;border-bottom:1px solid #1a1a1c;scroll-margin-top:64px">
+      <div style="font-size:11px;letter-spacing:.28em;color:#6f8a72;margin-bottom:14px">08 — PACING &amp; THE ANTI-SNOWBALL</div>
+      <h2 style="margin:0 0 18px;font-size:34px;font-weight:700;color:#ece9df;letter-spacing:-.02em;max-width:860px">A deliberate ~7–8 hours, shaped as three earned plateaus — and engineered against the snowball.</h2>
+      <p style="max-width:820px;margin:0 0 36px;color:#a8a59b;font-size:15.5px;line-height:1.7">My recommendation backs your instinct: keep 7–8 hours, but spend it as three plateaus, one per era, each sealed by a hard paradigm-shift gate that resets your sense of scale. The real threat to deliberate pacing isn't length — it's the <span style="color:#bdb9ae">snowball</span>, the moment production outruns cost and the game starts playing itself. GobbieLife resists that on purpose, four ways.</p>
+
+      <!-- timeline -->
+      <div style="margin-bottom:12px;font-size:10px;letter-spacing:.16em;color:#56554f">THE RUN, AT A GLANCE</div>
+      <div style="display:flex;height:46px;border:1px solid #1d1d1f;border-radius:4px;overflow:hidden;margin-bottom:6px">
+        <div style="flex:1.5;background:#0d0d0e;display:flex;align-items:center;justify-content:center;color:#cdcabf;font-size:12px;border-right:1px solid #1d1d1f">ERA I · ~1.5h</div>
+        <div style="flex:3;background:#100a06;display:flex;align-items:center;justify-content:center;color:#e2935a;font-size:12px;border-right:1px solid #2a1a10">ERA II · ~3h</div>
+        <div style="flex:3;background:#0d0d06;display:flex;align-items:center;justify-content:center;color:#e7c468;font-size:12px;border-right:1px solid #26240f">ERA III · ~3h</div>
+        <div style="flex:.7;background:#100608;display:flex;align-items:center;justify-content:center;color:#c87a6a;font-size:11px">FINALE</div>
+      </div>
+      <div style="display:flex;font-size:10px;color:#56554f;margin-bottom:38px;letter-spacing:.04em"><span style="flex:1.5;text-align:center">⌖ breach</span><span style="flex:3;text-align:center">⌖ wall/embassy</span><span style="flex:3;text-align:center">⌖ alignment lock</span><span style="flex:.7;text-align:center">▲</span></div>
+
+      <!-- levers -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:#1a1a1c;border:1px solid #1a1a1c;margin-bottom:24px">
+        <div style="background:#0a0a0b;padding:22px 20px">
+          <div style="font-size:10px;letter-spacing:.2em;color:#6f8a72;margin-bottom:9px">LEVER 01</div>
+          <h3 style="margin:0 0 9px;font-size:15.5px;color:#e2dfd5;font-weight:700">Coupled upkeep</h3>
+          <p style="margin:0;font-size:13px;line-height:1.62;color:#928f86">Every producer adds a consumer. Runts eat Fungus; machines burn Fuel; outposts need Garrisons. Raw output can never run away from its own cost — growth always drags a bill behind it.</p>
+        </div>
+        <div style="background:#0a0a0b;padding:22px 20px">
+          <div style="font-size:10px;letter-spacing:.2em;color:#6f8a72;margin-bottom:9px">LEVER 02</div>
+          <h3 style="margin:0 0 9px;font-size:15.5px;color:#e2dfd5;font-weight:700">Discovery gating</h3>
+          <p style="margin:0;font-size:13px;line-height:1.62;color:#928f86">You cannot buy past a Blueprint or secret you haven't found. Progress is decoupled from raw numbers, so a pile of resources alone never breaks the curve — you still have to <i>look</i>.</p>
+        </div>
+        <div style="background:#0a0a0b;padding:22px 20px">
+          <div style="font-size:10px;letter-spacing:.2em;color:#6f8a72;margin-bottom:9px">LEVER 03</div>
+          <h3 style="margin:0 0 9px;font-size:15.5px;color:#e2dfd5;font-weight:700">Hard ceilings</h3>
+          <p style="margin:0;font-size:13px;line-height:1.62;color:#928f86">Storage and housing cap hard, forcing the next structural investment instead of infinite stockpiling. Each ceiling is a little bottleneck that keeps you spending, not hoarding.</p>
+        </div>
+        <div style="background:#0a0a0b;padding:22px 20px">
+          <div style="font-size:10px;letter-spacing:.2em;color:#6f8a72;margin-bottom:9px">LEVER 04</div>
+          <h3 style="margin:0 0 9px;font-size:15.5px;color:#e2dfd5;font-weight:700">Grit as a brake</h3>
+          <p style="margin:0;font-size:13px;line-height:1.62;color:#928f86">Overexpand and morale craters, throttling all output until you spend on Mead Pits, Hunting, and wins. Growth that ignores its people stalls — the settlement pushes back.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div style="background:#0a0c0a;border:1px solid #2a3a2e;border-radius:5px;padding:22px">
+          <div style="font-size:10px;letter-spacing:.2em;color:#86b394;margin-bottom:9px">ON IDLING</div>
+          <p style="margin:0;font-size:13px;line-height:1.62;color:#9d9a90">Offline progress is allowed but capped at roughly 4–6 hours of banked upkeep, so the deliberate plateaus can't be skipped by simply waiting. The feeling you want is <span style="color:#bfe0c8">tending</span>, not waiting — check in, rebalance, and leave it ticking.</p>
+        </div>
+        <div style="background:#0a0a0b;border:1px solid #1d1d1f;border-radius:5px;padding:22px">
+          <div style="font-size:10px;letter-spacing:.2em;color:#6f8a72;margin-bottom:9px">THE NET</div>
+          <p style="margin:0;font-size:13px;line-height:1.62;color:#9d9a90"><span style="color:#cdcabf">~7–8h for a first full run.</span> The hidden ending and three alternate alignments push total content well past <span style="color:#cdcabf">20 hours</span> across replays — without ever letting a single run snowball into autopilot.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 09 PATHWAYS ============ -->
+    <section id="paths" style="padding:64px 0 30px;scroll-margin-top:64px">
+      <div style="font-size:11px;letter-spacing:.28em;color:#6f8a72;margin-bottom:14px">09 — THE PATHWAYS · FIVE FATES</div>
+      <h2 style="margin:0 0 18px;font-size:34px;font-weight:700;color:#ece9df;letter-spacing:-.02em;max-width:820px">Every click leans the saga toward one of five fates.</h2>
+      <p style="max-width:780px;margin:0 0 44px;color:#a8a59b;font-size:15.5px;line-height:1.7">Alignment isn't a menu — it accrues silently from how you solve problems. The spine is shared; the divergence widens across the eras until, at the Megaproject, only one road remains open.</p>
+
+      <!-- spine -->
+      <div style="display:flex;align-items:center;gap:0;margin-bottom:8px;font-size:12px;color:#6f6e68;flex-wrap:wrap">
+        <span style="color:#cdcabf">(._.) THE GUT</span>
+        <span style="color:#3c4a40;padding:0 10px">───▶</span>
+        <span style="color:#9d9a90">ERA I&nbsp; one road</span>
+        <span style="color:#3c4a40;padding:0 10px">───▶</span>
+        <span style="color:#c98a6a">ERA II&nbsp; first fork</span>
+        <span style="color:#3c4a40;padding:0 10px">───▶</span>
+        <span style="color:#e7c468">ERA III&nbsp; lock-in</span>
+        <span style="color:#3c4a40;padding:0 10px">───▶</span>
+        <span style="color:#dcd8ce">THE MEGAPROJECT</span>
+      </div>
+      <div style="font-size:11px;color:#56554f;margin-bottom:28px;letter-spacing:.04em">accrual sources: how you clear each bottleneck · procedural event choices · Tone bias · who you trade with vs. who you raid</div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px">
+        <div style="border:1px solid #3a1f1a;border-radius:5px;background:linear-gradient(180deg,#120705,#0a0504);padding:24px 20px">
+          <div style="font-size:12px;color:#5a5430;margin-bottom:14px">▓▓▓▓▓▓▓▓▓ AGGRESSIVE</div>
+          <div style="font-size:11px;letter-spacing:.18em;color:#c87a6a;margin-bottom:7px">THE VILLAIN</div>
+          <h3 style="margin:0 0 11px;font-size:19px;color:#f0c0b0;font-weight:700">World Conquest, World Ruin</h3>
+          <p style="margin:0;font-size:13px;line-height:1.65;color:#a8847a">The realms burn to feed the war-engine. You become the story mothers warn their children about — and the map goes dark, kingdom by kingdom, until nothing is left to take.</p>
+          <div style="margin-top:16px;font-size:24px;color:#b3361f;letter-spacing:.1em">███▓▓░·</div>
+        </div>
+        <div style="border:1px solid #3a3318;border-radius:5px;background:linear-gradient(180deg,#0f0d06,#08070a);padding:24px 20px">
+          <div style="font-size:12px;color:#5a5430;margin-bottom:14px">░░░▓▓▓▓▓▓ ISOLATIONIST</div>
+          <div style="font-size:11px;letter-spacing:.18em;color:#cdbf9a;margin-bottom:7px">THE GOBLIN KINGDOM</div>
+          <h3 style="margin:0 0 11px;font-size:19px;color:#ecd89a;font-weight:700">The Gilded, Sealed Mountain</h3>
+          <p style="margin:0;font-size:13px;line-height:1.65;color:#a89a5e">You wall the world out and the wealth in. A hoard-kingdom of goblin gold and goblin silence — impenetrable, magnificent, and utterly alone. None in. None out.</p>
+          <div style="margin-top:16px;font-size:24px;color:#e7c468;letter-spacing:.1em">║▓▓▓▓║</div>
+        </div>
+        <div style="border:1px solid #1f3a26;border-radius:5px;background:linear-gradient(180deg,#06120a,#040a06);padding:24px 20px">
+          <div style="font-size:12px;color:#3c4a40;margin-bottom:14px">░░▓▓▓▓▓░░ DIPLOMATIC</div>
+          <div style="font-size:11px;letter-spacing:.18em;color:#86b394;margin-bottom:7px">THE MELTING POT</div>
+          <h3 style="margin:0 0 11px;font-size:19px;color:#bfe0c8;font-weight:700">A Thriving, Chaotic City</h3>
+          <p style="margin:0;font-size:13px;line-height:1.65;color:#7ea489">Elf, man, dwarf and goblin crammed into one squabbling, polyglot capital — loud, corrupt, alive, and somehow home. The vermin built the one place everyone wanted to live.</p>
+          <div style="margin-top:16px;font-size:24px;color:#86b394;letter-spacing:.1em">◇▓◆▓◇</div>
+        </div>
+        <div style="border:1px solid #2a3340;border-radius:5px;background:linear-gradient(180deg,#070b12,#05070a);padding:24px 20px">
+          <div style="font-size:12px;color:#3c4250;margin-bottom:14px">▓░░▓░░▓▓▓ HEROIC</div>
+          <div style="font-size:11px;letter-spacing:.18em;color:#9fb0c4;margin-bottom:7px">THE SAVIOR</div>
+          <h3 style="margin:0 0 11px;font-size:19px;color:#d2e0ec;font-weight:700">The Absurd Last Hope</h3>
+          <p style="margin:0;font-size:13px;line-height:1.65;color:#8593a4">A greater darkness comes for everyone. You turn your monstrous industry outward and — ridiculously, gloriously — become the thing that saves the world that despised you.</p>
+          <div style="margin-top:16px;font-size:24px;color:#9fb0c4;letter-spacing:.1em">↟███↟</div>
+        </div>
+      </div>
+
+      <!-- HIDDEN 5TH FATE -->
+      <div style="margin-top:18px;border:1px solid #2a2438;border-radius:5px;background:linear-gradient(180deg,#0a0810,#070509);padding:26px 24px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:12px">
+          <div style="font-size:11px;letter-spacing:.18em;color:#8a7ea0">⌖ THE FIFTH FATE · HIDDEN</div>
+          <div style="font-size:10px;color:#5a5470;letter-spacing:.1em">TONE-AGNOSTIC · ALIGNMENT-AGNOSTIC · SECRET-GATED</div>
+        </div>
+        <h3 style="margin:0 0 13px;font-size:22px;color:#cfc6e0;font-weight:700;letter-spacing:.02em">▒▒▒▒  THE ROOT REKINDLED  ▒▒▒▒</h3>
+        <p style="max-width:880px;margin:0 0 14px;font-size:13.5px;line-height:1.72;color:#9a93ad">Candy Box hid its real game behind a wall of patience and one strange clue. GobbieLife hides a fifth ending the same way — reachable from <span style="color:#cfc6e0">any</span> alignment and any tone, but only if you heed the Root-Priest, keep Vesk alive to the end, gather every Memory Stone, and — at the moment everyone else digs <span style="color:#cfc6e0">up</span> — choose instead to dig <span style="color:#cfc6e0">down</span>, back into the mud you came from.</p>
+        <p style="max-width:880px;margin:0 0 18px;font-size:13.5px;line-height:1.72;color:#9a93ad">The reveal: the goblins were never an accident. The dead god-tree seeded the mud to grow itself a new heart. The thing that learned to want learns, at last, to <span style="color:#cfc6e0">be</span> — and you rekindle the god, or descend to become whatever the world must survive next. Either way: a set of credits no one told you existed.</p>
+        <div style="font-size:20px;color:#8a7ea0;letter-spacing:.12em">▒▓ ◌ ▓▒&nbsp;&nbsp; the root remembers &nbsp;&nbsp;▒▓ ◌ ▓▒</div>
+      </div>
+
+      <!-- LOCKED DECISIONS -->
+      <div style="margin-top:30px;background:#0a0c0a;border:1px solid #2a3a2e;border-radius:5px;padding:24px">
+        <div style="font-size:11px;letter-spacing:.2em;color:#86b394;margin-bottom:16px">✓ LOCKED DECISIONS</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;font-size:13px;line-height:1.62;color:#9d9a90">
+          <div><span style="color:#86b394">Tone × Alignment — independent.</span> A gleeful villain and a grim humanitarian are both possible. More expressive, more shareable.</div>
+          <div><span style="color:#86b394">Chronicle — exportable from day one.</span> Mab the Chronicler hands you a shareable saga-log from the first hour; a growth lever, not a late unlock.</div>
+          <div><span style="color:#86b394">Fifth hidden ending — in.</span> The Root Rekindled, gated behind secrets rather than stats. See above.</div>
+          <div><span style="color:#86b394">Run length — ~7–8h, deliberate.</span> Three plateaus, hard gates, no snowball; 20h+ across replays. Full reasoning in §08.</div>
+          <div><span style="color:#86b394">Alignment — hidden all game.</span> No axis bars. <b style="color:#bdb9ae">The Oracle</b> whispers riddles of the future you're drifting toward (~116 lines, slow cadence); alignment is revealed only at the climax (themed Megaproject + ending).</div>
+          <div><span style="color:#86b394">The Charge — poetic quests.</span> A per-stage objective panel, written as riddle-tasks with live progress, tone-aware. Tells the player what to chase without breaking voice.</div>
+          <div><span style="color:#86b394">Panel-filter navigation.</span> Every era's nav tabs are gentle <b style="color:#bdb9ae">filters over one calm dashboard</b> — an overview tab shows everything, the rest narrow focus. (A hybrid that turned later eras into sub-screens was tried and reverted; see the Nav Options mockup.)</div>
+          <div><span style="color:#86b394">Stage names + silly twins.</span> Every stage has a serious name and a Goblin-Silly variant that swaps in with Tone (e.g. The Ferrous Vault / The Shiny Metal Fort).</div>
+          <div><span style="color:#86b394">Events — deep &amp; era-scaled.</span> ~24/24/28 Reckoning templates per era, colour-scaled to what goblins care about at each point, on a slow cadence so each lands.</div>
+        </div>
+      </div>
+
+      <!-- BUILD STATUS -->
+      <div style="margin-top:30px;background:#0a0c0a;border:1px solid #2a3a2e;border-radius:5px;padding:24px">
+        <div style="font-size:11px;letter-spacing:.2em;color:#86b394;margin-bottom:8px">◆ BUILD STATUS · v0.3</div>
+        <p style="margin:0;font-size:13px;line-height:1.7;color:#9d9a90">A fully playable Era I→III slice ships alongside this bible in <span style="color:#bdb9ae">GobbieLife Stage 1 Playable.dc.html</span> — real economies, the Oracle, the Charge, panel-filter nav, ~76 events, ~116 riddles, all five endings (incl. the hidden Root Rekindled), autosave, and a demo speed control (×1/×60/×600) to feel the deliberate curve fast. A new session should read <span style="color:#bdb9ae">CLAUDE.md</span> for the full state map.</p>
+      </div>
+
+      <!-- STILL ON THE TABLE -->
+      <div style="margin-top:30px;background:#0a0a0b;border:1px solid #1d1d1f;border-radius:5px;padding:24px">
+        <div style="font-size:11px;letter-spacing:.2em;color:#86b394;margin-bottom:6px">✓ DECIDED · ALL 8 LEVERS SET</div>
+        <div style="font-size:12px;color:#6f6e68;margin-bottom:20px;line-height:1.6">Every lever called. Recommendations adopted across the board, with one deliberate override — Tone is fixed at the start of a run for narrative continuity.</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1px;background:#1a1a1c;border:1px solid #1a1a1c">
+          <div style="background:#0a0a0b;padding:18px"><div style="font-size:12.5px;font-weight:700;color:#dcd8ce;margin-bottom:6px">01 · Save &amp; continuity</div><p style="margin:0;font-size:12px;line-height:1.6;color:#928f86">Autosave, an export/import save-string, and capped offline progress. <span style="color:#86b394">✓ all three</span> — the save-string doubles as backup and a seed to share.</p></div>
+          <div style="background:#0a0a0b;padding:18px"><div style="font-size:12.5px;font-weight:700;color:#dcd8ce;margin-bottom:6px">02 · Can you lose?</div><p style="margin:0;font-size:12px;line-height:1.6;color:#928f86">A total Fungus collapse in Era I can wipe the pack to a soft-fail you claw back from. <span style="color:#86b394">✓ real stakes early, no rage-quit wipes late</span> — later eras set you back, never end you.</p></div>
+          <div style="background:#0a0a0b;padding:18px"><div style="font-size:12.5px;font-weight:700;color:#dcd8ce;margin-bottom:6px">03 · Number scale</div><p style="margin:0;font-size:12px;line-height:1.6;color:#928f86">Reject idle-game number inflation; keep values human (hundreds → hundred-thousands), never <span style="color:#bdb9ae">1e40</span>. <span style="color:#86b394">✓ yes</span> — readable numbers are part of the identity and the deliberate pace.</p></div>
+          <div style="background:#0b0a07;padding:18px;border:1px solid #2a2418"><div style="font-size:12.5px;font-weight:700;color:#e0d4b0;margin-bottom:6px">04 · Tone — fixed at the start ★</div><p style="margin:0;font-size:12px;line-height:1.6;color:#9a9580">Your override: Tone is chosen once at the outset and <span style="color:#cdbf9a">held for the whole run</span>, so the narrator never whiplashes — continuity over mid-game fiddling. Still cosmetic-first, with flavor Easter eggs baked in at the chosen level.</p></div>
+          <div style="background:#0a0a0b;padding:18px"><div style="font-size:12.5px;font-weight:700;color:#dcd8ce;margin-bottom:6px">05 · Meta &amp; replay</div><p style="margin:0;font-size:12px;line-height:1.6;color:#928f86">No numeric prestige. <span style="color:#86b394">✓ a persistent Codex</span> of unlocked lore, endings, and rare Reckonings — replay is driven by collection, not carried-over power.</p></div>
+          <div style="background:#0a0a0b;padding:18px"><div style="font-size:12.5px;font-weight:700;color:#dcd8ce;margin-bottom:6px">06 · Sound</div><p style="margin:0;font-size:12px;line-height:1.6;color:#928f86">A Dark Room's lesson: near-silence is powerful. <span style="color:#86b394">✓ a sparse, era-shifting ambient bed</span> (drips → clanks → drone), mutable, never chiptune.</p></div>
+          <div style="background:#0a0a0b;padding:18px"><div style="font-size:12.5px;font-weight:700;color:#dcd8ce;margin-bottom:6px">07 · Platform</div><p style="margin:0;font-size:12px;line-height:1.6;color:#928f86">Idle thrives on mobile. <span style="color:#86b394">✓ desktop-first canvas, mobile-respecting from day one</span> — the ASCII must reflow, not just zoom, with real touch targets.</p></div>
+          <div style="background:#08070a;padding:18px;border:1px solid #2a2438"><div style="font-size:12.5px;font-weight:700;color:#cfc6e0;margin-bottom:6px">08 · The hidden-depth dial</div><p style="margin:0;font-size:12px;line-height:1.6;color:#9a93ad">Beyond the 5th ending — how much truly secret content (hidden resources, a shadow vendor, the dig-down path)? <span style="color:#8a7ea0">✓ a handful, with faint breadcrumbs</span> — enough that players whisper "wait, is there more?"</p></div>
+        </div>
+      </div>
+
+      <div style="margin-top:30px;text-align:center;color:#3c3b37;font-size:12px;letter-spacing:.1em">(._.) &nbsp; END OF BIBLE · GobbieLife v0.1 · the mud remembers &nbsp; (._.)</div>
+    </section>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { tone: 30, mud: 0, scrapes: 0, scrapeIdx: 0, whisperSeed: 2, tier: 0, playing: false };
+
+  toneBank() {
+    const t = this.state.tone;
+    if (t < 38) return 'grim';
+    if (t > 62) return 'silly';
+    return 'mid';
+  }
+
+  scrapeLines() {
+    return {
+      grim: [
+        "Your fingernails split against the rock. The mud tastes of iron and the long-dead.",
+        "Something gives in your wrist. You keep digging. Hunger does not negotiate.",
+        "Cold sludge, threaded with bone-meal. You swallow what you cannot carry.",
+        "The dark leans closer. You scrape until your fingers forget they bleed.",
+      ],
+      mid: [
+        "You drag a fistful of cold mud from the warren wall. Heavier than it looks.",
+        "Wet earth, a few wriggling things. It'll do. It has to.",
+        "You pry loose a clot of mud and stack it with the rest.",
+        "The wall gives up another handful. You are, slowly, getting somewhere.",
+      ],
+      silly: [
+        "Ooh! A VERY nice piece of dirt. You name it Gerald and add it to the pile.",
+        "Squelch! That's the good mud. The premium sludge. Chef's kiss.",
+        "You find a worm. He seems nice. You let him help dig.",
+        "Mud acquired! It is brown. It is yours. Life is, briefly, good.",
+      ],
+    };
+  }
+
+  whisperBanks() {
+    return {
+      grim: {
+        who: ["A one-eared runt", "The smallest gobling", "A half-starved digger", "Old Vesk", "A nameless stray"],
+        did: ["choked to death on", "clawed free", "was buried beneath", "bartered its teeth for", "died clutching"],
+        what: ["a fistful of black fungus", "a shard of elven glass", "a rusted human nail", "three fat grubs", "a cold dead ember"],
+        where: ["in the deep warren.", "by the bone-pile.", "where the roots weep.", "under the Tallyman's cart.", "at the mouth of the Gut."],
+      },
+      mid: {
+        who: ["A young runt", "One of the diggers", "A wandering stray", "Vesk's cousin", "The pack's lookout"],
+        did: ["uncovered", "hauled back", "traded a tooth for", "stumbled onto", "hoarded"],
+        what: ["a knot of pale fungus", "a sliver of bright metal", "a fistful of grubs", "a strange carved stone", "a length of good rope"],
+        where: ["near the old dig.", "by the storage box.", "at the warren's edge.", "down a forgotten tunnel.", "where the echo lives."],
+      },
+      silly: {
+        who: ["A runt named Gerald", "The pack's most dramatic gobling", "A surprisingly polite stray", "Vesk, who is fine actually", "A worm with big ambitions"],
+        did: ["proudly presented", "traded a button for", "tripped and discovered", "would not stop talking about", "lovingly hoarded"],
+        what: ["a VERY nice rock", "a slightly damp sock", "a confused but agreeable beetle", "a shiny bottlecap", "the second-best mushroom"],
+        where: ["by the squelchy puddle.", "near the snack stash.", "in the good-mud corner.", "behind the storage box.", "where the echo lives."],
+      },
+    };
+  }
+
+  makeWhisper(bank) {
+    const b = this.whisperBanks()[bank] || this.whisperBanks().grim;
+    const seed = this.state.whisperSeed;
+    const pick = (arr, salt) => arr[(seed * 7 + salt * 3) % arr.length];
+    const who = pick(b.who, 1), did = pick(b.did, 2), what = pick(b.what, 4), where = pick(b.where, 6);
+    return { who, did, what, where, text: who + " " + did + " " + what + " " + where };
+  }
+
+  componentWillUnmount() { if (this._t) clearInterval(this._t); }
+
+  play() {
+    if (this._t) { clearInterval(this._t); this._t = null; this.setState({ playing: false }); return; }
+    var start = this.state.tier >= 6 ? 0 : this.state.tier;
+    this.setState({ tier: start, playing: true });
+    var self = this;
+    this._t = setInterval(function () {
+      self.setState(function (s) {
+        if (s.tier >= 6) { clearInterval(self._t); self._t = null; return { playing: false }; }
+        return { tier: s.tier + 1 };
+      });
+    }, 1500);
+  }
+
+  settlementTiers() {
+    return [
+      { name: 'A Huddle of Huts', era: 'ERA II · 2.1', souls: '~160', desc: 'a scatter of mud huts ringing the first surface dig', fp: 7, col: '#c98a6a' },
+      { name: 'A Palisaded Village', era: 'ERA II · 2.1', souls: '~500', desc: 'a palisade rings the yards; the first real walls', fp: 15, col: '#c98a6a' },
+      { name: 'A Market Warren', era: 'ERA II · 2.2', souls: '~1,700', desc: 'a market, a barter-square, and the first smokestacks', fp: 26, col: '#d3702f' },
+      { name: 'An Industrial Town', era: 'ERA II · 2.2', souls: '~8,000', desc: 'a true town — factory quarters, gantries, ceaseless smoke', fp: 40, col: '#d3702f' },
+      { name: 'A Fortress-City', era: 'ERA II · 2.3', souls: '~130,000', desc: 'walls, towers, and a rampart — impenetrable and watching', fp: 56, col: '#e2935a' },
+      { name: 'A Sprawling City-State', era: 'ERA III · 3.1', souls: '~4.5M', desc: 'a recognized power — dense districts, monuments rising', fp: 78, col: '#e7c468' },
+      { name: 'A World-Capital', era: 'ERA III · 3.2–3.3', souls: '~46M', desc: 'a capital that eats the skyline — the seat of the finale', fp: 100, col: '#e7c468' },
+    ];
+  }
+
+  renderVals() {
+    const bank = this.toneBank();
+    const lines = this.scrapeLines()[bank];
+    const intro = bank === 'grim'
+      ? "The warren is black. You are alone. Your hands remember nothing but the digging."
+      : bank === 'silly'
+        ? "It's ever so dark down here! But you're a plucky little fellow. Let's dig up some lovely mud."
+        : "Down in the dark you flex your small hands. There is mud. There is hunger. Begin.";
+    const scrapeFlavor = this.state.scrapes === 0 ? intro : lines[this.state.scrapeIdx % lines.length];
+
+    var _tiers = this.settlementTiers();
+    var _act = this.state.tier;
+    var _cur = _tiers[_act];
+    var _self = this;
+    var _stop = function () { if (_self._t) { clearInterval(_self._t); _self._t = null; } };
+    var _mk = function (i) {
+      var on = i === _act;
+      return 'position:absolute;left:0;right:0;bottom:26px;margin:0;font-family:inherit;font-size:clamp(9px,1.45vw,13px);line-height:1.2;white-space:pre;text-align:center;color:' + _tiers[i].col + ';opacity:' + (on ? '1' : '0') + ';transform:translateY(' + (on ? '0' : '22') + 'px) scaleY(' + (on ? '1' : '0.96') + ');transition:opacity .6s ease, transform .6s ease;pointer-events:none';
+    };
+    return {
+      panoTier: _act,
+      panoTierLabel: (_act + 1) + ' / 7',
+      panoName: _cur.name,
+      panoColName: _cur.col,
+      panoEra: _cur.era,
+      panoSouls: _cur.souls,
+      panoDesc: _cur.desc,
+      panoFpPct: _cur.fp,
+      panoS0: _mk(0), panoS1: _mk(1), panoS2: _mk(2), panoS3: _mk(3), panoS4: _mk(4), panoS5: _mk(5), panoS6: _mk(6),
+      panoPlayLabel: this.state.playing ? '❚❚ PAUSE' : (_act >= 6 ? '↻ REPLAY GROWTH' : '▶ PLAY GROWTH'),
+      togglePano: function () { _self.play(); },
+      panoScrub: function (e) { _stop(); _self.setState({ tier: +e.target.value, playing: false }); },
+      panoPrev: function () { _stop(); _self.setState(function (s) { return { tier: Math.max(0, s.tier - 1), playing: false }; }); },
+      panoNext: function () { _stop(); _self.setState(function (s) { return { tier: Math.min(6, s.tier + 1), playing: false }; }); },
+      panoTicks: _tiers.map(function (t, i) {
+        var on = i === _act;
+        return { n: i + 1, onClick: function () { _stop(); _self.setState({ tier: i, playing: false }); }, style: 'flex:1;text-align:center;cursor:pointer;font-family:inherit;font-size:10px;padding:6px 0;border-radius:3px;border:1px solid ' + (on ? t.col : '#241a12') + ';color:' + (on ? t.col : '#6a5230') + ';background:' + (on ? 'rgba(255,255,255,0.05)' : 'transparent') };
+      }),
+      tone: this.state.tone,
+      toneLabel: bank === 'grim' ? 'GRIMDARK' : bank === 'silly' ? 'GOBLIN SILLY' : 'BALANCED',
+      mud: this.state.mud,
+      scrapes: this.state.scrapes,
+      scrapeFlavor,
+      whisper: this.makeWhisper(bank),
+      onTone: (e) => this.setState({ tone: +e.target.value }),
+      scrape: () => this.setState(s => ({ mud: s.mud + 1, scrapes: s.scrapes + 1, scrapeIdx: s.scrapeIdx + 1 })),
+      rollWhisper: () => this.setState(s => ({ whisperSeed: s.whisperSeed + 1 })),
+    };
+  }
+}
+</script>
+</body>
+</html>

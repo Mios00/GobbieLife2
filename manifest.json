@@ -1,0 +1,15 @@
+{
+  "name": "GobbieLife",
+  "short_name": "GobbieLife",
+  "description": "A Candy Box–style ASCII incremental game. You are sentient mud that becomes a goblin, a warren, then a world-spanning empire — across three eras and six fates.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<meta name="design_doc_mode" content="canvas">
+<style>
+  body { margin: 0; background: #050608; }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
+
+<div style="width:1440px;margin:0 auto;padding:44px 44px 60px;background:radial-gradient(120% 60% at 50% 0%,#0c0d12,#050608 60%);font-family:'JetBrains Mono',monospace;color:#cdcabf">
+
+  <!-- ===== TITLE ===== -->
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid #23232a;padding-bottom:18px;margin-bottom:8px">
+    <div>
+      <div style="font-size:11px;letter-spacing:.42em;color:#6f6e68;margin-bottom:10px">CANDY-BOX INCREMENTAL · ASCII · THREE ERAS · NINE STAGES</div>
+      <div style="font-size:40px;font-weight:800;letter-spacing:-.01em;color:#ece9df">GobbieLife — Gameplay Architecture</div>
+      <div style="font-size:13px;color:#8a877e;margin-top:8px">Sentient mud → goblin → warren → world-conquering (or world-saving) empire. One continuous run, ~7–8h, five fates.</div>
+    </div>
+    <div style="font-size:30px;color:#2f2f36;letter-spacing:.12em;white-space:nowrap">▟█▙ ║ ▟█▙</div>
+  </div>
+
+  <!-- ===== LEGEND ===== -->
+  <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:11px;color:#8a877e;margin-bottom:30px">
+    <span style="display:flex;align-items:center;gap:7px"><span style="width:11px;height:11px;background:#86b394;border-radius:2px"></span>ERA I · Feral Awakening</span>
+    <span style="display:flex;align-items:center;gap:7px"><span style="width:11px;height:11px;background:#e2935a;border-radius:2px"></span>ERA II · Iron Hunger</span>
+    <span style="display:flex;align-items:center;gap:7px"><span style="width:11px;height:11px;background:#e7c468;border-radius:2px"></span>ERA III · World Blight</span>
+    <span style="display:flex;align-items:center;gap:7px"><span style="width:11px;height:11px;background:#5f93a8;border-radius:2px"></span>The Hollow / Dark Beyond</span>
+    <span style="display:flex;align-items:center;gap:7px"><span style="width:11px;height:11px;background:#9a8fb4;border-radius:2px"></span>Hidden Alignment / Oracle</span>
+    <span style="margin-left:auto;color:#5a5952">→ flow &nbsp;·&nbsp; ▼ era gate &nbsp;·&nbsp; ⟳ production loop</span>
+  </div>
+
+  <div style="display:flex;gap:26px;align-items:flex-start">
+
+    <!-- ================= MAIN SPINE ================= -->
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:0">
+
+      <!-- START -->
+      <div style="border:1px solid #33333c;border-radius:10px;background:#0c0d12;padding:18px 22px;text-align:center">
+        <div style="font-size:10px;letter-spacing:.28em;color:#8a877e;margin-bottom:10px">THE RUN BEGINS · ONE CHOICE, MADE ONCE</div>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <span style="border:1px solid #4a3030;border-radius:20px;padding:7px 16px;font-size:12.5px;color:#c88">☠ GRIMDARK</span>
+          <span style="border:1px solid #3a4a52;border-radius:20px;padding:7px 16px;font-size:12.5px;color:#9bb">◑ BALANCED</span>
+          <span style="border:1px solid #4a4030;border-radius:20px;padding:7px 16px;font-size:12.5px;color:#cb8">☺ GOBLIN-SILLY</span>
+        </div>
+        <div style="font-size:11px;color:#6f6e68;margin-top:11px"><b style="color:#9a8fb4">TONE</b> is locked for the whole run — it bends every line of narration. It is <b>independent</b> of Alignment.</div>
+      </div>
+
+      <div style="text-align:center;color:#3a3a42;font-size:20px;line-height:1.1;padding:6px 0">│</div>
+
+      <!-- ============ ERA I ============ -->
+      <div style="border:1px solid #294029;border-radius:10px;background:linear-gradient(180deg,#0b110b,#080a08);overflow:hidden">
+        <div style="display:flex;align-items:center;gap:12px;padding:13px 20px;border-bottom:1px solid #1a2a1a;background:#0b120b">
+          <span style="font-size:11px;letter-spacing:.24em;color:#86b394;font-weight:700">ERA I · THE FERAL AWAKENING</span>
+          <span style="font-size:10.5px;color:#5f7a63">1.1 Lone Scrapper → 1.2 Runt Pack → 1.3 Mud Warrens</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#132013">
+          <div style="background:#0a0f0a;padding:15px 17px">
+            <div style="font-size:10px;letter-spacing:.16em;color:#6f8a72;margin-bottom:9px">RESOURCES</div>
+            <div style="font-size:12.5px;line-height:1.9;color:#bcd0bf">◆ <b style="color:#cde0d0">Mud</b> — dug from the dark<br>◆ <b style="color:#9ec4a2">Fungus</b> — the only food</div>
+          </div>
+          <div style="background:#0a0f0a;padding:15px 17px">
+            <div style="font-size:10px;letter-spacing:.16em;color:#6f8a72;margin-bottom:9px">PACK &amp; ACTIONS</div>
+            <div style="font-size:12px;line-height:1.85;color:#a9c2ac">Scrape mud · Forage fungus<br>Recruit <b style="color:#cde0d0">Runts</b> → split into<br><b style="color:#cde0d0">Diggers</b> / <b style="color:#cde0d0">Foragers</b></div>
+          </div>
+          <div style="background:#0a0f0a;padding:15px 17px">
+            <div style="font-size:10px;letter-spacing:.16em;color:#6f8a72;margin-bottom:9px">⟳ THE LOOP</div>
+            <div style="font-size:11.5px;line-height:1.75;color:#8fae93">diggers → <span style="color:#cde0d0">mud</span><br>foragers → <span style="color:#9ec4a2">fungus</span><br>runts <span style="color:#c87a6a">eat fungus</span> (starve = game over)</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding:8px 0">
+        <span style="display:inline-block;border:1px solid #2f4a2f;border-radius:20px;padding:6px 16px;font-size:11px;color:#86b394;background:#0a0f0a">▼ &nbsp;GATE — hoard <b>1000 mud</b> → BREACH THE SURFACE</span>
+      </div>
+
+      <!-- ============ ERA II ============ -->
+      <div style="border:1px solid #3a2a18;border-radius:10px;background:linear-gradient(180deg,#120b06,#0a0705);overflow:hidden">
+        <div style="display:flex;align-items:center;gap:12px;padding:13px 20px;border-bottom:1px solid #2a1f14;background:#120b06">
+          <span style="font-size:11px;letter-spacing:.24em;color:#e2935a;font-weight:700">ERA II · THE IRON HUNGER</span>
+          <span style="font-size:10.5px;color:#9a6f54">2.1 Smog-Pit → 2.2 Smoghaven → 2.3 Ferrous Vault</span>
+        </div>
+
+        <!-- refining chain -->
+        <div style="padding:16px 18px;border-bottom:1px solid #1c130c">
+          <div style="font-size:10px;letter-spacing:.16em;color:#b07a4e;margin-bottom:11px">THE REFINING CHAIN · each producer burns Ash as shared fuel</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px">
+            <span style="border:1px solid #3a4a2a;border-radius:5px;padding:8px 12px;color:#b7c69a">Blightwood</span>
+            <span style="color:#8a6f4e">→ ▤ Char-Kiln →</span>
+            <span style="border:1px solid #4a3a22;border-radius:5px;padding:8px 12px;color:#c8a86a">Ash</span>
+            <span style="color:#8a6f4e">+ Scrap → ≣ Smelter →</span>
+            <span style="border:1px solid #3a4a5a;border-radius:5px;padding:8px 12px;color:#b6c6d6">Iron</span>
+            <span style="color:#8a6f4e">+ Ash → ⬢ Forge →</span>
+            <span style="border:1px solid #5a5060;border-radius:5px;padding:8px 12px;color:#d2dce8;font-weight:700">Adamantium</span>
+            <span style="border:1px solid #3a2f18;border-radius:20px;padding:5px 11px;color:#e0a878;font-size:10.5px;margin-left:4px">⬢ Forge halt toggle</span>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#1c130c">
+          <div style="background:#0a0604;padding:15px 17px">
+            <div style="font-size:10px;letter-spacing:.16em;color:#b07a4e;margin-bottom:9px">JOBS &amp; DISCOVERY</div>
+            <div style="font-size:11.5px;line-height:1.8;color:#c2a888">Scavengers · Woodcutters · Foragers · Warband<span style="color:#7a5b44"> (2.3)</span><br><span style="color:#9a8360">Scavenging drips <b style="color:#cabba0">Discovery</b> → a blueprint chain (Kiln → Forge → Watchtower → Colosseum)</span></div>
+          </div>
+          <div style="background:#0a0604;padding:15px 17px">
+            <div style="font-size:10px;letter-spacing:.16em;color:#b07a4e;margin-bottom:9px">WORKS &amp; TOWN</div>
+            <div style="font-size:11.5px;line-height:1.8;color:#c2a888">Hunting Lodge <span style="color:#7a5b44">(food +1/+2/+2.5 by stage)</span> · Ash-Bath · Mead Pit · Shanty · Colosseum<br><b style="color:#c6d6e6">Wall</b> &amp; <b style="color:#c6d6e6">Watchtower</b> — 9 tiers each <span style="color:#7a5b44">(Tier 5+ costs Adamantium)</span></div>
+          </div>
+          <div style="background:#0a0604;padding:15px 17px">
+            <div style="font-size:10px;letter-spacing:.16em;color:#b07a4e;margin-bottom:9px">BRAKES &amp; THREATS</div>
+            <div style="font-size:11.5px;line-height:1.8;color:#c2a888"><b style="color:#e0b4a8">Grit / Comfort</b> caps runaway growth · logistic population<br><b style="color:#e0b4a8">Raids</b> (2.3, scale w/ Notoriety) — defend, or pay a <b style="color:#e0b4a8">wealth-scaled tribute</b> split across your hoard</div>
+          </div>
+        </div>
+        <div style="padding:11px 18px;border-top:1px solid #1c130c;font-size:11px;color:#8a6f4e;display:flex;gap:18px;flex-wrap:wrap">
+          <span>⌂ <b style="color:#c9c1a8">Embassy</b> → reveals THE STANDINGS</span>
+          <span>▚ Settlement Panorama begins (live skyline + souls)</span>
+          <span>◍ The Hollow starts whispering (2.3)</span>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding:8px 0">
+        <span style="display:inline-block;border:1px solid #5a4020;border-radius:20px;padding:6px 16px;font-size:11px;color:#e2935a;background:#0a0604">▼ &nbsp;GATE — Iron → 2.2 · Adamantium → 2.3 · raise <b>THE HERALD HORN</b> &amp; sound its note</span>
+      </div>
+
+      <!-- alignment fork -->
+      <div style="border:1px dashed #4a3d5e;border-radius:10px;background:#0a0810;padding:15px 18px;margin-bottom:6px">
+        <div style="font-size:10px;letter-spacing:.16em;color:#9a8fb4;margin-bottom:11px">⑃ THE HERALD HORN'S NOTE — the first explicit Alignment fork (seeds the hidden axes)</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;font-size:11.5px">
+          <div style="border:1px solid #2a2438;border-radius:6px;padding:11px 12px"><b style="color:#e7c468">The Grand Maze</b><br><span style="color:#7a7488">→ Isolationist</span></div>
+          <div style="border:1px solid #2a2438;border-radius:6px;padding:11px 12px"><b style="color:#86b394">The Ashen Conclave</b><br><span style="color:#7a7488">→ Diplomatic</span></div>
+          <div style="border:1px solid #2a2438;border-radius:6px;padding:11px 12px"><b style="color:#b3361f">The Iron Legion</b><br><span style="color:#7a7488">→ Aggressive</span></div>
+          <div style="border:1px solid #2a2438;border-radius:6px;padding:11px 12px"><b style="color:#9fb0c4">The Sanctuary</b><br><span style="color:#7a7488">→ Heroic</span></div>
+        </div>
+      </div>
+
+      <div style="text-align:center;color:#3a3a42;font-size:20px;line-height:1.1;padding:6px 0">│</div>
+
+      <!-- ============ ERA III ============ -->
+      <div style="border:1px solid #3a3518;border-radius:10px;background:linear-gradient(180deg,#100f06,#0a0a06);overflow:hidden">
+        <div style="display:flex;align-items:center;gap:12px;padding:13px 20px;border-bottom:1px solid #26240f;background:#100f06">
+          <span style="font-size:11px;letter-spacing:.24em;color:#e7c468;font-weight:700">ERA III · THE WORLD BLIGHT</span>
+          <span style="font-size:10.5px;color:#a8954e">3.1 Ashen Dominion → 3.2 Iron Hegemony → 3.3 Grand Mechanica</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#26240f">
+          <div style="background:#0a0a06;padding:15px 17px">
+            <div style="font-size:10px;letter-spacing:.16em;color:#a8954e;margin-bottom:9px">EMPIRE ECONOMY</div>
+            <div style="font-size:11.5px;line-height:1.8;color:#c9bd90"><b style="color:#d2dce8">Adamantium</b> · <b style="color:#e7c468">Coin</b> · <b style="color:#c9c1a8">Influence</b> · Food<br>Outpost · Trade Route · Granary<br><span style="color:#7a6e44">Claim territory (steep scaling → 31 lands)</span></div>
+          </div>
+          <div style="background:#0a0a06;padding:15px 17px">
+            <div style="font-size:10px;letter-spacing:.16em;color:#a8954e;margin-bottom:9px">UNREST &amp; DIPLOMACY</div>
+            <div style="font-size:11.5px;line-height:1.8;color:#c9bd90"><b style="color:#e7c468">Garrison</b> (adam) / <b style="color:#bcd89a">Pleasure-Garden</b> (coin) suppress <b style="color:#c8553a">Unrest</b> → else <b style="color:#c8553a">Uprising</b><br><span style="color:#7a6e44">THE STANDINGS — 4 factions; hostile → War</span></div>
+          </div>
+          <div style="background:#0a0a06;padding:15px 17px">
+            <div style="font-size:10px;letter-spacing:.16em;color:#a8954e;margin-bottom:9px">3.2 · CONGRESS OF POWERS</div>
+            <div style="font-size:11.5px;line-height:1.8;color:#c9bd90"><b style="color:#c8553a">Coalition</b> meter climbs → world marches as one<br>Levers: <span style="color:#bcd89a">Sway</span> · <span style="color:#e0a898">Cow</span> · <span style="color:#a8b0d0">Seal</span> · <span style="color:#a8c0d8">Shield</span> <span style="color:#7a6e44">(each hardens Alignment)</span><br><span style="color:#86b394">☘ below 20% = "world at ease" → up to +40% Coin &amp; Influence (lever costs rise with territory)</span></div>
+          </div>
+        </div>
+
+        <!-- 3.3 the two-clock race -->
+        <div style="padding:16px 18px;border-top:1px solid #26240f;background:#0b0a06">
+          <div style="font-size:10px;letter-spacing:.16em;color:#e7c468;margin-bottom:12px">3.3 · THE GRAND MECHANICA — a two-clock race (advance at 18 lands + Alignment locked)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <div style="border:1px solid #3a3214;border-radius:7px;padding:12px 14px;background:#0d0b05">
+              <div style="font-size:11.5px;color:#f3d572;font-weight:700;margin-bottom:7px">⏣ POUR THE HOARD</div>
+              <div style="height:9px;background:#161206;border:1px solid #3a3214;border-radius:2px;overflow:hidden"><div style="width:62%;height:100%;background:repeating-linear-gradient(90deg,#c89a32,#c89a32 6px,#f3d572 6px,#f3d572 12px)"></div></div>
+              <div style="font-size:10.5px;color:#9a8c5e;margin-top:7px">Adam + Coin + Influence batches fill the Mechanica</div>
+            </div>
+            <div style="border:1px solid #16303a;border-radius:7px;padding:12px 14px;background:#07090b">
+              <div style="font-size:11.5px;color:#5f93a8;font-weight:700;margin-bottom:7px">◍ THE DARK BEYOND · doom clock</div>
+              <div style="height:9px;background:#06090a;border:1px solid #16303a;border-radius:2px;overflow:hidden"><div style="width:40%;height:100%;background:#6fb8c4"></div></div>
+              <div style="font-size:10.5px;color:#6f8496;margin-top:7px">Incursions at <b>20 · 40 · 60 · 80%</b> escalate (res → infra → <b style="color:#c8553a">−4 then −8 land</b>) · <b style="color:#c8553a">100% = world swallowed</b></div>
+            </div>
+          </div>
+          <div style="text-align:center;font-size:11px;color:#8a7e5a;margin-top:12px">Finish the Mechanica &amp; speak the final word <span style="color:#5f93a8">before the Dark Beyond crests</span> — or lose everything.</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;color:#3a3a42;font-size:20px;line-height:1.1;padding:8px 0">│<br>▼</div>
+
+      <!-- ============ ENDINGS ============ -->
+      <div style="border:1px solid #33333c;border-radius:10px;background:#0c0d12;padding:17px 20px">
+        <div style="font-size:10px;letter-spacing:.24em;color:#8a877e;margin-bottom:14px">THE SAGA ENDS · which fate depends on your hidden Alignment (revealed only now)</div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:12px">
+          <div style="border:1px solid #4a2620;border-radius:7px;padding:12px;text-align:center"><div style="font-size:12px;font-weight:700;color:#b3361f">The Villain</div><div style="font-size:10.5px;color:#7a6a66;margin-top:4px">Aggressive</div></div>
+          <div style="border:1px solid #4a4020;border-radius:7px;padding:12px;text-align:center"><div style="font-size:12px;font-weight:700;color:#e7c468">Goblin Kingdom</div><div style="font-size:10.5px;color:#7a746a;margin-top:4px">Isolationist</div></div>
+          <div style="border:1px solid #2a4a30;border-radius:7px;padding:12px;text-align:center"><div style="font-size:12px;font-weight:700;color:#86b394">The Melting Pot</div><div style="font-size:10.5px;color:#6a7a6e;margin-top:4px">Diplomatic</div></div>
+          <div style="border:1px solid #3a4550;border-radius:7px;padding:12px;text-align:center"><div style="font-size:12px;font-weight:700;color:#9fb0c4">The Savior</div><div style="font-size:10.5px;color:#6a747e;margin-top:4px">Heroic</div></div>
+          <div style="border:1px dashed #4a3d5e;border-radius:7px;padding:12px;text-align:center"><div style="font-size:12px;font-weight:700;color:#9a8fb4">Root Rekindled</div><div style="font-size:10.5px;color:#6f6a80;margin-top:4px">Hidden · tap the Root</div></div>
+        </div>
+        <div style="display:flex;gap:10px">
+          <div style="flex:1;border:1px solid #3a352a;border-radius:7px;padding:10px 13px;font-size:11px;color:#9a938a">✝ <b style="color:#b0a89a">Starved</b> — famine empties the warren / foundry-town / dominion (Eras I–III)</div>
+          <div style="flex:1;border:1px solid #234049;border-radius:7px;padding:10px 13px;font-size:11px;color:#7fa5b0">◍ <b style="color:#8fc0d0">The Dark Beyond</b> — the Hollow swallows the world (Era III, doom clock hits 100%)</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================= PERSISTENT SYSTEMS RAIL ================= -->
+    <div style="width:300px;flex-shrink:0;display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:10px;letter-spacing:.24em;color:#6f6e68;padding-bottom:2px">RUNS ALL THREE ERAS ↓</div>
+
+      <div style="border:1px solid #3a3350;border-radius:9px;background:#0a0810;padding:15px 16px">
+        <div style="font-size:11px;letter-spacing:.14em;color:#9a8fb4;font-weight:700;margin-bottom:8px">◇ HIDDEN ALIGNMENT</div>
+        <div style="font-size:11.5px;line-height:1.7;color:#8f88a4">Four axes — <span style="color:#c8a">Aggr</span> · <span style="color:#8b9">Dipl</span> · <span style="color:#cb8">Isol</span> · <span style="color:#9bc">Hero</span> — accrue <b>silently</b> from choices. Never shown as bars. Decides the ending.</div>
+      </div>
+
+      <div style="border:1px solid #2f2a44;border-radius:9px;background:#09070e;padding:15px 16px">
+        <div style="font-size:11px;letter-spacing:.14em;color:#9a8fb4;font-weight:700;margin-bottom:8px">◈ THE ORACLE</div>
+        <div style="font-size:11.5px;line-height:1.7;color:#8f88a4">Riddles that hint at the future you're drifting toward — the <b>only</b> feedback on hidden Alignment.</div>
+      </div>
+
+      <div style="border:1px solid #2c2c2e;border-radius:9px;background:#08080a;padding:15px 16px">
+        <div style="font-size:11px;letter-spacing:.14em;color:#8a857a;font-weight:700;margin-bottom:8px">≈ WHISPERS</div>
+        <div style="font-size:11.5px;line-height:1.7;color:#847f74">Ambient flavor — combinatorial + authored + cast/faction + rare <span style="color:#5f93a8">Hollow</span> lines. All era-scaled, all tone-aware.</div>
+      </div>
+
+      <div style="border:1px solid #2c2c2e;border-radius:9px;background:#08080a;padding:15px 16px">
+        <div style="font-size:11px;letter-spacing:.14em;color:#8a857a;font-weight:700;margin-bottom:8px">◆ RECKONINGS</div>
+        <div style="font-size:11.5px;line-height:1.7;color:#847f74">Periodic choice-events (~130 across the run). Move resources <b>and</b> quietly tip Alignment. Era-scaled to what goblins care about; ~1 in 6 is a <b style="color:#a8954e">gamble</b> (good/bad coin-flip), and Calamities escalate era to era.</div>
+      </div>
+
+      <div style="border:1px solid #2c2c2e;border-radius:9px;background:#08080a;padding:15px 16px">
+        <div style="font-size:11px;letter-spacing:.14em;color:#8a857a;font-weight:700;margin-bottom:8px">▤ THE CHRONICLE</div>
+        <div style="font-size:11.5px;line-height:1.7;color:#847f74">The saga log — colour-coded by kind, exportable &amp; shareable from the first minute.</div>
+      </div>
+
+      <div style="border:1px solid #26240f;border-radius:9px;background:#0a0a06;padding:15px 16px">
+        <div style="font-size:11px;letter-spacing:.14em;color:#a8954e;font-weight:700;margin-bottom:8px">⚖ THE STANDINGS <span style="color:#6f6e68;font-weight:400">· from Era II</span></div>
+        <div style="font-size:11.5px;line-height:1.7;color:#9a8c60">Four powers — Sunspire · Iron States · Dwarrow Holds · Splinter Packs. Reckonings, raids &amp; dedicated <b style="color:#c9bd90">attitude events</b> (warm/cold choices, ~9 scenarios per power) shift them; hostility brings war.</div>
+      </div>
+
+      <div style="border:1px solid #234049;border-radius:9px;background:#07090b;padding:15px 16px">
+        <div style="font-size:11px;letter-spacing:.14em;color:#5f93a8;font-weight:700;margin-bottom:8px">◍ THE HOLLOW <span style="color:#6f6e68;font-weight:400">· from 2.3</span></div>
+        <div style="font-size:11.5px;line-height:1.7;color:#7fa5b0">Mythic lore behind the mist — grows from rare whispers into Era III's <b>Dark Beyond</b> doom clock.</div>
+      </div>
+
+      <div style="border:1px solid #2c2c2e;border-radius:9px;background:#08080a;padding:15px 16px">
+        <div style="font-size:11px;letter-spacing:.14em;color:#8a857a;font-weight:700;margin-bottom:8px">⚑ THE WANDER</div>
+        <div style="font-size:11.5px;line-height:1.7;color:#847f74">Parallel 9-quest chain, 4 variants each, with road choices, riddles &amp; minigames.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;font-size:10.5px;color:#4a4952;margin-top:34px;letter-spacing:.12em">PURE-BLACK TERMINAL · JETBRAINS MONO · NO EMOJI · ASCII BLOCK ART · TONE-AWARE NARRATION THROUGHOUT</div>
+
+</div>
+</x-dc>
+</body>
+</html>
