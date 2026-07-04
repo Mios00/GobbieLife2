@@ -3,7 +3,14 @@
 
 *38 chapters in three parts, ~95,000 words at target. Each entry gives the scene, the turn (what changes), and — where relevant — what it plants for later books. The three long fuses (the Knocking, the Green Dreams, the Root Gallery) are tracked explicitly: they must recur on a rhythm, never explained, always advanced.*
 
-**A note on the narrator.** The book is told by a chronicler-voice from long after the events — warm, wry, mythic, occasionally addressing the reader ("You must understand what it did not: that hunger was the first gift"). This voice lets early chapters narrate a pre-verbal mind without tricksy prose, and it is itself a planted secret: by Book Three the reader will learn the chronicle is Fenwick's codex, and the teller is closer to the story than they let on.
+**A note on the narration (binding style guide for all prose).**
+The saga is written in **third person limited**, one point-of-view head per scene, in a register close to Sanderson's Mistborn books: clear, concrete, scene-driven, momentum over ornament, wonder earned through specificity rather than rhetoric. The deep's strangeness follows rules, and the rules are shown working before they matter.
+
+- **No em dashes. Ever.** Use periods, commas, or restructure the sentence. Short sentences are welcome.
+- **Epigraphs carry the chronicle.** Each chapter opens with a short fragment from a codex whose author is unnamed until Book Three (the planted secret survives: the codex is Fenwick's, and the "F." reveal moves from the epilogue prose to the final epigraph of Book One). All commentary, hindsight, and foreshadowing that the old chronicler-voice used to do in-line now lives ONLY in epigraphs.
+- **Pre-verbal chapters** (1 through 9) stay in close third on the creature: simple sensory interiority that grows in vocabulary as the mind grows. Never narrate concepts the POV hasn't earned except through the epigraph.
+- **Dialogue does the character work** from chapter 10 onward. Distinct speech patterns: Moro (few words, always literal), Brakka (slow, kind, asks questions), Snit (fast, deflecting, funny), Vess (says less than she knows, never lies), the Oracle (riddles only, never explains).
+- Any quoted riddles/lines in this outline that contain em dashes are working shorthand; rewrite them to the style rules at drafting time.
 
 ---
 

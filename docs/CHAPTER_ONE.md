@@ -3,116 +3,128 @@
 
 ---
 
-> *Before the ash there were two suns, and beneath the two suns an empire, and beneath the empire — holding it up the way roots hold a mountain — a god shaped like a tree.*
+*Style note for the whole saga: third person limited, close to one head per scene. Short epigraphs open each chapter, drawn from a codex whose author is not revealed until Book Three. No em dashes, anywhere, ever. Clarity first, then wonder. The magic of the deep follows rules, and the rules are shown before they matter.*
+
+---
+
+> I have spent thirty years assembling the relics of the Before, and the question the ledger-men always ask me is where the goblins came from. They ask it the way you would ask where rats come from. I used to give them the long answer. Now I only tell them this: we came from the bottom. Everything you are standing on, we were holding up.
 >
-> *The empire is forgotten. The suns are down to one, and that one is tired. The god is dead, and lies across the deep places of the world like a fallen beam, and things live in his shadow that were never given names.*
->
-> *This is the story of one of them.*
+> From the Codex of the Before, author's preface
 
----
+### CHAPTER ONE
 
-### CHAPTER ONE — THE ACHE
+The ache came back at the hour of nothing at all.
 
-Begin in the dark. Not the dark you are thinking of.
+There was no warning. There never was. One moment the shelf of stone held only mud and settled water, the same as it had for longer than counting. The next moment there was a thin line of hurt drawn through the middle of the mud, bright and wrong, and the mud knew it.
 
-The dark you are thinking of is a room with the lamp out, which is to say a room full of remembered furniture, with morning stacked neatly on the other side of it. That dark is a lid. It comes off.
+Knowing was the strange part. Not the pain. Pain was cheap in the deep. Stone cracked, roots settled, blind things in the water died and drifted down and became silt. The dark was full of small ruins and none of them noticed themselves. But this hurt was noticed, and the noticing had a shape, and the shape had an inside and an outside.
 
-This dark was the kind that has never once been interrupted. It lay at the bottom of the world the way silt lies at the bottom of a well — settled, total, older than the idea of eyes. Above it stood a thousand fathoms of stone, and above the stone the ash-fields of a finished world, and above those a tired sun going about its rounds like a watchman who knows the estate was sold long ago. None of that mattered here. Here there was black water, and the black columns of the dead god's roots going down through it like the pillars of a drowned cathedral, and between two of those roots, on a shelf of stone the size of a poor family's table, there was a slick of mud.
+Inside, the ache.
 
-I want to be honest with you at the outset, because this chronicle will ask you to believe enormous things and honesty is the only coin I have to pay you in: the mud was not special. This matters. There was nothing in it that was not in a thousand other slicks and smears and wallows of the deep dark — the same dissolved earth, the same threads of dead root, the same patient minerals that had once been mountains and would be again, given time and pressure and the world's inattention. If you had gathered it up — you could have; it would have filled two cupped hands, with some to spare — you would have found nothing to remark on but a certain sweetness of rot, and a fleck or two of something dark that would not take a scratch.
+Outside, the cold black water, which did not care.
 
-And yet. On a day with no name, in a year no calendar was alive to count, at the hour of nothing at all —
+That was all it had. Not eyes. Not a name. Not the idea of a name. Just a border, drawn around a pain, at the bottom of the world.
 
-— it hurt.
+The world it lay in was a drowned hall. It did not know this either, but the hall was there all the same, and it deserves describing, because everything that ever happened afterward happened because of what that place had been. Great columns rose out of the black water, wider than houses, going up into dark that had never once been interrupted. The columns were not stone. They were wood, or had been, ages ago. They were roots. They belonged to something overhead that had died so long past that even its manner of dying had worn away, and they still held their posture, the way a dead tree holds its branches through the first winter, out of habit.
 
-That was the first thing. Not thought. Not light. Not the voice of a god, for the only god in reach was dead, and lay all around it, and *was*, in a manner of speaking, the neighborhood. Just: hurt. A thin, silver wire of *wrongness* drawn through the middle of the mud, with no message attached to it and no address on it and nothing on the other end.
+Between two of those roots there was a shelf of flat rock about the size of a poor family's table. On the shelf there was mud, two handfuls of it, dark and wet and veined with threads of dead root.
 
-You have felt it. You felt it before you were born and you have felt it every winter morning since: the body's first and oldest sentence, the one that does not need a body to be spoken in. *Something is not as it should be.* The whole of what came after — the warrens and the songs, the horn that woke the thrones of the world, the engine that was almost built and the garden that was planted instead — every part of it unfolds from that one wire of ache, the way an oak unfolds from the bitterness inside an acorn. Scholars in the Iron States have asked me, with the particular smile they keep for goblin chroniclers, what force I supposed had struck the spark. I ask them in return what force they suppose keeps *them* aching, and whether it has ever introduced itself, and the smile usually goes away.
+The mud hurt, and knew it, and that was the whole of the story so far.
 
-The mud did not wonder about the ache. Wondering was a long way off yet. The mud simply hurt, the way a bell rings — helplessly, entirely — and because the hurt was *in* it and the water around it was *not* hurting, there entered into the bottom of the world, quiet as a coin dropped in a well, the first distinction: **this** and **that**. In here, the ache. Out there, the cold that did not care.
+Time moved. In the deep it moved the way water moves through stone, slow and total, without any days in it. The ache faded. When it faded, the border faded with it, and the mud went back to being weather. Then the ache returned, and the border came back.
 
-That is all a self is, at the start. A border drawn around a pain.
+Here was the trick of it, the small hinge the whole world would eventually turn on. Each time the border came back, it came back in the same place.
 
-Do not mourn that it began so poorly. Everything does.
+Something remembered.
 
----
+Not thoughts. Nothing so grand. Pain repeated is pain worn into a groove, the way a rope wears a groove in a well-stone, and the groove was memory before anything had a mind to keep memory in. The ache carved its channel. The channel held its shape between one hurt and the next. And slowly, over a stretch of time that would beggar any calendar, the shape learned itself the way water learns the shape of its jar.
 
-For a long time — and I mean by this a length of time that would bankrupt the word *long*; empires of moss rose and fell in it — nothing further happened. The ache came and went. When it went, the mud lapsed back into being weather. When it came, the border redrew itself, the little kingdom of *this* declared itself again between the two roots, and each time — this is the important thing, this is the whole trick of it — each time, the border remembered a little of where it had been drawn before.
+It became a thing that persisted.
 
-Memory. Nobody teaches it. It is just what pain does when it repeats: it wears a groove.
+Then it lost a piece of itself, and everything changed.
 
-*(Hold that word. Groove. You will want it again in a hundred pages, and then again three books from now, and I will not remind you.)*
+There was no drama in it. A lip of the mud, softened by seep-water, simply slid off the edge of the shelf. It happened the way such things always happened in the deep. A slow lean. A silent parting. A smear of darkness dropping away into darker water, gone.
 
-In the groove, slowly, the ache learned its own shape, and the shape had edges, and one day — allow me the word *day* — a part of the mud sloughed off the shelf, as mud does, and slid away into the black water, and was gone.
+The mud felt the parting. It waited, in whatever way a thing without a mind can wait, for the lost piece to go on hurting.
 
-And it did not hurt.
+It didn't.
 
-Attend, because the bottom of the world is attending too: a piece of *this* had become *that*, and the ache had not followed it. The border, it turned out, could be redrawn. What lay inside it was not fixed. Which meant — and here is the second sentence ever spoken in the silent language of the deep, the one that follows *something is wrong* the way night follows evening —
+The piece was outside the border now, and the border did not follow it down. What had been *this* had become *that*, and it had happened in an instant, without permission, and it could happen again.
 
-*Some things can be kept. And some things can be lost.*
+If the mud had possessed a voice, it could not have said what moved through it then. There was no word for it yet in all the world, because the world's old words had died with the Before and the new words had not been invented. But the thing that moved through it is easy to name from here, at this distance, with three books of hindsight in hand.
 
-Fear is just that sentence, said quickly. Hoarding is that sentence, said with the hands. Love, though it will not appear in this chronicle for some chapters yet, is that sentence said while looking at someone else. The mud knew none of these words. It only drew itself, for the first time *on purpose*, a little tighter together on the shelf — pulled its borders in the way you pull a blanket in — and if you had been there, floating in that lightless cathedral with your lamp that would have been blasphemy, you would have seen it: two handfuls of wet earth, huddling.
+Fear. The first fear. Not fear of the dark, which was home, or of the dead god, which was the neighborhood. Fear of the border. Fear that everything inside it stood on nothing, and could slide.
 
-The first deliberate act of my people was to hold on.
+And the mud answered its first fear with its first act.
 
-We have been much slandered in the courts of the world — as thieves, as vermin, as the rust that eats the works of better folk — and I have answered the slanders where answering helped and let them lie where it did not. But on nights when the answering wears thin, I go back down to this, the oldest scene in the family, the one no slander can reach: before we had eyes, before we had names, before we had anything at all that could be stolen from us, we had already learned the one law we have never since broken.
+It pulled itself in.
 
-*Hold on.*
+Slowly, blindly, with no muscle and no plan, over a night that was ten thousand nights long, the mud drew its edges tighter on the shelf. It gave up territory. It thickened. It gathered the threads of dead root inside itself like a miser gathering coins, and where the shelf sloped toward the drop, it withdrew.
 
----
+Anything watching would have seen very little. Two handfuls of wet earth, huddling.
 
-Now I must tell you about the counting, and you must forgive me for how little I can tell.
+But there is a straight line, and not a long one, from that huddle to the mud-hoards of the great warrens, to the storage pits and the tally-walls, to vaults and walls and horns of black metal, to every goblin who ever clutched a sack and would not open a door. Scholars of other peoples say goblins hoard because they are greedy. The truth is older and simpler and kinder than that.
 
-Sound in the deep water is not like sound in the air. It does not arrive from a direction; it arrives from *everywhere*, through the stone, through the water, through whatever is listening, so that hearing it is less like hearing and more like being briefly part of a larger body. The mud had no ears. It did not need them. Through the shelf of stone, through the black water, through the columns of the dead god's roots, there came — and had been coming, I believe, since before the ache itself — a pulse.
+Holding on was the first thing they ever learned. They learned it before they had hands.
+
+The counting had been there the whole time.
+
+It came up through the stone, and through the water, and through the shelf, patient as tides. Three beats. A rest. Three beats. Slow beyond any use of the word slow. Between one beat and the next, a careful listener could have counted their own heartbeats into the hundreds and lost the number and started again. There were no careful listeners. There was only the deep, and the rhythm it kept.
+
+The mud did not hear it. Hearing needs ears. But sound in deep water is not a message that arrives, it is a pressure that includes you, and the mud was included. Every beat pressed faintly on the border of it. Every rest let go. Three, rest, three, through the shelf and the water and the dark, since before the ache, since before anything.
+
+The mud made no distinction between the counting and the world. Why would it? The counting was simply what the dark did, the way cold was what the water did. It had always been there. Things that have always been there are invisible, even to creatures with eyes, and the mud was spared eyes for a while yet.
+
+But the counting pressed on the border, and the border was the only thing in the deep that was learning.
+
+Three, rest, three. The groove wore deeper. Three, rest, three. The shape held its shape a little longer each time. Whatever the counting was, and it will be a long time before this story can say, it was regular, and regularity was the one thing the little border could get purchase on. Chaos teaches nothing. Pain teaches borders. But a pattern, faithful and endless, pressing gently on a thing that remembers?
+
+That teaches time.
+
+Long after, in a city of chimneys that did not yet exist, goblin mothers would sing their children down to sleep with a song that had no words, only a shape. Three notes, a rest, three notes. The wise folk of the Sunspire would write that goblins took the rhythm from the swing of the pick. They had it backward. The pick took its rhythm from the songs, and the songs took theirs from the dark, and the dark took its own from something at the bottom of everything that kept time as if time were being kept *for* someone.
+
+As if the count were a tally, and the tally had entries, and one day something would be checked against it.
+
+But that is far ahead. In the deep, at the beginning, there was only the pressing and the letting go, and a border that held its shape between them, and learned.
+
+Then came the still season, and the choice.
+
+Off through the black water, where the roots crowded thick as a palisade, there was warmth. Not much. A seam in the rock where the world's old blood still moved somewhere far below, faint as a fire remembered from two rooms away. The mud knew nothing of seams or fires. It knew only that some stretches of the long dark were eased, and some were not, and that the eased ones came when the slow stir of the water happened to drift across the shelf from a certain quarter.
+
+The warmth was not a possession. It was weather, like everything else. On the aching days when the drift came, the ache dulled, and the border loosened, and existence was lighter. On the aching days when the water sat still, the hurt burned on unsoftened, and the mud endured it, because enduring was the entire content of its life.
+
+It had never once occurred to the mud that there was anything to do about the difference. *Doing* was not yet in the world. The deep was a place where things happened to other things, and had been since the god died.
+
+Then the water went still, and stayed still.
+
+Some shift of stone far away, some settling of the god's long body, closed off the current that had carried the warmth. The drift stopped. The eased days stopped with it. The ache came, and burned, and came again, and burned, and no relief arrived, and the counting went on overhead and beneath, three and rest and three, indifferent and faithful, while the little border lay in its groove and hurt.
+
+Understand what was on that shelf, and what was not. There was no mind. There was no map. There was nothing that could be called a decision by any court in any age. There was a border around a pain, a memory of ease, and a faint gradient in the dark where the warmth still bled from its seam, thinner than thin, but real.
+
+The mud moved.
+
+It went over the lip of the shelf, the place where losing happens, the place every fiber of its short fierce learning said never to go. It went slowly, more slowly than growing, hauling itself by nothing but the yes and no of its own edges, out along the cold rock toward the seam. It moved perhaps the length of a forearm. The journey cost it pieces of itself, small ones, sloughed off and lost to the water below, and it registered every loss and kept going, which was new. Nothing in the deep had ever paid a price on purpose before.
+
+It reached the warm seam, and the ache eased, and the mud settled into the ease like a stone finding the bottom of a well.
+
+That was all. That was everything.
+
+The dark did not remark on it. The counting did not miss a beat. Overhead, up through a thousand fathoms of stone, the ash-fields of a finished world went on lying grey under a tired sun, and no chronicle anywhere recorded that at the bottom of everything, matter had just moved against the current of its own comfort, had spent itself to get warm, had wanted something and gone.
+
+Though perhaps that is not quite true. Perhaps the beat that followed the mud's arrival at the seam came a shade different from the ten thousand beats before it. A shade slower. The way a man tapping his finger on a table will falter, half a grain of a second, when something small crosses the edge of his sight.
+
+Perhaps not. The deep keeps its own ledger, and shows it to no one, and this story will not pretend to have read it.
+
+What the story can say is this. On the shelf between the roots of the dead god there was now a creature, and the creature had a law, and the law had two clauses. Hold on. And when the warmth will not come to you, go.
+
+It was not a goblin yet. It had no fingers, no ears, no name, and it would earn all three, slowly, the way it earned everything. But the estate was already whole, that night at the bottom of the world. Everything that follows in these three books, the pack and the warrens, the breach and the smoke, the horn and the thrones, the engine that was almost built and the garden that was planted instead, all of it is only that first forearm of distance, travelled again and again, by more and more of them, toward warmer and stranger seams.
+
+The mud rested in the warmth it had chosen. Around it the water stood black and total. Below it, far below, through root and stone and dark, the counting went on.
 
 Three beats. A rest. Three beats.
 
-Slow. Patient beyond any patience I can put on this page — a rhythm on the scale of tides, of breathing mountains. If you kept count of your own heartbeats between one pulse of it and the next you would lose the count somewhere in the hundreds and be forced, as everything down there was eventually forced, simply to *trust* it: three, rest, three. It did not vary — or rather, it varied once in all the ages this book covers, and when it did, everything in the deep held still, but that is a matter for a much later chapter and I will not spoil it here except to say: count the knocks, whenever this chronicle gives them. I count them every time, and I have read the ending, and I count them anyway.
-
-The mud, of course, made no distinction between the pulse and the world. Why would it? The pulse had always been there. It was simply what the dark *did*, the way warmth was what the sweet rot did and cold was what the water did. If the mud had possessed a church, the pulse would have been the floor of it — not worshipped, never noticed, holding everything up.
-
-But I will tell you what I believe, and you may weigh it when you have read all three books and know what I know. I believe the pulse was the reason. Not the ache — the ache was only pain, and pain alone makes nothing; the deep is full of things that hurt and stayed weather. I believe it was the *pattern* that did it: the endless, faithful, mindless-seeming repetition pressing against that little border of hurt, wearing its groove, teaching the first lesson under the first lesson, the one that even *hold on* rests upon —
-
-*You are not alone down here. Something keeps time.*
-
-Every song my people ever made is in that meter. Our digging songs, our grave songs, the lullaby my own mother sang me in a city of chimneys that did not yet exist when this chapter happened — three beats, a rest, three beats. The scholars of the Sunspire call it the goblin cadence and have written monographs about its origin in the rhythm of the pick. They have it backwards. The pick took its rhythm from us, and we took ours from the dark, and what the dark took it from — well.
-
-That is the story, isn't it. Go on. It's only three books.
+Patient as a kept promise. As if it were waiting for somebody to knock back.
 
 ---
 
-The last thing that happened in the age this chapter covers — the hinge on which the whole door of it turns — was small, as hinges are.
-
-Some distance from the shelf, off through the black water where the roots crowded thick, there was warmth. Only a little. A seam in the stone where the world's old blood still moved somewhere far below, faint as the memory of a fire two rooms away. It had always been there, same as the pulse. On the days the ache was bad, the warmth eased it, when the slow stir of the water happened to carry its influence across the shelf. On the days the current sat still, the ache burned uneased. The mud endured both kinds of day identically, because enduring was the entire content of its life.
-
-And then one day — the day this book is truly about, the day my people mark with the first fire of the winter feast, though not one in a thousand of us could tell you why the feast begins with the youngest child moving a coal from the cold end of the hearth to the hot — one day, the ache was bad, and the water sat still, and the warmth did not come.
-
-And the mud went to it.
-
-I have written that sentence nine times and it does not get larger, and it should. Understand what was in the room and what was not. There was no mind. There was no plan. There was no *toward* — direction itself had not been invented on that shelf; there was only the border of hurt, and the memory worn in it, and the faint gradient of ease off through the dark. And confronted with the world's stillness, the little kingdom of *this* did a thing no stone, no water, no dutiful dead root in all the deep had ever done:
-
-it declined to wait.
-
-A slick of mud two handfuls big hauled itself — there is no prettier verb; it *hauled*, the way you haul a sack, except that it was both the hauler and the sack — off the only home it had ever had, over the lip of the shelf, and out along the seam of warmth into open dark. It moved perhaps the length of your forearm. It took — I genuinely cannot tell you what it took; hours are a surface habit. Say it took everything the mud had, and arrived with less than it started with, and count the arithmetic a profit anyway, because at the end of that forearm of distance lay the warm seam, and the ache eased, and the mud — spent, diminished, triumphant, entirely unaware of being any of the three —
-
-*rested in the warmth it had chosen.*
-
-Chosen. First time for that, too, at the bottom of the world, under the whole weight of a finished age. Above it, unimagined, the ash-fields waited. Around it the dead god lay in the dark that had been his body's shadow, and through his fallen roots the counting went on, three and rest and three, and I have wondered all my life — I will wonder it on the night I die — whether anything down there noticed. Whether, between one pulse of the counting and the next, something at the far end of that patient rhythm registered the small, impossible event out on the cold margin of its parish: matter, moving *against* the current of its comfort. The universe's oldest rule — *things run down* — broken, quietly, without permission, by two handfuls of wet earth that hurt.
-
-I like to think it noticed. I have a reason to think it noticed, which you will reach in the fullness of the tale.
-
-But that is ahead of us, and the mud is behind us on its warm seam, resting, holding on, keeping — though it will not learn the word for ten thousand pulses yet — *time*.
-
-It wanted. That was all it did, and all it was: the first of my people, and it wanted.
-
-You must understand what it could not: that this was the whole of the inheritance. Not the fingers we would grow for grasping, nor the ears we would grow for the dark, nor the cleverness the world calls low when we use it and calls providence when it is used on us. Those came later; those were furniture. The estate itself was the wanting — the refusal, older than our name, to lie still in the cold and call it peace.
-
-Everything that follows in these three books — the pack and the warrens, the breach and the smoke, the horn, the thrones, the engine, the garden — is only that first forearm of distance, travelled again and again, by more and more of us, toward warmer and stranger seams.
-
-We are the mud that wanted.
-
-Hold on. I will tell you the rest.
-
----
-
-*Here ends the first chapter of* THE MUD THAT WANTED, *being Book One of the Root-Tender's Saga. The second chapter is called* WET AND DRY, UP AND DOWN, *and in it, the world acquires a map two forearms wide, and property is invented, with all that follows from it.*
+*End of Chapter One. Chapter Two: WET AND DRY, UP AND DOWN, in which the world acquires a map two forearms wide, a splinter of slate becomes the first tool, and keeping it becomes the first tomorrow.*
